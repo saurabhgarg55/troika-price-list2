@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Troika Construction Pen",
+    "code": "PIP20/BK",
+    "price": 35.00,
+    "notes": "Multitasking ballpoint pen, centimeter and inch ruler, 1:20 m and 1:50 m scale, spirit level, slotted and Phillips screwdriver, stylus."
+  },
+  {
+    "id": "2",
+    "name": "Troika Patent Keychain",
+    "code": "KYR60MC",
+    "price": 22.50,
+    "notes": "Keyring with 6 exchangeable rings, quick release mechanism."
+  },
+  {
+    "id": "3",
+    "name": "Troika Card Saver",
+    "code": "CCT62/BK",
+    "price": 28.00,
+    "notes": "Credit card case with read protection (RFID), holds up to 10 cards."
+  },
+  {
+    "id": "4",
+    "name": "Troika Eco Run",
+    "code": "TOR90/BK",
+    "price": 45.00,
+    "notes": "Rechargeable LED flashlight, magnetic, 2 light strengths, flashing light."
+  },
+  {
+    "id": "5",
+    "name": "Troika Toolbert",
+    "code": "TOL41/GY",
+    "price": 32.00,
+    "notes": "Mini tool with 4 functions: knife, scissors, screwdriver, keyring."
+  },
+  {
+    "id": "6",
+    "name": "Troika Lil Pad",
+    "code": "NPP25/BK",
+    "price": 18.50,
+    "notes": "A7 notepad with multitasking ballpoint pen."
+  },
+  {
+    "id": "7",
+    "name": "Troika Business Card Case",
+    "code": "CDC15/ST",
+    "price": 25.00,
+    "notes": "Stainless steel business card case, holds approx. 15 cards."
+  },
+  {
+    "id": "8",
+    "name": "Troika Travel Case",
+    "code": "TRV82/BK",
+    "price": 55.00,
+    "notes": "Organizer case for travel documents, cables, and accessories."
+  }
+]

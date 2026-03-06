@@ -1,0 +1,5 @@
+{
+  "name": "Troika Price List",
+  "description": "A mobile-friendly price list application for Troika products with search and details view.",
+  "requestFramePermissions": []
+}
