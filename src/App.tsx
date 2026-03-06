@@ -44,7 +44,7 @@ function HomeScreen({
         ) : (
           products.map((product) => (
             <div 
-              key={product.id}
+              key={product.code || product.id}
               onClick={() => onSelectProduct(product)}
               className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex justify-between items-center cursor-pointer hover:shadow-md transition-all active:scale-[0.98]"
             >
@@ -53,7 +53,7 @@ function HomeScreen({
                 <span className="text-sm text-slate-500 mt-1 font-mono">{product.code}</span>
               </div>
               <div className="text-lg font-black text-[#6287AF] shrink-0">
-                Rs. {product.price.toFixed(2)}
+                {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
               </div>
             </div>
           ))
@@ -91,7 +91,7 @@ function ProductDetailPage({
             {product.code}
           </div>
           <div className="text-5xl font-black text-[#6287AF]">
-            Rs. {product.price.toFixed(2)}
+            {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
           </div>
         </div>
 
