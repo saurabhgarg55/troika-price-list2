@@ -208,13 +208,12 @@ function CartScreen({
   const total = cart.reduce((sum, item) => sum + (parsePrice(item.product.price) * item.quantity), 0);
 
   const generateQuoteText = () => {
-    let text = "📝 *Quotation*\n\n";
+    let text = "📝 *Quotation Request*\n\n";
     cart.forEach(item => {
       text += `*${item.product.name}*\n`;
       text += `Code: ${item.product.code}\n`;
-      text += `${item.quantity} x ${item.product.price} = Rs. ${(parsePrice(item.product.price) * item.quantity).toFixed(2)}\n\n`;
+      text += `Qty: ${item.quantity}\n\n`;
     });
-    text += `*Total: Rs. ${total.toFixed(2)}*`;
     return text;
   };
 
@@ -278,12 +277,6 @@ function CartScreen({
                       <Plus className="h-4 w-4" />
                     </button>
                   </div>
-                  <div className="text-right">
-                    <div className="text-xs text-slate-500">{item.product.price} each</div>
-                    <div className="font-black text-[#6287AF]">
-                      Rs. {(parsePrice(item.product.price) * item.quantity).toFixed(2)}
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}
@@ -293,10 +286,6 @@ function CartScreen({
 
       {cart.length > 0 && (
         <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-[0_-8px_15px_-3px_rgba(0,0,0,0.1)] p-4">
-          <div className="flex justify-between items-center mb-4 px-2">
-            <span className="text-slate-500 font-bold uppercase tracking-wider text-sm">Total Amount</span>
-            <span className="text-3xl font-black text-slate-900">Rs. {total.toFixed(2)}</span>
-          </div>
           <div className="flex space-x-3">
             <button 
               onClick={handleWhatsApp}
