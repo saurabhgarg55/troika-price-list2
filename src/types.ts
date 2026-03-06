@@ -5,3 +5,8 @@ export interface Product {
   price: number | string;
   notes?: string;
 }
+
+export interface CartItem {
+  product: Product;
+  quantity: number;
+}

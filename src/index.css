@@ -5,6 +5,16 @@
   --font-sans: "Lato", ui-sans-serif, system-ui, sans-serif;
 }
 
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 body {
   background-color: #f8fafc;
 }
