@@ -137,7 +137,7 @@ function HomeScreen({
               className="h-16 w-auto object-contain mb-3 opacity-80"
               onError={(e) => e.currentTarget.style.display = 'none'}
             />
-            <p className="text-[10px] mt-1">© {new Date().getFullYear()} Troika. All Rights Reserved.</p>
+            <p className="text-[10px] mt-1">© Troika. All Rights Reserved.</p>
           </div>
         )}
       </div>
