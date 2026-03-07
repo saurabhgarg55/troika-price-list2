@@ -33,16 +33,32 @@ function HomeScreen({
   return (
     <div className="flex flex-col h-full bg-slate-50 relative">
       {/* AppBar */}
-      <header className="bg-[#6287AF] text-white p-4 shadow-md z-10 flex items-center justify-between h-16 shrink-0">
-        <h1 className="text-xl font-bold tracking-wide">Troika Price List</h1>
+      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center justify-between h-16 shrink-0 border-b border-slate-200">
+        <div className="flex items-center">
+          {/* We will use a placeholder URL until a public link is provided, or assume it's in public/logo.png */}
+          <img 
+            src="/logo.png" 
+            alt="Troika - artful passion" 
+            className="h-12 w-auto object-contain"
+            onError={(e) => {
+              // Fallback if logo.png is not found
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.nextElementSibling?.classList.remove('hidden');
+            }}
+          />
+          <div className="hidden flex-col">
+            <h1 className="text-xl font-black tracking-wider leading-none text-[#1A365D]">TROIKA</h1>
+            <span className="text-[10px] tracking-wide text-[#00AEEF] leading-tight mt-0.5">artful passion</span>
+          </div>
+        </div>
         <div className="flex items-center space-x-1">
-          <a href="tel:+9779705952285" className="p-2 hover:bg-white/20 rounded-full transition-colors" title="Call Us">
+          <a href="tel:+9779705952285" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Call Us">
             <Phone className="h-6 w-6" />
           </a>
-          <button onClick={onOpenCart} className="relative p-2 hover:bg-white/20 rounded-full transition-colors">
+          <button onClick={onOpenCart} className="relative p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
             <ShoppingCart className="h-6 w-6" />
             {cartCount > 0 && (
-              <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform translate-x-1 -translate-y-1">
+              <span className="absolute top-0 right-0 bg-[#00AEEF] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform translate-x-1 -translate-y-1">
                 {cartCount}
               </span>
             )}
@@ -58,7 +74,7 @@ function HomeScreen({
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl leading-5 bg-slate-50 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#6287AF] focus:border-[#6287AF] sm:text-sm transition-colors"
+            className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl leading-5 bg-slate-50 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] sm:text-sm transition-colors"
             placeholder="Search by name or code..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -75,7 +91,7 @@ function HomeScreen({
               onClick={() => setSelectedCategory(cat)}
               className={`px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap transition-colors ${
                 selectedCategory === cat 
-                  ? 'bg-[#6287AF] text-white shadow-sm' 
+                  ? 'bg-[#1A365D] text-white shadow-sm' 
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -88,11 +104,17 @@ function HomeScreen({
       {/* Product List */}
       <div className="flex-1 overflow-y-auto p-4 space-y-3 pb-24">
         {products.length === 0 ? (
-          <div className="text-center text-slate-500 mt-10">No products found.</div>
+          <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
+            <div className="bg-slate-100 p-5 rounded-full mb-4">
+              <Search className="h-10 w-10 text-slate-300" />
+            </div>
+            <p className="font-medium text-slate-500">No products found.</p>
+            <p className="text-sm mt-1">Try a different search term or category.</p>
+          </div>
         ) : (
-          products.map((product) => (
+          products.map((product, index) => (
             <div 
-              key={product.code || product.id}
+              key={`${product.code || product.id}-${index}`}
               onClick={() => onSelectProduct(product)}
               className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex justify-between items-center cursor-pointer hover:shadow-md transition-all active:scale-[0.98]"
             >
@@ -100,11 +122,23 @@ function HomeScreen({
                 <span className="font-bold text-slate-800 text-lg leading-tight">{product.name}</span>
                 <span className="text-sm text-slate-500 mt-1 font-mono">{product.code}</span>
               </div>
-              <div className="text-lg font-black text-[#6287AF] shrink-0">
+              <div className="text-lg font-black text-[#00AEEF] shrink-0">
                 {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
               </div>
             </div>
           ))
+        )}
+        
+        {products.length > 0 && (
+          <div className="py-8 text-center flex flex-col items-center justify-center opacity-70">
+            <img 
+              src="/logo.png" 
+              alt="Troika" 
+              className="h-16 w-auto object-contain mb-3 opacity-80"
+              onError={(e) => e.currentTarget.style.display = 'none'}
+            />
+            <p className="text-[10px] mt-1">© {new Date().getFullYear()} Troika. All Rights Reserved.</p>
+          </div>
         )}
       </div>
     </div>
@@ -125,14 +159,16 @@ function ProductDetailPage({
   return (
     <div className="flex flex-col h-full bg-white relative">
       {/* AppBar */}
-      <header className="bg-[#6287AF] text-white p-4 shadow-md z-10 flex items-center h-16 shrink-0">
+      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
           onClick={onBack}
-          className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-white/20 transition-colors active:bg-white/30"
+          className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-slate-100 transition-colors active:bg-slate-200"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
-        <h1 className="text-xl font-bold tracking-wide">Product Details</h1>
+        <div className="flex items-center space-x-2">
+          <h1 className="text-lg font-bold tracking-wide">Product Details</h1>
+        </div>
       </header>
 
       {/* Content */}
@@ -142,7 +178,7 @@ function ProductDetailPage({
           <div className="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-md text-sm font-mono tracking-wide mb-6 border border-slate-200">
             {product.code}
           </div>
-          <div className="text-5xl font-black text-[#6287AF]">
+          <div className="text-5xl font-black text-[#00AEEF]">
             {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
           </div>
         </div>
@@ -184,7 +220,7 @@ function ProductDetailPage({
             onAddToCart(product, quantity);
             onBack();
           }}
-          className="flex-1 ml-4 bg-[#6287AF] hover:bg-[#4A6B8F] active:bg-[#3A5675] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center"
+          className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] active:bg-[#0a1629] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center"
         >
           <ShoppingCart className="h-5 w-5 mr-2" />
           Add to Quote
@@ -229,21 +265,29 @@ function CartScreen({
 
   return (
     <div className="flex flex-col h-full bg-slate-50 relative">
-      <header className="bg-[#6287AF] text-white p-4 shadow-md z-10 flex items-center h-16 shrink-0">
+      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
           onClick={onBack}
-          className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-white/20 transition-colors active:bg-white/30"
+          className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-slate-100 transition-colors active:bg-slate-200"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
-        <h1 className="text-xl font-bold tracking-wide">Current Quote</h1>
+        <div className="flex items-center space-x-2">
+          <h1 className="text-lg font-bold tracking-wide">Current Quote</h1>
+        </div>
       </header>
 
       <div className="flex-1 overflow-y-auto p-4 pb-40">
         {cart.length === 0 ? (
-          <div className="text-center text-slate-500 mt-10 flex flex-col items-center">
-            <ShoppingCart className="h-16 w-16 text-slate-300 mb-4" />
-            <p>Your quote is empty.</p>
+          <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
+            <img 
+              src="/logo.png" 
+              alt="Troika" 
+              className="h-24 w-auto object-contain mb-6 opacity-60"
+              onError={(e) => e.currentTarget.style.display = 'none'}
+            />
+            <p className="font-medium text-slate-500">Your quote is empty.</p>
+            <p className="text-sm mt-1">Add items from the Troika catalog.</p>
           </div>
         ) : (
           <div className="space-y-4">
@@ -286,6 +330,10 @@ function CartScreen({
 
       {cart.length > 0 && (
         <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-[0_-8px_15px_-3px_rgba(0,0,0,0.1)] p-4">
+          <div className="flex justify-between items-center mb-4 px-2">
+            <span className="text-slate-500 font-bold">Total Estimated Price:</span>
+            <span className="text-2xl font-black text-[#00AEEF]">Rs. {total.toFixed(2)}</span>
+          </div>
           <div className="flex space-x-3">
             <button 
               onClick={handleWhatsApp}
@@ -320,27 +368,17 @@ export default function App() {
     setProducts(productsData as Product[]);
   }, []);
 
-  const categories = useMemo(() => {
-    const cats = new Set<string>();
-    products.forEach(p => {
-      const parts = p.code.split(' ');
-      if (parts.length > 1) {
-        cats.add(parts[0]);
-      } else {
-        cats.add(p.code.substring(0, 2));
-      }
-    });
-    return ["All", ...Array.from(cats)].filter(Boolean);
-  }, [products]);
+  const categories = ["All", "RE", "24", "INR", "BL", "SL", "ZE", "VN", "HD", "T", "SH", "HF", "SINK"];
 
   const filteredProducts = useMemo(() => {
     return products.filter(p => {
       const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             p.code.toLowerCase().includes(searchQuery.toLowerCase());
       
-      const parts = p.code.split(' ');
-      const prefix = parts.length > 1 ? parts[0] : p.code.substring(0, 2);
-      const matchesCategory = selectedCategory === 'All' || prefix === selectedCategory;
+      const code = p.code.trim();
+      const prefix = code.split(' ')[0];
+      const matchesCategory = selectedCategory === 'All' || 
+                              (selectedCategory === '24' ? code.startsWith('24') : prefix === selectedCategory);
 
       return matchesSearch && matchesCategory;
     });
