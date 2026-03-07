@@ -41,11 +41,6 @@ function HomeScreen({
             src={logoImg} 
             alt="Troika - artful passion" 
             className="h-12 w-auto object-contain"
-            onError={(e) => {
-              // Fallback if logo.png is not found
-              e.currentTarget.style.display = 'none';
-              e.currentTarget.nextElementSibling?.classList.remove('hidden');
-            }}
           />
           <div className="hidden flex-col">
             <h1 className="text-xl font-black tracking-wider leading-none text-[#1A365D]">TROIKA</h1>
@@ -136,7 +131,6 @@ function HomeScreen({
               src={logoImg} 
               alt="Troika" 
               className="h-16 w-auto object-contain mb-3 opacity-80"
-              onError={(e) => e.currentTarget.style.display = 'none'}
             />
             <p className="text-[10px] mt-1">© Troika. All Rights Reserved.</p>
           </div>
@@ -285,7 +279,6 @@ function CartScreen({
               src={logoImg} 
               alt="Troika" 
               className="h-24 w-auto object-contain mb-6 opacity-60"
-              onError={(e) => e.currentTarget.style.display = 'none'}
             />
             <p className="font-medium text-slate-500">Your quote is empty.</p>
             <p className="text-sm mt-1">Add items from the Troika catalog.</p>
