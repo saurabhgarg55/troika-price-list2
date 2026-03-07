@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone } from 'lucide-react';
 import { Product, CartItem } from './types';
 import productsData from './data/products.json';
+import logoImg from './assets/logo.png';
 
 const parsePrice = (price: string | number): number => {
   if (typeof price === 'number') return price;
@@ -37,7 +38,7 @@ function HomeScreen({
         <div className="flex items-center">
           {/* We will use a placeholder URL until a public link is provided, or assume it's in public/logo.png */}
           <img 
-            src="/logo.png" 
+            src={logoImg} 
             alt="Troika - artful passion" 
             className="h-12 w-auto object-contain"
             onError={(e) => {
@@ -132,7 +133,7 @@ function HomeScreen({
         {products.length > 0 && (
           <div className="py-8 text-center flex flex-col items-center justify-center opacity-70">
             <img 
-              src="/logo.png" 
+              src={logoImg} 
               alt="Troika" 
               className="h-16 w-auto object-contain mb-3 opacity-80"
               onError={(e) => e.currentTarget.style.display = 'none'}
@@ -281,7 +282,7 @@ function CartScreen({
         {cart.length === 0 ? (
           <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
             <img 
-              src="/logo.png" 
+              src={logoImg} 
               alt="Troika" 
               className="h-24 w-auto object-contain mb-6 opacity-60"
               onError={(e) => e.currentTarget.style.display = 'none'}
