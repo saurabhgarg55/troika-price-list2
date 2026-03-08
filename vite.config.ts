@@ -7,9 +7,6 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    build: {
-      assetsInlineLimit: 100000,
-    },
     plugins: [
       react(), 
       tailwindcss(),

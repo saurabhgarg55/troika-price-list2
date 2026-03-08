@@ -1,8 +1,18 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem } from './types';
 import productsData from './data/products.json';
-import logoImg from './assets/logo.png';
+
+const triggerHaptic = (type: 'light' | 'medium' | 'heavy' = 'light') => {
+  if (typeof window !== 'undefined' && navigator.vibrate) {
+    switch (type) {
+      case 'light': navigator.vibrate(10); break;
+      case 'medium': navigator.vibrate(20); break;
+      case 'heavy': navigator.vibrate([30, 50, 30]); break;
+    }
+  }
+};
 
 const parsePrice = (price: string | number): number => {
   if (typeof price === 'number') return price;
@@ -31,6 +41,16 @@ function HomeScreen({
   cartCount: number,
   onOpenCart: () => void
 }) {
+  const [cartBump, setCartBump] = useState(false);
+
+  useEffect(() => {
+    if (cartCount > 0) {
+      setCartBump(true);
+      const timer = setTimeout(() => setCartBump(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [cartCount]);
+
   return (
     <div className="flex flex-col h-full bg-slate-50 relative">
       {/* AppBar */}
@@ -38,7 +58,7 @@ function HomeScreen({
         <div className="flex items-center">
           {/* We will use a placeholder URL until a public link is provided, or assume it's in public/logo.png */}
           <img 
-            src={logoImg} 
+            src="/logo.png" 
             alt="Troika - artful passion" 
             className="h-12 w-auto object-contain"
           />
@@ -48,17 +68,29 @@ function HomeScreen({
           </div>
         </div>
         <div className="flex items-center space-x-1">
-          <a href="tel:+9779705952285" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Call Us">
+          <a href="tel:+9779705952285" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Call Us" onClick={() => triggerHaptic('light')}>
             <Phone className="h-6 w-6" />
           </a>
-          <button onClick={onOpenCart} className="relative p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors">
+          <motion.button 
+            onClick={() => { triggerHaptic('light'); onOpenCart(); }} 
+            className="relative p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors"
+            animate={cartBump ? { scale: [1, 1.2, 1] } : {}}
+            transition={{ duration: 0.3 }}
+          >
             <ShoppingCart className="h-6 w-6" />
-            {cartCount > 0 && (
-              <span className="absolute top-0 right-0 bg-[#00AEEF] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform translate-x-1 -translate-y-1">
-                {cartCount}
-              </span>
-            )}
-          </button>
+            <AnimatePresence>
+              {cartCount > 0 && (
+                <motion.span 
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0 }}
+                  className="absolute top-0 right-0 bg-[#00AEEF] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform translate-x-1 -translate-y-1"
+                >
+                  {cartCount}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </motion.button>
         </div>
       </header>
 
@@ -84,7 +116,7 @@ function HomeScreen({
           {categories.map(cat => (
             <button
               key={cat}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => { triggerHaptic('light'); setSelectedCategory(cat); }}
               className={`px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap transition-colors ${
                 selectedCategory === cat 
                   ? 'bg-[#1A365D] text-white shadow-sm' 
@@ -111,7 +143,7 @@ function HomeScreen({
           products.map((product, index) => (
             <div 
               key={`${product.code || product.id}-${index}`}
-              onClick={() => onSelectProduct(product)}
+              onClick={() => { triggerHaptic('light'); onSelectProduct(product); }}
               className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex justify-between items-center cursor-pointer hover:shadow-md transition-all active:scale-[0.98]"
             >
               <div className="flex flex-col pr-4">
@@ -128,7 +160,7 @@ function HomeScreen({
         {products.length > 0 && (
           <div className="py-8 text-center flex flex-col items-center justify-center opacity-70">
             <img 
-              src={logoImg} 
+              src="/logo.png" 
               alt="Troika" 
               className="h-16 w-auto object-contain mb-3 opacity-80"
             />
@@ -197,14 +229,14 @@ function ProductDetailPage({
       <div className="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] flex items-center justify-between">
         <div className="flex items-center bg-slate-100 rounded-xl border border-slate-200 overflow-hidden">
           <button 
-            onClick={() => setQuantity(Math.max(1, quantity - 1))}
+            onClick={() => { triggerHaptic('light'); setQuantity(Math.max(1, quantity - 1)); }}
             className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
           >
             <Minus className="h-5 w-5" />
           </button>
           <span className="w-12 text-center font-bold text-lg text-slate-800">{quantity}</span>
           <button 
-            onClick={() => setQuantity(quantity + 1)}
+            onClick={() => { triggerHaptic('light'); setQuantity(quantity + 1); }}
             className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
           >
             <Plus className="h-5 w-5" />
@@ -212,6 +244,7 @@ function ProductDetailPage({
         </div>
         <button 
           onClick={() => {
+            triggerHaptic('medium');
             onAddToCart(product, quantity);
             onBack();
           }}
@@ -276,7 +309,7 @@ function CartScreen({
         {cart.length === 0 ? (
           <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
             <img 
-              src={logoImg} 
+              src="/logo.png" 
               alt="Troika" 
               className="h-24 w-auto object-contain mb-6 opacity-60"
             />
@@ -286,36 +319,59 @@ function CartScreen({
         ) : (
           <div className="space-y-4">
             {cart.map((item) => (
-              <div key={item.product.code} className="bg-white rounded-xl p-4 shadow-sm border border-slate-200">
-                <div className="flex justify-between items-start mb-3">
-                  <div className="pr-4">
-                    <h3 className="font-bold text-slate-800 leading-tight">{item.product.name}</h3>
-                    <p className="text-xs text-slate-500 font-mono mt-1">{item.product.code}</p>
-                  </div>
-                  <button 
-                    onClick={() => onRemoveItem(item.product.code)}
-                    className="text-red-400 hover:text-red-600 p-1"
-                  >
-                    <Trash2 className="h-5 w-5" />
-                  </button>
+              <div 
+                key={item.product.code} 
+                className="relative rounded-xl bg-red-500 overflow-hidden"
+              >
+                <div className="absolute inset-y-0 right-0 flex items-center justify-end w-full pr-6 text-white font-bold">
+                  <span className="mr-2 text-sm">Swipe to delete</span>
+                  <Trash2 className="h-6 w-6" />
                 </div>
-                <div className="flex justify-between items-center">
-                  <div className="flex items-center bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                <motion.div
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={{ left: 0.5, right: 0 }}
+                  onDragEnd={(e, { offset, velocity }) => {
+                    if (offset.x < -100 || velocity.x < -500) {
+                      triggerHaptic('medium');
+                      onRemoveItem(item.product.code);
+                    }
+                  }}
+                  className="bg-white rounded-xl p-4 shadow-sm border border-slate-200 relative z-10 flex flex-col"
+                >
+                  <div className="flex justify-between items-start mb-3">
+                    <div className="pr-4">
+                      <h3 className="font-bold text-slate-800 leading-tight">{item.product.name}</h3>
+                      <p className="text-xs text-slate-500 font-mono mt-1">{item.product.code}</p>
+                    </div>
                     <button 
-                      onClick={() => onUpdateQuantity(item.product.code, item.quantity - 1)}
-                      className="p-2 hover:bg-slate-200 text-slate-600"
+                      onClick={() => { triggerHaptic('medium'); onRemoveItem(item.product.code); }}
+                      className="text-red-400 hover:text-red-600 p-1"
                     >
-                      <Minus className="h-4 w-4" />
-                    </button>
-                    <span className="w-8 text-center font-bold text-sm text-slate-800">{item.quantity}</span>
-                    <button 
-                      onClick={() => onUpdateQuantity(item.product.code, item.quantity + 1)}
-                      className="p-2 hover:bg-slate-200 text-slate-600"
-                    >
-                      <Plus className="h-4 w-4" />
+                      <Trash2 className="h-5 w-5" />
                     </button>
                   </div>
-                </div>
+                  <div className="flex justify-between items-center">
+                    <div className="flex items-center bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                      <button 
+                        onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity - 1); }}
+                        className="p-2 hover:bg-slate-200 text-slate-600"
+                      >
+                        <Minus className="h-4 w-4" />
+                      </button>
+                      <span className="w-8 text-center font-bold text-sm text-slate-800">{item.quantity}</span>
+                      <button 
+                        onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity + 1); }}
+                        className="p-2 hover:bg-slate-200 text-slate-600"
+                      >
+                        <Plus className="h-4 w-4" />
+                      </button>
+                    </div>
+                    <div className="font-bold text-[#00AEEF]">
+                      Rs. {(parsePrice(item.product.price) * item.quantity).toFixed(2)}
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             ))}
           </div>
