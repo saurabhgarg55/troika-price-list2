@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone } from 'lucide-react';
+import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem } from './types';
 import productsData from './data/products.json';
@@ -56,9 +56,8 @@ function HomeScreen({
       {/* AppBar */}
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center justify-between h-16 shrink-0 border-b border-slate-200">
         <div className="flex items-center">
-          {/* We will use a placeholder URL until a public link is provided, or assume it's in public/logo.png */}
           <img 
-            src="/logo.png" 
+            src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
             alt="Troika - artful passion" 
             className="h-12 w-auto object-contain"
           />
@@ -160,7 +159,7 @@ function HomeScreen({
         {products.length > 0 && (
           <div className="py-8 text-center flex flex-col items-center justify-center opacity-70">
             <img 
-              src="/logo.png" 
+              src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
               alt="Troika" 
               className="h-16 w-auto object-contain mb-3 opacity-80"
             />
@@ -291,6 +290,19 @@ function CartScreen({
     window.open(`mailto:?subject=Quotation&body=${text}`, '_blank');
   };
 
+  const handleSaveLocal = () => {
+    const text = generateQuoteText();
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `Troika_Quote_${new Date().toISOString().split('T')[0]}.txt`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="flex flex-col h-full bg-slate-50 relative">
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
@@ -309,7 +321,7 @@ function CartScreen({
         {cart.length === 0 ? (
           <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
             <img 
-              src="/logo.png" 
+              src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
               alt="Troika" 
               className="h-24 w-auto object-contain mb-6 opacity-60"
             />
@@ -384,20 +396,27 @@ function CartScreen({
             <span className="text-slate-500 font-bold">Total Estimated Price:</span>
             <span className="text-2xl font-black text-[#00AEEF]">Rs. {total.toFixed(2)}</span>
           </div>
-          <div className="flex space-x-3">
+          <div className="flex space-x-2">
             <button 
               onClick={handleWhatsApp}
-              className="flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center"
+              className="flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3 px-2 rounded-xl shadow-md transition-all flex items-center justify-center text-sm"
             >
-              <Send className="h-5 w-5 mr-2" />
+              <Send className="h-4 w-4 mr-1.5" />
               WhatsApp
             </button>
             <button 
               onClick={handleEmail}
-              className="flex-1 bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 px-4 rounded-xl shadow-md transition-all flex items-center justify-center"
+              className="flex-1 bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 px-2 rounded-xl shadow-md transition-all flex items-center justify-center text-sm"
             >
-              <Mail className="h-5 w-5 mr-2" />
+              <Mail className="h-4 w-4 mr-1.5" />
               Email
+            </button>
+            <button 
+              onClick={handleSaveLocal}
+              className="flex-1 bg-[#00AEEF] hover:bg-[#0095cc] text-white font-bold py-3 px-2 rounded-xl shadow-md transition-all flex items-center justify-center text-sm"
+            >
+              <Download className="h-4 w-4 mr-1.5" />
+              Save
             </button>
           </div>
         </div>
