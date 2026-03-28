@@ -437,7 +437,7 @@ export default function App() {
     setProducts(productsData as Product[]);
   }, []);
 
-  const categories = ["All", "RE", "24", "INR", "BL", "SL", "ZE", "VN", "HD", "T", "SH", "HF", "SINK"];
+  const categories = ["All", "RE", "EU", "INS", "INR", "BL", "SL", "VS", "NK", "ZE", "VN", "HD", "CR", "DN", "AT", "PR", "EKO", "AL", "T", "MG", "OP", "SQ", "C", "HR", "AR", "SH", "HF", "SINK"];
 
   const filteredProducts = useMemo(() => {
     return products.filter(p => {
@@ -445,9 +445,17 @@ export default function App() {
                             p.code.toLowerCase().includes(searchQuery.toLowerCase());
       
       const code = p.code.trim();
-      const prefix = code.split(' ')[0];
-      const matchesCategory = selectedCategory === 'All' || 
-                              (selectedCategory === '24' ? code.startsWith('24') : prefix === selectedCategory);
+      const prefix = code.split(' ')[0].toUpperCase();
+      
+      let matchesCategory = selectedCategory === 'All';
+      
+      if (!matchesCategory) {
+        if (selectedCategory === 'SINK') {
+          matchesCategory = prefix === 'SINK' || prefix === 'KITCHEN' || prefix === 'SMART' || (p.notes && p.notes.toLowerCase().includes('sink')) || p.name.toLowerCase().includes('sink');
+        } else {
+          matchesCategory = prefix === selectedCategory;
+        }
+      }
 
       return matchesSearch && matchesCategory;
     });
