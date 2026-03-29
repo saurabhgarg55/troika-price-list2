@@ -2,7 +2,8 @@
   {
     "code": "RE 5101",
     "name": "Pillar Cock",
-    "price": 5850.0
+    "price": 5850.0,
+    "image": "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/fd22e41b47e672c9903f6abf901e22a71889eef8/public/Re%205101.bmp"
   },
   {
     "code": "RE 5102",

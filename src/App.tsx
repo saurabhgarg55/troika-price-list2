@@ -3,6 +3,9 @@ import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Pho
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem } from './types';
 import productsData from './data/products.json';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable';
+import * as XLSX from 'xlsx';
 
 const triggerHaptic = (type: 'light' | 'medium' | 'heavy' = 'light') => {
   if (typeof window !== 'undefined' && navigator.vibrate) {
@@ -183,7 +186,7 @@ function ProductDetailPage({
   const [quantity, setQuantity] = useState(1);
 
   return (
-    <div className="flex flex-col h-full bg-white relative">
+    <div className="flex flex-col h-full bg-white">
       {/* AppBar */}
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
@@ -198,8 +201,16 @@ function ProductDetailPage({
       </header>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto p-6 pb-32">
+      <div className="flex-1 overflow-y-auto p-6">
         <div className="mb-8">
+          {product.image && (
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              className="w-full h-64 object-contain mb-6 rounded-xl bg-slate-100 p-4"
+              referrerPolicy="no-referrer"
+            />
+          )}
           <h2 className="text-3xl font-black text-slate-900 mb-3 leading-tight">{product.name}</h2>
           <div className="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-md text-sm font-mono tracking-wide mb-6 border border-slate-200">
             {product.code}
@@ -225,7 +236,7 @@ function ProductDetailPage({
       </div>
 
       {/* Bottom Action Bar */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] flex items-center justify-between">
+      <div className="p-4 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] flex items-center justify-between">
         <div className="flex items-center bg-slate-100 rounded-xl border border-slate-200 overflow-hidden">
           <button 
             onClick={() => { triggerHaptic('light'); setQuantity(Math.max(1, quantity - 1)); }}
@@ -233,7 +244,16 @@ function ProductDetailPage({
           >
             <Minus className="h-5 w-5" />
           </button>
-          <span className="w-12 text-center font-bold text-lg text-slate-800">{quantity}</span>
+          <input
+            type="number"
+            min="1"
+            value={quantity}
+            onChange={(e) => {
+              const val = parseInt(e.target.value);
+              if (!isNaN(val) && val > 0) setQuantity(val);
+            }}
+            className="w-16 text-center font-bold text-lg text-slate-800 bg-transparent focus:outline-none"
+          />
           <button 
             onClick={() => { triggerHaptic('light'); setQuantity(quantity + 1); }}
             className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
@@ -285,26 +305,37 @@ function CartScreen({
     window.open(`https://wa.me/?text=${text}`, '_blank');
   };
 
-  const handleEmail = () => {
-    const text = encodeURIComponent(generateQuoteText());
-    window.open(`mailto:?subject=Quotation&body=${text}`, '_blank');
+  const handleGeneratePDF = () => {
+    const doc = new jsPDF();
+    autoTable(doc, {
+      head: [['Code', 'Name', 'Qty', 'Price', 'Total']],
+      body: cart.map(item => [
+        item.product.code,
+        item.product.name,
+        item.quantity,
+        parsePrice(item.product.price).toFixed(2),
+        (parsePrice(item.product.price) * item.quantity).toFixed(2)
+      ]),
+      foot: [['', '', '', 'Total', total.toFixed(2)]],
+    });
+    doc.save(`Troika_Quote_${new Date().toISOString().split('T')[0]}.pdf`);
   };
 
-  const handleSaveLocal = () => {
-    const text = generateQuoteText();
-    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `Troika_Quote_${new Date().toISOString().split('T')[0]}.txt`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+  const handleSaveExcel = () => {
+    const worksheet = XLSX.utils.json_to_sheet(cart.map(item => ({
+      Code: item.product.code,
+      Name: item.product.name,
+      Quantity: item.quantity,
+      Price: parsePrice(item.product.price),
+      Total: parsePrice(item.product.price) * item.quantity
+    })));
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Quotation');
+    XLSX.writeFile(workbook, `Troika_Quote_${new Date().toISOString().split('T')[0]}.xlsx`);
   };
 
   return (
-    <div className="flex flex-col h-full bg-slate-50 relative">
+    <div className="flex flex-col h-full bg-slate-50">
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
           onClick={onBack}
@@ -317,7 +348,7 @@ function CartScreen({
         </div>
       </header>
 
-      <div className="flex-1 overflow-y-auto p-4 pb-40">
+      <div className="flex-1 overflow-y-auto p-4">
         {cart.length === 0 ? (
           <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
             <img 
@@ -391,7 +422,7 @@ function CartScreen({
       </div>
 
       {cart.length > 0 && (
-        <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-200 shadow-[0_-8px_15px_-3px_rgba(0,0,0,0.1)] p-4">
+        <div className="bg-white border-t border-slate-200 shadow-[0_-8px_15px_-3px_rgba(0,0,0,0.1)] p-4">
           <div className="flex justify-between items-center mb-4 px-2">
             <span className="text-slate-500 font-bold">Total Estimated Price:</span>
             <span className="text-2xl font-black text-[#00AEEF]">Rs. {total.toFixed(2)}</span>
@@ -405,18 +436,18 @@ function CartScreen({
               WhatsApp
             </button>
             <button 
-              onClick={handleEmail}
+              onClick={handleGeneratePDF}
               className="flex-1 bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 px-2 rounded-xl shadow-md transition-all flex items-center justify-center text-sm"
             >
-              <Mail className="h-4 w-4 mr-1.5" />
-              Email
+              <Download className="h-4 w-4 mr-1.5" />
+              Send PDF
             </button>
             <button 
-              onClick={handleSaveLocal}
+              onClick={handleSaveExcel}
               className="flex-1 bg-[#00AEEF] hover:bg-[#0095cc] text-white font-bold py-3 px-2 rounded-xl shadow-md transition-all flex items-center justify-center text-sm"
             >
               <Download className="h-4 w-4 mr-1.5" />
-              Save
+              Save Excel
             </button>
           </div>
         </div>
