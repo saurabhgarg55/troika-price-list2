@@ -6,6 +6,7 @@ import productsData from './data/products.json';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import * as XLSX from 'xlsx';
+import { requestNotificationPermission } from './firebase';
 
 const triggerHaptic = (type: 'light' | 'medium' | 'heavy' = 'light') => {
   if (typeof window !== 'undefined' && navigator.vibrate) {
@@ -463,6 +464,10 @@ export default function App() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
+
+  useEffect(() => {
+    requestNotificationPermission();
+  }, []);
 
   useEffect(() => {
     setProducts(productsData as Product[]);
