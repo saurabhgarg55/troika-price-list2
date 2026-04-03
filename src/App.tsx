@@ -473,7 +473,20 @@ export default function App() {
     setProducts(productsData as Product[]);
   }, []);
 
-  const categories = ["All", "RE", "EU", "INS", "INR", "BL", "SL", "VS", "NK", "ZE", "VN", "HD", "CR", "DN", "AT", "PR", "EKO", "AL", "T", "MG", "OP", "SQ", "C", "HR", "AR", "SH", "HF", "SINK"];
+  const categoryMapping: { [key: string]: string } = {
+    "Remus": "RE",
+    "Ion": "INR",
+    "Bliss": "BL",
+    "Zeus": "ZE",
+    "Sol": "SL",
+    "Venus": "VN",
+    "Hades": "HD",
+    "Hf": "HF",
+    "Sink": "SINK",
+    "T": "T"
+  };
+
+  const categories = ["All", ...Object.keys(categoryMapping)];
 
   const filteredProducts = useMemo(() => {
     return products.filter(p => {
@@ -486,10 +499,11 @@ export default function App() {
       let matchesCategory = selectedCategory === 'All';
       
       if (!matchesCategory) {
-        if (selectedCategory === 'SINK') {
+        if (selectedCategory === 'Sink') {
           matchesCategory = prefix === 'SINK' || prefix === 'KITCHEN' || prefix === 'SMART' || (p.notes && p.notes.toLowerCase().includes('sink')) || p.name.toLowerCase().includes('sink');
         } else {
-          matchesCategory = prefix === selectedCategory;
+          const mappedPrefix = categoryMapping[selectedCategory];
+          matchesCategory = prefix === mappedPrefix;
         }
       }
 
