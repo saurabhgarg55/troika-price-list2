@@ -24,13 +24,13 @@ export default defineConfig(({mode}) => {
           display: "standalone",
           icons: [
             {
-              src: "/icon-192.png",
+              src: "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/bb44831cd794dbd1ba70a443e541d293fcf46c8e/public/icon-192.png",
               sizes: "192x192",
               type: "image/png",
               purpose: "any maskable"
             },
             {
-              src: "/icon-512.png",
+              src: "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/bb44831cd794dbd1ba70a443e541d293fcf46c8e/public/icon-512.png",
               sizes: "512x512",
               type: "image/png",
               purpose: "any maskable"
