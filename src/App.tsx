@@ -33,7 +33,8 @@ function HomeScreen({
   setSelectedCategory,
   onSelectProduct,
   cartCount,
-  onOpenCart
+  onOpenCart,
+  onOpenAbout
 }: { 
   products: Product[], 
   searchQuery: string, 
@@ -43,7 +44,8 @@ function HomeScreen({
   setSelectedCategory: (c: string) => void,
   onSelectProduct: (p: Product) => void,
   cartCount: number,
-  onOpenCart: () => void
+  onOpenCart: () => void,
+  onOpenAbout: () => void
 }) {
   const [cartBump, setCartBump] = useState(false);
 
@@ -63,7 +65,8 @@ function HomeScreen({
           <img 
             src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
             alt="Troika - artful passion" 
-            className="h-12 w-auto object-contain"
+            className="h-12 w-auto object-contain cursor-pointer"
+            onClick={() => { triggerHaptic('light'); onOpenAbout(); }}
           />
           <div className="hidden flex-col">
             <h1 className="text-xl font-black tracking-wider leading-none text-[#1A365D]">TROIKA</h1>
@@ -457,12 +460,78 @@ function CartScreen({
   );
 }
 
+function AboutScreen({ onBack }: { onBack: () => void }) {
+  return (
+    <div className="flex flex-col h-full bg-white">
+      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
+        <button 
+          onClick={onBack}
+          className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-slate-100 transition-colors active:bg-slate-200"
+        >
+          <ChevronLeft className="h-6 w-6" />
+        </button>
+        <h1 className="text-lg font-bold tracking-wide">About Troika</h1>
+      </header>
+      <div className="flex-1 overflow-y-auto p-6 space-y-8 text-slate-700">
+        <div className="flex justify-center">
+          <img 
+            src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
+            alt="Troika" 
+            className="h-24 object-contain"
+          />
+        </div>
+        
+        <div className="space-y-4">
+          <p className="leading-relaxed text-lg text-slate-800 font-medium">
+            Troika is an idea conceived as a synthesis of technological innovation and artfully created products, poised to make its mark in the domestic and international markets.
+          </p>
+          <p className="leading-relaxed">
+            Stringent build quality combines with carefully crafted aesthetics to produce a truly international range of products that are built-to-last. A refined blend of ergonomic shapes, contemporary styling, and immaculate finish ensures that Troika sets the gold standard for good quality bathware at affordable pricing.
+          </p>
+        </div>
+
+        <div className="space-y-6 border-t border-slate-100 pt-8">
+          <div className="space-y-3">
+            <h3 className="text-xl font-bold text-[#1A365D]">Passion That Drives the Vision</h3>
+            <p className="leading-relaxed">
+              Troika Group is one among premium brands in India & recognized as the youngest trendsetters in the industry. Since our inception, we have remained loyal to our core values of Innovation, Product Quality & Customer Satisfaction.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-[#1A365D]">Vision & Mission</h3>
+            <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-3">
+              <p className="leading-relaxed">
+                <strong className="text-[#00AEEF]">VISION:</strong> To continuously improve the quality & design of our product range & to consistently increase customer focus.
+              </p>
+              <p className="leading-relaxed">
+                <strong className="text-[#00AEEF]">MISSION:</strong> To launch innovative & world-class products. To manufacture highest quality products and set benchmarks for the industry. To be transparent & fair.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-xl font-bold text-[#1A365D]">Quality Assurance</h3>
+            <p className="leading-relaxed">
+              At Troika, we understand the value of exceptional build-quality, which makes our faucets easy to install and a pleasure to use. From melting high-grade ingots to delivering products of outstanding quality, we are at par with the best in the industry.
+            </p>
+            <p className="leading-relaxed">
+              Each faucet is assembled by hand by specially trained staff and subjected to comprehensive inspection and functional checks. All our faucets are vigorously tested at high operating and static pressures. We also subject our surface finishes to destructive testing to maintain the specified standards of life expectancy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [products, setProducts] = useState<Product[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
@@ -549,6 +618,8 @@ export default function App() {
             onUpdateQuantity={handleUpdateCartQuantity}
             onRemoveItem={handleRemoveFromCart}
           />
+        ) : isAboutOpen ? (
+          <AboutScreen onBack={() => setIsAboutOpen(false)} />
         ) : selectedProduct ? (
           <ProductDetailPage 
             product={selectedProduct} 
@@ -566,6 +637,7 @@ export default function App() {
             onSelectProduct={setSelectedProduct}
             cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
             onOpenCart={() => setIsCartOpen(true)}
+            onOpenAbout={() => setIsAboutOpen(true)}
           />
         )}
       </div>
