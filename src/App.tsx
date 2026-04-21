@@ -311,7 +311,22 @@ function CartScreen({
 
   const handleGeneratePDF = () => {
     const doc = new jsPDF();
+    
+    // Add Branding
+    const logoUrl = "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png";
+    
+    // Add Logo
+    doc.addImage(logoUrl, 'PNG', 14, 10, 30, 15);
+    
+    doc.setFontSize(20);
+    doc.text('Troika Quotation', 50, 20);
+    doc.setFontSize(10);
+    doc.text('Artful Passion', 50, 26);
+    doc.text('Contact: 988888-3468 | info@troikaworld.com', 50, 32);
+    doc.line(14, 35, 196, 35);
+
     autoTable(doc, {
+      startY: 40,
       head: [['Code', 'Name', 'Qty', 'Price', 'Total']],
       body: cart.map(item => [
         item.product.code,
@@ -558,7 +573,7 @@ export default function App() {
   const categories = ["All", ...Object.keys(categoryMapping)];
 
   const filteredProducts = useMemo(() => {
-    return products.filter(p => {
+    const filtered = products.filter(p => {
       const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             p.code.toLowerCase().includes(searchQuery.toLowerCase());
       
@@ -578,6 +593,23 @@ export default function App() {
 
       return matchesSearch && matchesCategory;
     });
+
+    if (searchQuery.trim() !== '') {
+      const query = searchQuery.trim().toLowerCase();
+      const exactMatches = [];
+      const others = [];
+      
+      for (const p of filtered) {
+        if (p.code.trim().toLowerCase() === query) {
+          exactMatches.push(p);
+        } else {
+          others.push(p);
+        }
+      }
+      return [...exactMatches, ...others];
+    }
+
+    return filtered;
   }, [products, searchQuery, selectedCategory]);
 
   const handleAddToCart = (product: Product, quantity: number) => {
