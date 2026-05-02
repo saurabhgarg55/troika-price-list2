@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin } from 'lucide-react';
+import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin, X, Share } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Product, CartItem } from './types';
+import { Product, CartItem, BeforeInstallPromptEvent } from './types';
 import productsData from './data/products.json';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
@@ -590,6 +590,41 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false);
+  const [isIosStore, setIsIosStore] = useState(false);
+
+  useEffect(() => {
+    const isIos = () => {
+      const userAgent = window.navigator.userAgent.toLowerCase();
+      return /iphone|ipad|ipod/.test(userAgent);
+    };
+    const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator as any).standalone;
+    
+    if (isIos() && !isInStandaloneMode()) {
+      setIsIosStore(true);
+      setTimeout(() => setShowInstallPrompt(true), 1500);
+    } else {
+      const handler = (e: Event) => {
+        e.preventDefault();
+        setDeferredPrompt(e as BeforeInstallPromptEvent);
+        // Give a slight delay before showing the install banner to be less aggressive
+        setTimeout(() => setShowInstallPrompt(true), 1500);
+      };
+      window.addEventListener('beforeinstallprompt', handler);
+      return () => window.removeEventListener('beforeinstallprompt', handler);
+    }
+  }, []);
+
+  const handleInstallClick = async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === 'accepted') {
+      setDeferredPrompt(null);
+      setShowInstallPrompt(false);
+    }
+  };
 
   useEffect(() => {
     requestNotificationPermission();
@@ -714,6 +749,59 @@ export default function App() {
             onOpenAbout={() => setIsAboutOpen(true)}
           />
         )}
+
+        {/* Install PWA Prompt */}
+        <AnimatePresence>
+          {showInstallPrompt && (
+            <motion.div 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50, transition: { duration: 0.2 } }}
+              transition={{ type: "spring", bounce: 0.3 }}
+              className="absolute bottom-4 left-4 right-4 z-50 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-200 rounded-2xl p-4 flex flex-col pt-5"
+            >
+              <button 
+                onClick={() => setShowInstallPrompt(false)}
+                className="absolute top-2 right-2 p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600 rounded-full transition-colors"
+                aria-label="Dismiss"
+              >
+                <X className="h-4 w-4" />
+              </button>
+              
+              <div className="flex items-center space-x-4">
+                <img 
+                  src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/bb44831cd794dbd1ba70a443e541d293fcf46c8e/public/icon-192.png" 
+                  alt="App Icon" 
+                  className="h-12 w-12 rounded-xl object-contain bg-slate-50 border border-slate-100"
+                />
+                <div className="flex flex-col flex-1">
+                  <h3 className="font-bold text-slate-800 leading-tight">Install Troika</h3>
+                  <p className="text-xs text-slate-500 mt-0.5">Quick access from your home screen</p>
+                </div>
+              </div>
+              
+              {isIosStore ? (
+                <div className="mt-4 bg-slate-50 border border-slate-100 rounded-xl p-3 flex flex-col space-y-2 text-sm text-slate-600">
+                  <div className="flex items-center">
+                    <span className="bg-white border flex justify-center items-center font-bold border-slate-200 h-6 w-6 rounded-full mr-3 text-xs shrink-0">1</span>
+                    <span className="flex items-center">Tap the <Share className="h-4 w-4 mx-1.5 text-blue-500" /> Share icon</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="bg-white border flex justify-center items-center font-bold border-slate-200 h-6 w-6 rounded-full mr-3 text-xs shrink-0">2</span>
+                    <span className="flex items-center">Select <span className="font-bold ml-1 text-slate-800 bg-slate-200 px-1 rounded inline-block whitespace-nowrap">Add to Home Screen</span></span>
+                  </div>
+                </div>
+              ) : (
+                <button 
+                  onClick={handleInstallClick}
+                  className="mt-4 w-full bg-[#1A365D] hover:bg-[#122643] text-white font-bold py-2.5 rounded-xl transition-colors text-sm"
+                >
+                  Add to Home Screen
+                </button>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
