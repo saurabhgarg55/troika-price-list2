@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download } from 'lucide-react';
+import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem } from './types';
 import productsData from './data/products.json';
@@ -58,7 +58,7 @@ function HomeScreen({
   }, [cartCount]);
 
   return (
-    <div className="flex flex-col h-full bg-slate-50 relative">
+    <div className="flex flex-col flex-1 min-h-0 h-full bg-slate-50 relative">
       {/* AppBar */}
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center justify-between h-16 shrink-0 border-b border-slate-200">
         <div className="flex items-center">
@@ -74,6 +74,9 @@ function HomeScreen({
           </div>
         </div>
         <div className="flex items-center space-x-1">
+          <a href="https://share.google/Jlr8F77IVfGNzaPLR" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Locate Us" onClick={() => triggerHaptic('light')}>
+            <MapPin className="h-6 w-6" />
+          </a>
           <a href="tel:+9779705952285" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Call Us" onClick={() => triggerHaptic('light')}>
             <Phone className="h-6 w-6" />
           </a>
@@ -146,7 +149,7 @@ function HomeScreen({
       </div>
 
       {/* Product List */}
-      <motion.ul layout className="flex-1 overflow-y-auto p-4 pb-24">
+      <motion.ul layout className="flex-1 overflow-y-auto p-4 pb-24 min-h-0">
         {products.length === 0 ? (
           <motion.div 
             initial={{ opacity: 0 }}
@@ -212,7 +215,7 @@ function ProductDetailPage({
   const [quantity, setQuantity] = useState<number | string>(1);
 
   return (
-    <div className="flex flex-col h-full bg-white">
+    <div className="flex flex-col flex-1 min-h-0 bg-white h-full relative">
       {/* AppBar */}
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
@@ -227,7 +230,7 @@ function ProductDetailPage({
       </header>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto p-6">
+      <div className="flex-1 overflow-y-auto p-6 min-h-0 pb-20">
         <div className="mb-8">
           {product.image && (
             <img 
@@ -262,8 +265,8 @@ function ProductDetailPage({
       </div>
 
       {/* Bottom Action Bar */}
-      <div className="p-4 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] flex items-center justify-between">
-        <div className="flex items-center bg-slate-100 rounded-xl border border-slate-200 overflow-hidden">
+      <div className="p-4 bg-white border-t border-slate-200 shadow-[0_-4px_15px_-3px_rgba(0,0,0,0.1)] flex items-center justify-between shrink-0 absolute bottom-0 left-0 right-0 z-20">
+        <div className="flex items-center bg-slate-100 rounded-xl border border-slate-200 overflow-hidden shrink-0">
           <button 
             onClick={() => { triggerHaptic('light'); setQuantity(Math.max(1, (Number(quantity) || 1) - 1)); }}
             className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
@@ -287,7 +290,7 @@ function ProductDetailPage({
                 setQuantity(1);
               }
             }}
-            className="w-16 text-center font-bold text-lg text-slate-800 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:bg-white rounded-md transition-all py-1"
+            className="w-12 text-center font-bold text-lg text-slate-800 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:bg-white rounded-md transition-all py-1"
           />
           <button 
             onClick={() => { triggerHaptic('light'); setQuantity((Number(quantity) || 0) + 1); }}
@@ -303,10 +306,10 @@ function ProductDetailPage({
             onAddToCart(product, Number(quantity) || 1);
             onBack();
           }}
-          className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center"
+          className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] text-white font-bold py-3.5 px-3 rounded-xl shadow-md transition-all flex items-center justify-center min-w-0"
         >
-          <ShoppingCart className="h-5 w-5 mr-2" />
-          Add to Quote
+          <ShoppingCart className="h-5 w-5 mr-2 shrink-0" />
+          <span className="truncate">Add to Quote</span>
         </motion.button>
       </div>
     </div>
@@ -386,7 +389,7 @@ function CartScreen({
   };
 
   return (
-    <div className="flex flex-col h-full bg-slate-50">
+    <div className="flex flex-col flex-1 min-h-0 h-full bg-slate-50 relative">
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
           onClick={onBack}
@@ -399,7 +402,7 @@ function CartScreen({
         </div>
       </header>
 
-      <div className="flex-1 overflow-y-auto p-4">
+      <div className="flex-1 overflow-y-auto p-4 pb-48 min-h-0">
         {cart.length === 0 ? (
           <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
             <img 
@@ -480,7 +483,7 @@ function CartScreen({
       </div>
 
       {cart.length > 0 && (
-        <div className="bg-white border-t border-slate-200 shadow-[0_-8px_15px_-3px_rgba(0,0,0,0.1)] p-4">
+        <div className="bg-white border-t border-slate-200 shadow-[0_-8px_15px_-3px_rgba(0,0,0,0.1)] p-4 shrink-0 absolute bottom-0 left-0 right-0 z-20">
           <div className="flex justify-between items-center mb-4 px-2">
             <span className="text-slate-500 font-bold">Total Estimated Price:</span>
             <span className="text-2xl font-black text-[#00AEEF]">Rs. {total.toFixed(2)}</span>
@@ -516,7 +519,7 @@ function CartScreen({
 
 function AboutScreen({ onBack }: { onBack: () => void }) {
   return (
-    <div className="flex flex-col h-full bg-white">
+    <div className="flex flex-col flex-1 min-h-0 h-full bg-white relative">
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
           onClick={onBack}
@@ -526,7 +529,7 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
         </button>
         <h1 className="text-lg font-bold tracking-wide">About Troika</h1>
       </header>
-      <div className="flex-1 overflow-y-auto p-6 space-y-8 text-slate-700">
+      <div className="flex-1 overflow-y-auto p-6 space-y-8 text-slate-700 min-h-0">
         <div className="flex justify-center">
           <img 
             src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
