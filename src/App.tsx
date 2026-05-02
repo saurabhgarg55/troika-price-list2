@@ -117,50 +117,72 @@ function HomeScreen({
       </div>
 
       {/* Categories */}
-      <div className="bg-white border-b border-slate-200 shrink-0">
-        <div className="flex overflow-x-auto hide-scrollbar p-3 space-x-2">
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => { triggerHaptic('light'); setSelectedCategory(cat); }}
-              className={`px-4 py-1.5 rounded-full text-sm font-bold whitespace-nowrap transition-colors ${
-                selectedCategory === cat 
-                  ? 'bg-[#1A365D] text-white shadow-sm' 
-                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-              }`}
-            >
-              {cat === 'All' ? 'All Products' : cat}
-            </button>
-          ))}
+      <div className="bg-white shrink-0 shadow-[0_4px_20px_rgba(0,0,0,0.02)] z-10">
+        <div className="flex overflow-x-auto hide-scrollbar px-4 py-3 space-x-2 items-center">
+          {categories.map(cat => {
+            const isSelected = selectedCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => { triggerHaptic('light'); setSelectedCategory(cat); }}
+                className={`relative px-5 py-2 rounded-2xl text-sm font-bold tracking-wide whitespace-nowrap transition-colors flex items-center justify-center shrink-0 ${
+                  isSelected 
+                    ? 'text-white' 
+                    : 'text-slate-500 hover:text-slate-800 bg-slate-50 hover:bg-slate-100 border border-slate-200/60'
+                }`}
+              >
+                {isSelected && (
+                  <motion.div
+                    layoutId="activeCategory"
+                    className="absolute inset-0 bg-[#1A365D] rounded-2xl shadow-md"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <span className="relative z-10">{cat === 'All' ? 'All Products' : cat}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
       {/* Product List */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-3 pb-24">
+      <motion.ul layout className="flex-1 overflow-y-auto p-4 pb-24">
         {products.length === 0 ? (
-          <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center text-slate-400 mt-20 flex flex-col items-center"
+          >
             <div className="bg-slate-100 p-5 rounded-full mb-4">
               <Search className="h-10 w-10 text-slate-300" />
             </div>
             <p className="font-medium text-slate-500">No products found.</p>
             <p className="text-sm mt-1">Try a different search term or category.</p>
-          </div>
+          </motion.div>
         ) : (
-          products.map((product, index) => (
-            <div 
-              key={`${product.code || product.id}-${index}`}
-              onClick={() => { triggerHaptic('light'); onSelectProduct(product); }}
-              className="bg-white rounded-xl p-4 shadow-sm border border-slate-100 flex justify-between items-center cursor-pointer hover:shadow-md transition-all active:scale-[0.98]"
-            >
-              <div className="flex flex-col pr-4">
-                <span className="font-bold text-slate-800 text-lg leading-tight">{product.name}</span>
-                <span className="text-sm text-slate-500 mt-1 font-mono">{product.code}</span>
-              </div>
-              <div className="text-lg font-black text-[#00AEEF] shrink-0">
-                {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
-              </div>
-            </div>
-          ))
+          <AnimatePresence mode="popLayout">
+            {products.map((product, index) => (
+              <motion.li 
+                layout
+                initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
+                transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                whileTap={{ scale: 0.96 }}
+                key={`${product.code || product.id}-${index}`}
+                onClick={() => { triggerHaptic('light'); onSelectProduct(product); }}
+                className="bg-white rounded-3xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] mb-3 flex justify-between items-center cursor-pointer hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow"
+              >
+                <div className="flex flex-col pr-4 items-start">
+                  <span className="font-bold text-slate-800 text-lg leading-tight mb-2">{product.name}</span>
+                  <span className="font-mono text-[10px] tracking-wide bg-slate-100 text-slate-500 rounded-full px-2.5 py-0.5 inline-block">{product.code}</span>
+                </div>
+                <div className="text-lg font-black text-[#00AEEF] shrink-0">
+                  {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
+                </div>
+              </motion.li>
+            ))}
+          </AnimatePresence>
         )}
         
         {products.length > 0 && (
@@ -173,7 +195,7 @@ function HomeScreen({
             <p className="text-[10px] mt-1">© Troika. All Rights Reserved.</p>
           </div>
         )}
-      </div>
+      </motion.ul>
     </div>
   );
 }
@@ -274,17 +296,18 @@ function ProductDetailPage({
             <Plus className="h-5 w-5" />
           </button>
         </div>
-        <button 
+        <motion.button 
+          whileTap={{ scale: 0.95 }}
           onClick={() => {
             triggerHaptic('medium');
             onAddToCart(product, Number(quantity) || 1);
             onBack();
           }}
-          className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] active:bg-[#0a1629] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center"
+          className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center"
         >
           <ShoppingCart className="h-5 w-5 mr-2" />
           Add to Quote
-        </button>
+        </motion.button>
       </div>
     </div>
   );
@@ -389,62 +412,69 @@ function CartScreen({
           </div>
         ) : (
           <div className="space-y-4">
-            {cart.map((item) => (
-              <div 
-                key={item.product.code} 
-                className="relative rounded-xl bg-red-500 overflow-hidden"
-              >
-                <div className="absolute inset-y-0 right-0 flex items-center justify-end w-full pr-6 text-white font-bold">
-                  <span className="mr-2 text-sm">Swipe to delete</span>
-                  <Trash2 className="h-6 w-6" />
-                </div>
-                <motion.div
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={{ left: 0.5, right: 0 }}
-                  onDragEnd={(e, { offset, velocity }) => {
-                    if (offset.x < -100 || velocity.x < -500) {
-                      triggerHaptic('medium');
-                      onRemoveItem(item.product.code);
-                    }
-                  }}
-                  className="bg-white rounded-xl p-4 shadow-sm border border-slate-200 relative z-10 flex flex-col"
+            <AnimatePresence>
+              {cart.map((item) => (
+                <motion.div 
+                  layout
+                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, height: 0, marginBottom: 0, transition: { duration: 0.2 } }}
+                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                  key={item.product.code} 
+                  className="relative rounded-xl bg-red-500 overflow-hidden"
                 >
-                  <div className="flex justify-between items-start mb-3">
-                    <div className="pr-4">
-                      <h3 className="font-bold text-slate-800 leading-tight">{item.product.name}</h3>
-                      <p className="text-xs text-slate-500 font-mono mt-1">{item.product.code}</p>
-                    </div>
-                    <button 
-                      onClick={() => { triggerHaptic('medium'); onRemoveItem(item.product.code); }}
-                      className="text-red-400 hover:text-red-600 p-1"
-                    >
-                      <Trash2 className="h-5 w-5" />
-                    </button>
+                  <div className="absolute inset-y-0 right-0 flex items-center justify-end w-full pr-6 text-white font-bold">
+                    <span className="mr-2 text-sm">Swipe to delete</span>
+                    <Trash2 className="h-6 w-6" />
                   </div>
-                  <div className="flex justify-between items-center">
-                    <div className="flex items-center bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                  <motion.div
+                    drag="x"
+                    dragConstraints={{ left: 0, right: 0 }}
+                    dragElastic={{ left: 0.5, right: 0 }}
+                    onDragEnd={(e, { offset, velocity }) => {
+                      if (offset.x < -100 || velocity.x < -500) {
+                        triggerHaptic('medium');
+                        onRemoveItem(item.product.code);
+                      }
+                    }}
+                    className="bg-white rounded-xl p-4 shadow-sm border border-slate-200 relative z-10 flex flex-col"
+                  >
+                    <div className="flex justify-between items-start mb-3">
+                      <div className="pr-4">
+                        <h3 className="font-bold text-slate-800 leading-tight">{item.product.name}</h3>
+                        <p className="text-xs text-slate-500 font-mono mt-1">{item.product.code}</p>
+                      </div>
                       <button 
-                        onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity - 1); }}
-                        className="p-2 hover:bg-slate-200 text-slate-600"
+                        onClick={() => { triggerHaptic('medium'); onRemoveItem(item.product.code); }}
+                        className="text-red-400 hover:text-red-600 p-1"
                       >
-                        <Minus className="h-4 w-4" />
-                      </button>
-                      <span className="w-8 text-center font-bold text-sm text-slate-800">{item.quantity}</span>
-                      <button 
-                        onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity + 1); }}
-                        className="p-2 hover:bg-slate-200 text-slate-600"
-                      >
-                        <Plus className="h-4 w-4" />
+                        <Trash2 className="h-5 w-5" />
                       </button>
                     </div>
-                    <div className="font-bold text-[#00AEEF]">
-                      Rs. {(parsePrice(item.product.price) * item.quantity).toFixed(2)}
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                        <button 
+                          onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity - 1); }}
+                          className="p-2 hover:bg-slate-200 text-slate-600"
+                        >
+                          <Minus className="h-4 w-4" />
+                        </button>
+                        <span className="w-8 text-center font-bold text-sm text-slate-800">{item.quantity}</span>
+                        <button 
+                          onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity + 1); }}
+                          className="p-2 hover:bg-slate-200 text-slate-600"
+                        >
+                          <Plus className="h-4 w-4" />
+                        </button>
+                      </div>
+                      <div className="font-bold text-[#00AEEF]">
+                        Rs. {(parsePrice(item.product.price) * item.quantity).toFixed(2)}
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
-              </div>
-            ))}
+              ))}
+            </AnimatePresence>
           </div>
         )}
       </div>
@@ -593,7 +623,7 @@ export default function App() {
       
       if (!matchesCategory) {
         if (selectedCategory === 'Sink') {
-          matchesCategory = prefix === 'SINK' || prefix === 'KITCHEN' || prefix === 'SMART' || (p.notes && p.notes.toLowerCase().includes('sink')) || p.name.toLowerCase().includes('sink');
+          matchesCategory = p.name.trim().toLowerCase().startsWith('kitchen sink');
         } else {
           const mappedPrefix = categoryMapping[selectedCategory];
           matchesCategory = prefix === mappedPrefix;
