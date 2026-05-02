@@ -108,7 +108,7 @@ function HomeScreen({
           </div>
           <input
             type="text"
-            className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl leading-5 bg-slate-50 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] sm:text-sm transition-colors"
+            className="block w-full pl-10 pr-3 py-3 border border-slate-200 rounded-xl leading-5 bg-slate-50 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#00AEEF]/20 focus:border-[#00AEEF] sm:text-sm transition-all shadow-sm"
             placeholder="Search by name or code..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
@@ -187,7 +187,7 @@ function ProductDetailPage({
   onBack: () => void,
   onAddToCart: (p: Product, qty: number) => void
 }) {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState<number | string>(1);
 
   return (
     <div className="flex flex-col h-full bg-white">
@@ -243,7 +243,7 @@ function ProductDetailPage({
       <div className="p-4 bg-white border-t border-slate-200 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] flex items-center justify-between">
         <div className="flex items-center bg-slate-100 rounded-xl border border-slate-200 overflow-hidden">
           <button 
-            onClick={() => { triggerHaptic('light'); setQuantity(Math.max(1, quantity - 1)); }}
+            onClick={() => { triggerHaptic('light'); setQuantity(Math.max(1, (Number(quantity) || 1) - 1)); }}
             className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
           >
             <Minus className="h-5 w-5" />
@@ -253,13 +253,22 @@ function ProductDetailPage({
             min="1"
             value={quantity}
             onChange={(e) => {
-              const val = parseInt(e.target.value);
-              if (!isNaN(val) && val > 0) setQuantity(val);
+              if (e.target.value === '') {
+                setQuantity('');
+              } else {
+                const val = parseInt(e.target.value);
+                if (!isNaN(val) && val > 0) setQuantity(val);
+              }
             }}
-            className="w-16 text-center font-bold text-lg text-slate-800 bg-transparent focus:outline-none"
+            onBlur={() => {
+              if (quantity === '' || Number(quantity) < 1) {
+                setQuantity(1);
+              }
+            }}
+            className="w-16 text-center font-bold text-lg text-slate-800 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:bg-white rounded-md transition-all py-1"
           />
           <button 
-            onClick={() => { triggerHaptic('light'); setQuantity(quantity + 1); }}
+            onClick={() => { triggerHaptic('light'); setQuantity((Number(quantity) || 0) + 1); }}
             className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
           >
             <Plus className="h-5 w-5" />
@@ -268,7 +277,7 @@ function ProductDetailPage({
         <button 
           onClick={() => {
             triggerHaptic('medium');
-            onAddToCart(product, quantity);
+            onAddToCart(product, Number(quantity) || 1);
             onBack();
           }}
           className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] active:bg-[#0a1629] text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center"

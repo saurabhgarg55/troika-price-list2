@@ -17,8 +17,38 @@ messaging.onBackgroundMessage((payload) => {
   const notificationTitle = payload.notification.title;
   const notificationOptions = {
     body: payload.notification.body,
-    icon: '/logo.png'
+    icon: '/logo.png',
+    data: payload.data // Pass custom data payload to the notification event
   };
 
   self.registration.showNotification(notificationTitle, notificationOptions);
+});
+
+self.addEventListener('notificationclick', (event) => {
+  console.log('[firebase-messaging-sw.js] Notification click received.', event);
+  event.notification.close(); // Close the notification
+
+  // Read URL from custom data payload provided in Firebase console
+  const urlToOpen = event.notification.data && event.notification.data.click_url;
+
+  if (urlToOpen) {
+    event.waitUntil(clients.openWindow(urlToOpen));
+  } else {
+    // If no URL is provided, open the main app
+    event.waitUntil(
+      clients.matchAll({ type: 'window' }).then((windowClients) => {
+        // If app is already open, focus it
+        for (let i = 0; i < windowClients.length; i++) {
+          const client = windowClients[i];
+          if (client.url.includes(self.location.origin) && 'focus' in client) {
+            return client.focus();
+          }
+        }
+        // Otherwise open a new window to the main app
+        if (clients.openWindow) {
+          return clients.openWindow('/');
+        }
+      })
+    );
+  }
 });
