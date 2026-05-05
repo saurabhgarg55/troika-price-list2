@@ -149,32 +149,22 @@ function HomeScreen({
       </div>
 
       {/* Product List */}
-      <motion.ul layout className="flex-1 overflow-y-auto p-4 pb-24 min-h-0">
+      <ul className="flex-1 overflow-y-auto p-4 pb-24 min-h-0">
         {products.length === 0 ? (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-center text-slate-400 mt-20 flex flex-col items-center"
-          >
+          <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
             <div className="bg-slate-100 p-5 rounded-full mb-4">
               <Search className="h-10 w-10 text-slate-300" />
             </div>
             <p className="font-medium text-slate-500">No products found.</p>
             <p className="text-sm mt-1">Try a different search term or category.</p>
-          </motion.div>
+          </div>
         ) : (
-          <AnimatePresence mode="popLayout">
+          <>
             {products.map((product, index) => (
-              <motion.li 
-                layout
-                initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                whileTap={{ scale: 0.96 }}
+              <li 
                 key={`${product.code || product.id}-${index}`}
                 onClick={() => { triggerHaptic('light'); onSelectProduct(product); }}
-                className="bg-white rounded-3xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] mb-3 flex justify-between items-center cursor-pointer hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow"
+                className="bg-white rounded-3xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] mb-3 flex justify-between items-center cursor-pointer hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] active:scale-[0.98] transition-all"
               >
                 <div className="flex flex-col pr-4 items-start">
                   <span className="font-bold text-slate-800 text-lg leading-tight mb-2">{product.name}</span>
@@ -183,9 +173,9 @@ function HomeScreen({
                 <div className="text-lg font-black text-[#00AEEF] shrink-0">
                   {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
                 </div>
-              </motion.li>
+              </li>
             ))}
-          </AnimatePresence>
+          </>
         )}
         
         {products.length > 0 && (
@@ -198,7 +188,7 @@ function HomeScreen({
             <p className="text-[10px] mt-1">© Troika. All Rights Reserved.</p>
           </div>
         )}
-      </motion.ul>
+      </ul>
     </div>
   );
 }
@@ -351,13 +341,13 @@ function CartScreen({
     const logoUrl = "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png";
     
     // Add Logo
-    doc.addImage(logoUrl, 'PNG', 14, 10, 30, 15);
+    doc.addImage(logoUrl, 'PNG', 14, 10, 20, 20);
     
     doc.setFontSize(20);
-    doc.text('Troika Quotation', 50, 20);
+    doc.text('Troika Quotation', 45, 18);
     doc.setFontSize(10);
-    doc.text('Artful Passion', 50, 26);
-    doc.text('Contact: 988888-3468 | info@troikaworld.com', 50, 32);
+    doc.text('Artful Passion', 45, 24);
+    doc.text('Email: info@troikaworld.com', 45, 29);
     doc.line(14, 35, 196, 35);
 
     autoTable(doc, {
@@ -796,7 +786,7 @@ export default function App() {
                   onClick={handleInstallClick}
                   className="mt-4 w-full bg-[#1A365D] hover:bg-[#122643] text-white font-bold py-2.5 rounded-xl transition-colors text-sm"
                 >
-                  Add to Home Screen
+                  Install
                 </button>
               )}
             </motion.div>
