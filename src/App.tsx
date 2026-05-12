@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin, X, Share } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem, BeforeInstallPromptEvent } from './types';
@@ -583,6 +583,16 @@ export default function App() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isIosStore, setIsIosStore] = useState(false);
+  const [globalDiscount, setGlobalDiscount] = useState(0);
+  const allClickCountRef = useRef(0);
+  const clickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const applyGlobalDiscount = (price: string | number) => {
+    if (globalDiscount === 0) return price;
+    const parsed = parsePrice(price);
+    if (!parsed) return price;
+    return parsed * (1 - globalDiscount / 100);
+  };
 
   useEffect(() => {
     const isIos = () => {
@@ -679,17 +689,67 @@ export default function App() {
     return filtered;
   }, [products, searchQuery, selectedCategory]);
 
-  const handleAddToCart = (product: Product, quantity: number) => {
+  const discountedFilteredProducts = useMemo(() => {
+    if (globalDiscount === 0) return filteredProducts;
+    return filteredProducts.map(p => ({
+      ...p,
+      price: applyGlobalDiscount(p.price)
+    }));
+  }, [filteredProducts, globalDiscount]);
+
+  const discountedCart = useMemo(() => {
+    if (globalDiscount === 0) return cart;
+    return cart.map(item => ({
+      ...item,
+      product: {
+        ...item.product,
+        price: applyGlobalDiscount(item.product.price)
+      }
+    }));
+  }, [cart, globalDiscount]);
+
+  const discountedSelectedProduct = useMemo(() => {
+    if (!selectedProduct || globalDiscount === 0) return selectedProduct;
+    return {
+      ...selectedProduct,
+      price: applyGlobalDiscount(selectedProduct.price)
+    };
+  }, [selectedProduct, globalDiscount]);
+
+  const handleSetCategory = (cat: string) => {
+    if (cat === 'All') {
+      allClickCountRef.current += 1;
+      if (clickTimerRef.current) clearTimeout(clickTimerRef.current);
+      if (allClickCountRef.current >= 3) {
+        const discountStr = window.prompt("Enter discount percentage (e.g. 20):");
+        if (discountStr !== null) {
+          const val = parseFloat(discountStr);
+          if (!isNaN(val)) setGlobalDiscount(val);
+        }
+        allClickCountRef.current = 0;
+      } else {
+        clickTimerRef.current = setTimeout(() => {
+          allClickCountRef.current = 0;
+        }, 500);
+      }
+    } else {
+      allClickCountRef.current = 0;
+    }
+    setSelectedCategory(cat);
+  };
+
+  const handleAddToCart = (selectedProd: Product, quantity: number) => {
+    const originalProduct = products.find(p => p.code === selectedProd.code) || selectedProd;
     setCart(prev => {
-      const existing = prev.find(item => item.product.code === product.code);
+      const existing = prev.find(item => item.product.code === originalProduct.code);
       if (existing) {
         return prev.map(item => 
-          item.product.code === product.code 
+          item.product.code === originalProduct.code 
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       }
-      return [...prev, { product, quantity }];
+      return [...prev, { product: originalProduct, quantity }];
     });
   };
 
@@ -712,7 +772,7 @@ export default function App() {
       <div className="w-full max-w-md bg-white sm:rounded-[2rem] sm:shadow-2xl h-[100dvh] sm:h-[850px] sm:max-h-[90vh] relative overflow-hidden flex flex-col sm:border-[8px] sm:border-slate-800">
         {isCartOpen ? (
           <CartScreen 
-            cart={cart}
+            cart={discountedCart}
             onBack={() => setIsCartOpen(false)}
             onUpdateQuantity={handleUpdateCartQuantity}
             onRemoveItem={handleRemoveFromCart}
@@ -721,18 +781,18 @@ export default function App() {
           <AboutScreen onBack={() => setIsAboutOpen(false)} />
         ) : selectedProduct ? (
           <ProductDetailPage 
-            product={selectedProduct} 
+            product={discountedSelectedProduct!} 
             onBack={() => setSelectedProduct(null)} 
             onAddToCart={handleAddToCart}
           />
         ) : (
           <HomeScreen 
-            products={filteredProducts} 
+            products={discountedFilteredProducts} 
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
             categories={categories}
             selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
+            setSelectedCategory={handleSetCategory}
             onSelectProduct={setSelectedProduct}
             cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
             onOpenCart={() => setIsCartOpen(true)}
