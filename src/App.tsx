@@ -48,6 +48,7 @@ function HomeScreen({
   onOpenAbout: () => void
 }) {
   const [cartBump, setCartBump] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     if (cartCount > 0) {
@@ -58,14 +59,21 @@ function HomeScreen({
   }, [cartCount]);
 
   return (
-    <div className="flex flex-col flex-1 min-h-0 h-full bg-slate-50 relative">
+    <div 
+      className="flex flex-col flex-1 h-full bg-slate-50 relative overflow-y-auto hide-scrollbar"
+      onScroll={(e) => setIsScrolled(e.currentTarget.scrollTop > 10)}
+    >
       {/* AppBar */}
-      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center justify-between h-16 shrink-0 border-b border-slate-200">
+      <header className={`sticky top-0 z-30 flex items-center justify-between h-16 shrink-0 border-b transition-all duration-300 px-4 ${
+        isScrolled 
+          ? 'bg-white/70 backdrop-blur-[12px] border-slate-200/50 shadow-sm' 
+          : 'bg-white border-slate-200'
+      }`}>
         <div className="flex items-center">
           <img 
             src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
             alt="Troika - artful passion" 
-            className="h-12 w-auto object-contain cursor-pointer"
+            className="h-12 w-auto object-contain cursor-pointer -ml-2"
             onClick={() => { triggerHaptic('light'); onOpenAbout(); }}
           />
           <div className="hidden flex-col">
@@ -73,7 +81,7 @@ function HomeScreen({
             <span className="text-[10px] tracking-wide text-[#00AEEF] leading-tight mt-0.5">artful passion</span>
           </div>
         </div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 -mr-2">
           <a href="https://share.google/Jlr8F77IVfGNzaPLR" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Locate Us" onClick={() => triggerHaptic('light')}>
             <MapPin className="h-6 w-6" />
           </a>
@@ -104,7 +112,7 @@ function HomeScreen({
       </header>
 
       {/* Search Bar */}
-      <div className="p-4 bg-white border-b border-slate-200 shrink-0 shadow-sm z-0">
+      <div className="p-4 bg-white border-b border-slate-200 shrink-0 shadow-sm z-20">
         <div className="relative">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <Search className="h-5 w-5 text-slate-400" />
@@ -149,7 +157,7 @@ function HomeScreen({
       </div>
 
       {/* Product List */}
-      <ul className="flex-1 overflow-y-auto p-4 pb-24 min-h-0">
+      <ul className="p-4 pb-24 flex-1">
         {products.length === 0 ? (
           <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
             <div className="bg-slate-100 p-5 rounded-full mb-4">
@@ -201,18 +209,55 @@ function HomeScreen({
 function ProductDetailPage({ 
   product, 
   onBack,
-  onAddToCart
+  onAddToCart,
+  onNext,
+  onPrev
 }: { 
   product: Product, 
   onBack: () => void,
-  onAddToCart: (p: Product, qty: number) => void
+  onAddToCart: (p: Product, qty: number) => void,
+  onNext?: () => void,
+  onPrev?: () => void
 }) {
   const [quantity, setQuantity] = useState<number | string>(1);
+  const [direction, setDirection] = useState(0);
+
+  useEffect(() => {
+    setQuantity(1);
+  }, [product.code]);
+
+  const handleDragEnd = (e: any, { offset }: any) => {
+    const swipe = offset.x;
+    if (swipe < -50 && onNext) {
+      setDirection(1);
+      onNext();
+    } else if (swipe > 50 && onPrev) {
+      setDirection(-1);
+      onPrev();
+    }
+  };
+
+  const variants = {
+    enter: (direction: number) => ({
+      x: direction > 0 ? '100%' : '-100%',
+      opacity: 0
+    }),
+    center: {
+      zIndex: 1,
+      x: 0,
+      opacity: 1
+    },
+    exit: (direction: number) => ({
+      zIndex: 0,
+      x: direction < 0 ? '100%' : '-100%',
+      opacity: 0
+    })
+  };
 
   return (
-    <div className="flex flex-col flex-1 min-h-0 bg-white h-full relative">
+    <div className="flex flex-col flex-1 min-h-0 bg-white h-full relative overflow-hidden">
       {/* AppBar */}
-      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
+      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-30 flex items-center h-16 shrink-0 border-b border-slate-200">
         <button 
           onClick={onBack}
           className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-slate-100 transition-colors active:bg-slate-200"
@@ -224,95 +269,118 @@ function ProductDetailPage({
         </div>
       </header>
 
-      {/* Content */}
-      <div className="flex-1 overflow-y-auto p-6 min-h-0 pb-20">
-        <div className="mb-8">
-          {product.image && (
-            <img 
-              src={product.image} 
-              alt={product.name} 
-              className="w-full h-64 object-contain mb-6 rounded-xl bg-slate-100 p-4"
-              referrerPolicy="no-referrer"
-            />
-          )}
-          <h2 className="text-3xl font-black text-slate-900 mb-3 leading-tight">{product.name}</h2>
-          <div className="flex flex-wrap items-center gap-2 mb-6">
-            <div className="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-md text-sm font-mono tracking-wide border border-slate-200">
-              {product.code}
-            </div>
-            {product.size && (
-              <div className="inline-block bg-[#00AEEF]/10 text-[#00AEEF] px-3 py-1 rounded-md text-sm font-mono tracking-wide border border-[#00AEEF]/20">
-                Size: {product.size}
+      {/* Swipeable Content wrapper */}
+      <div className="flex-1 relative">
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={product.code || product.name}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            transition={{
+              x: { type: "spring", stiffness: 300, damping: 30 },
+              opacity: { duration: 0.2 }
+            }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={1}
+            onDragEnd={handleDragEnd}
+            className="absolute inset-0 flex flex-col bg-white"
+          >
+            {/* Content */}
+            <div className="flex-1 overflow-y-auto p-6 min-h-0 pb-20">
+              <div className="mb-8">
+                {product.image && (
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="w-full h-64 object-contain mb-6 rounded-xl bg-slate-100 p-4 pointer-events-none"
+                    referrerPolicy="no-referrer"
+                  />
+                )}
+                <h2 className="text-3xl font-black text-slate-900 mb-3 leading-tight">{product.name}</h2>
+                <div className="flex flex-wrap items-center gap-2 mb-6">
+                  <div className="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-md text-sm font-mono tracking-wide border border-slate-200">
+                    {product.code}
+                  </div>
+                  {product.size && (
+                    <div className="inline-block bg-[#00AEEF]/10 text-[#00AEEF] px-3 py-1 rounded-md text-sm font-mono tracking-wide border border-[#00AEEF]/20">
+                      Size: {product.size}
+                    </div>
+                  )}
+                </div>
+                <div className="text-5xl font-black text-[#00AEEF]">
+                  {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
+                </div>
               </div>
-            )}
-          </div>
-          <div className="text-5xl font-black text-[#00AEEF]">
-            {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
-          </div>
-        </div>
 
-        {product.notes && (
-          <div className="mt-8">
-            <label className="block text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">
-              Notes
-            </label>
-            <textarea
-              readOnly
-              className="w-full p-4 border border-slate-200 rounded-xl bg-slate-50 text-slate-700 resize-none focus:outline-none leading-relaxed"
-              rows={6}
-              value={product.notes}
-            />
-          </div>
-        )}
-      </div>
+              {product.notes && (
+                <div className="mt-8">
+                  <label className="block text-sm font-bold text-slate-700 mb-3 uppercase tracking-wider">
+                    Notes
+                  </label>
+                  <textarea
+                    readOnly
+                    className="w-full p-4 border border-slate-200 rounded-xl bg-slate-50 text-slate-700 resize-none focus:outline-none leading-relaxed"
+                    rows={6}
+                    value={product.notes}
+                  />
+                </div>
+              )}
+            </div>
 
-      {/* Bottom Action Bar */}
-      <div className="p-4 bg-white border-t border-slate-200 shadow-[0_-4px_15px_-3px_rgba(0,0,0,0.1)] flex items-center justify-between shrink-0 absolute bottom-0 left-0 right-0 z-20">
-        <div className="flex items-center bg-slate-100 rounded-xl border border-slate-200 overflow-hidden shrink-0">
-          <button 
-            onClick={() => { triggerHaptic('light'); setQuantity(Math.max(1, (Number(quantity) || 1) - 1)); }}
-            className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
-          >
-            <Minus className="h-5 w-5" />
-          </button>
-          <input
-            type="number"
-            min="1"
-            value={quantity}
-            onChange={(e) => {
-              if (e.target.value === '') {
-                setQuantity('');
-              } else {
-                const val = parseInt(e.target.value);
-                if (!isNaN(val) && val > 0) setQuantity(val);
-              }
-            }}
-            onBlur={() => {
-              if (quantity === '' || Number(quantity) < 1) {
-                setQuantity(1);
-              }
-            }}
-            className="w-12 text-center font-bold text-lg text-slate-800 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:bg-white rounded-md transition-all py-1"
-          />
-          <button 
-            onClick={() => { triggerHaptic('light'); setQuantity((Number(quantity) || 0) + 1); }}
-            className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
-          >
-            <Plus className="h-5 w-5" />
-          </button>
-        </div>
-        <motion.button 
-          whileTap={{ scale: 0.95 }}
-          onClick={() => {
-            triggerHaptic('medium');
-            onAddToCart(product, Number(quantity) || 1);
-            onBack();
-          }}
-          className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] text-white font-bold py-3.5 px-3 rounded-xl shadow-md transition-all flex items-center justify-center min-w-0"
-        >
-          <ShoppingCart className="h-5 w-5 mr-2 shrink-0" />
-          <span className="truncate">Add to Quote</span>
-        </motion.button>
+            {/* Bottom Action Bar */}
+            <div className="p-4 bg-white border-t border-slate-200 shadow-[0_-4px_15px_-3px_rgba(0,0,0,0.1)] flex items-center justify-between shrink-0 absolute bottom-0 left-0 right-0 z-20">
+              <div className="flex items-center bg-slate-100 rounded-xl border border-slate-200 overflow-hidden shrink-0">
+                <button 
+                  onClick={() => { triggerHaptic('light'); setQuantity(Math.max(1, (Number(quantity) || 1) - 1)); }}
+                  className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
+                >
+                  <Minus className="h-5 w-5" />
+                </button>
+                <input
+                  type="number"
+                  min="1"
+                  value={quantity}
+                  onChange={(e) => {
+                    if (e.target.value === '') {
+                      setQuantity('');
+                    } else {
+                      const val = parseInt(e.target.value);
+                      if (!isNaN(val) && val > 0) setQuantity(val);
+                    }
+                  }}
+                  onBlur={() => {
+                    if (quantity === '' || Number(quantity) < 1) {
+                      setQuantity(1);
+                    }
+                  }}
+                  className="w-12 text-center font-bold text-lg text-slate-800 bg-transparent focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:bg-white rounded-md transition-all py-1"
+                />
+                <button 
+                  onClick={() => { triggerHaptic('light'); setQuantity((Number(quantity) || 0) + 1); }}
+                  className="p-3 hover:bg-slate-200 active:bg-slate-300 transition-colors text-slate-600"
+                >
+                  <Plus className="h-5 w-5" />
+                </button>
+              </div>
+              <motion.button 
+                whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  triggerHaptic('medium');
+                  onAddToCart(product, Number(quantity) || 1);
+                  onBack();
+                }}
+                className="flex-1 ml-4 bg-[#1A365D] hover:bg-[#122643] text-white font-bold py-3.5 px-3 rounded-xl shadow-md transition-all flex items-center justify-center min-w-0"
+              >
+                <ShoppingCart className="h-5 w-5 mr-2 shrink-0" />
+                <span className="truncate">Add to Quote</span>
+              </motion.button>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
@@ -781,38 +849,60 @@ export default function App() {
     setCart(prev => prev.filter(item => item.product.code !== code));
   };
 
+  const selectedProductIndex = selectedProduct ? discountedFilteredProducts.findIndex(p => p.code === selectedProduct.code) : -1;
+
+  const handleNextProduct = selectedProductIndex >= 0 && selectedProductIndex < discountedFilteredProducts.length - 1
+    ? () => setSelectedProduct(discountedFilteredProducts[selectedProductIndex + 1])
+    : undefined;
+
+  const handlePrevProduct = selectedProductIndex > 0
+    ? () => setSelectedProduct(discountedFilteredProducts[selectedProductIndex - 1])
+    : undefined;
+
   return (
     <div className="min-h-screen bg-slate-200 flex justify-center items-center p-0 sm:p-4">
-      <div className="w-full max-w-md bg-white sm:rounded-[2rem] sm:shadow-2xl h-[100dvh] sm:h-[850px] sm:max-h-[90vh] relative overflow-hidden flex flex-col sm:border-[8px] sm:border-slate-800">
-        {isCartOpen ? (
-          <CartScreen 
-            cart={discountedCart}
-            onBack={() => setIsCartOpen(false)}
-            onUpdateQuantity={handleUpdateCartQuantity}
-            onRemoveItem={handleRemoveFromCart}
-          />
-        ) : isAboutOpen ? (
-          <AboutScreen onBack={() => setIsAboutOpen(false)} />
-        ) : selectedProduct ? (
-          <ProductDetailPage 
-            product={discountedSelectedProduct!} 
-            onBack={() => setSelectedProduct(null)} 
-            onAddToCart={handleAddToCart}
-          />
-        ) : (
-          <HomeScreen 
-            products={discountedFilteredProducts} 
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            categories={categories}
-            selectedCategory={selectedCategory}
-            setSelectedCategory={handleSetCategory}
-            onSelectProduct={setSelectedProduct}
-            cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
-            onOpenCart={() => setIsCartOpen(true)}
-            onOpenAbout={() => setIsAboutOpen(true)}
-          />
-        )}
+      <div className="w-full max-w-md bg-slate-50 sm:rounded-[2rem] sm:shadow-2xl h-[100dvh] sm:h-[850px] sm:max-h-[90vh] relative overflow-hidden flex flex-col sm:border-[8px] sm:border-slate-800">
+        <AnimatePresence>
+          {isCartOpen ? (
+            <motion.div key="cart" className="w-full h-full absolute inset-0 z-30 flex flex-col bg-slate-50" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
+              <CartScreen 
+                cart={discountedCart}
+                onBack={() => setIsCartOpen(false)}
+                onUpdateQuantity={handleUpdateCartQuantity}
+                onRemoveItem={handleRemoveFromCart}
+              />
+            </motion.div>
+          ) : isAboutOpen ? (
+            <motion.div key="about" className="w-full h-full absolute inset-0 z-30 flex flex-col bg-slate-50" initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
+              <AboutScreen onBack={() => setIsAboutOpen(false)} />
+            </motion.div>
+          ) : selectedProduct ? (
+            <motion.div key="product" className="w-full h-full absolute inset-0 z-20 flex flex-col bg-slate-50" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
+              <ProductDetailPage 
+                product={discountedSelectedProduct!} 
+                onBack={() => setSelectedProduct(null)} 
+                onAddToCart={handleAddToCart}
+                onNext={handleNextProduct}
+                onPrev={handlePrevProduct}
+              />
+            </motion.div>
+          ) : (
+            <motion.div key="home" className="w-full h-full absolute inset-0 z-10 flex flex-col bg-slate-50" initial={{ opacity: 0.5, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0.5, scale: 0.95 }} transition={{ duration: 0.3 }}>
+              <HomeScreen 
+                products={discountedFilteredProducts} 
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
+                categories={categories}
+                selectedCategory={selectedCategory}
+                setSelectedCategory={handleSetCategory}
+                onSelectProduct={setSelectedProduct}
+                cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
+                onOpenCart={() => setIsCartOpen(true)}
+                onOpenAbout={() => setIsAboutOpen(true)}
+              />
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Install PWA Prompt */}
         <AnimatePresence>
