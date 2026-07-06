@@ -168,7 +168,12 @@ function HomeScreen({
               >
                 <div className="flex flex-col pr-4 items-start">
                   <span className="font-bold text-slate-800 text-lg leading-tight mb-2">{product.name}</span>
-                  <span className="font-mono text-[10px] tracking-wide bg-slate-100 text-slate-500 rounded-full px-2.5 py-0.5 inline-block">{product.code}</span>
+                  <div className="flex items-center space-x-2">
+                    <span className="font-mono text-[10px] tracking-wide bg-slate-100 text-slate-500 rounded-full px-2.5 py-0.5 inline-block">{product.code}</span>
+                    {product.size && (
+                      <span className="font-mono text-[10px] tracking-wide bg-[#00AEEF]/10 text-[#00AEEF] rounded-full px-2.5 py-0.5 inline-block whitespace-nowrap">Size: {product.size}</span>
+                    )}
+                  </div>
                 </div>
                 <div className="text-lg font-black text-[#00AEEF] shrink-0">
                   {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
@@ -231,8 +236,15 @@ function ProductDetailPage({
             />
           )}
           <h2 className="text-3xl font-black text-slate-900 mb-3 leading-tight">{product.name}</h2>
-          <div className="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-md text-sm font-mono tracking-wide mb-6 border border-slate-200">
-            {product.code}
+          <div className="flex flex-wrap items-center gap-2 mb-6">
+            <div className="inline-block bg-slate-100 text-slate-600 px-3 py-1 rounded-md text-sm font-mono tracking-wide border border-slate-200">
+              {product.code}
+            </div>
+            {product.size && (
+              <div className="inline-block bg-[#00AEEF]/10 text-[#00AEEF] px-3 py-1 rounded-md text-sm font-mono tracking-wide border border-[#00AEEF]/20">
+                Size: {product.size}
+              </div>
+            )}
           </div>
           <div className="text-5xl font-black text-[#00AEEF]">
             {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
@@ -647,7 +659,7 @@ export default function App() {
     "T": "T"
   };
 
-  const categories = ["All", ...Object.keys(categoryMapping)];
+  const categories = ["All", "Sanitary Ware", ...Object.keys(categoryMapping)];
 
   const filteredProducts = useMemo(() => {
     const filtered = products.filter(p => {
@@ -662,6 +674,8 @@ export default function App() {
       if (!matchesCategory) {
         if (selectedCategory === 'Sink') {
           matchesCategory = p.name.trim().toLowerCase().startsWith('kitchen sink');
+        } else if (selectedCategory === 'Sanitary Ware') {
+          matchesCategory = p.category === 'Sanitary Ware';
         } else {
           const mappedPrefix = categoryMapping[selectedCategory];
           matchesCategory = prefix === mappedPrefix;

@@ -2,4663 +2,4663 @@
   {
     "code": "RE 5101",
     "name": "Pillar Cock",
-    "price": 5850.0,
+    "price": 5850,
     "image": "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/fd22e41b47e672c9903f6abf901e22a71889eef8/public/Re%205101.bmp"
   },
   {
     "code": "RE 5102",
     "name": "Pillar Cock With '300mm' Extended Body",
-    "price": 9295.0
+    "price": 9295
   },
   {
     "code": "RE 5103",
     "name": "Bib Cock With Wall Flange",
-    "price": 4960.0
+    "price": 4960
   },
   {
     "code": "RE 5104",
     "name": "Bib Cock Long Nose With Wall Flange",
-    "price": 5395.0
+    "price": 5395
   },
   {
     "code": "RE 5105",
     "name": "Angle Cock With Wall Flange",
-    "price": 4210.0
+    "price": 4210
   },
   {
     "code": "RE 5106",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",
-    "price": 5420.0
+    "price": 5420
   },
   {
     "code": "RE 5107",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",
-    "price": 5930.0
+    "price": 5930
   },
   {
     "code": "RE 5108",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",
-    "price": 5675.0
+    "price": 5675
   },
   {
     "code": "RE 5109",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",
-    "price": 6185.0
+    "price": 6185
   },
   {
     "code": "RE 5110",
     "name": "Swan Neck With Casted Swivel Spout",
-    "price": 10240.0
+    "price": 10240
   },
   {
     "code": "RE 5111",
     "name": "Sink Cock With Casted Swivel Spout & Wall Flange",
-    "price": 10240.0
+    "price": 10240
   },
   {
     "code": "RE 5113",
     "name": "2-Way Bib Cock With Wall Flange",
-    "price": 7715.0
+    "price": 7715
   },
   {
     "code": "RE 5114",
     "name": "2-Way Angle Cock With Wall Flange",
-    "price": 7715.0
+    "price": 7715
   },
   {
     "code": "RE 5118",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 15490.0
+    "price": 15490
   },
   {
     "code": "RE 5118A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 16000.0
+    "price": 16000
   },
   {
     "code": "RE 5119",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 20745.0
+    "price": 20745
   },
   {
     "code": "RE 5120",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 20870.0
+    "price": 20870
   },
   {
     "code": "RE 5121",
     "name": "Wall Mixer With Tipton For Telephonic Shower System",
-    "price": 19850.0
+    "price": 19850
   },
   {
     "code": "RE 5122",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 17580.0
+    "price": 17580
   },
   {
     "code": "RE 5123",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 23700.0
+    "price": 23700
   },
   {
     "code": "RE 5124",
     "name": "Sink Mixer Wall Mounted With Casted Swivel Spout",
-    "price": 16690.0
+    "price": 16690
   },
   {
     "code": "RE 5128",
     "name": "Spout Plain With Wall Flange 15 mm",
-    "price": 5215.0
+    "price": 5215
   },
   {
     "code": "RE 5129",
     "name": "Spout Tipton With Wall Flange & Provision For Telephonic Shower",
-    "price": 6925.0
+    "price": 6925
   },
   {
     "code": "RE 5141",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 21405.0
+    "price": 21405
   },
   {
     "code": "RE 5142",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 18015.0
+    "price": 18015
   },
   {
     "code": "RE 5143",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 19535.0
+    "price": 19535
   },
   {
     "code": "RE 5143A",
     "name": "Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",
-    "price": 7485.0
+    "price": 7485
   },
   {
     "code": "RE 5146D",
     "name": "Single Lever Sink/Basin Mixer High Neck",
-    "price": 15950.0
+    "price": 15950
   },
   {
     "code": "RE 5147",
     "name": "Single  Lever Basin Mixer Wall Mounted",
-    "price": 21610.0
+    "price": 21610
   },
   {
     "code": "RE 5147A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 11410.0
+    "price": 11410
   },
   {
     "code": "RE 5149",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 20475.0
+    "price": 20475
   },
   {
     "code": "RE 5149A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 7485.0
+    "price": 7485
   },
   {
     "code": "RE 5150",
     "name": "Single Lever Sink Mixer Wall Mounted High Neck",
-    "price": 17300.0
+    "price": 17300
   },
   {
     "code": "EU 4501",
     "name": "Pillar Cock",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "EU 4502",
     "name": "Pillar Cock With '300mm' Extended Body",
-    "price": 8655.0
+    "price": 8655
   },
   {
     "code": "EU 4503",
     "name": "Bib Cock With Wall Flange",
-    "price": 4830.0
+    "price": 4830
   },
   {
     "code": "EU 4504",
     "name": "Bib Cock Long Nose With Wall Flange",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "EU 4505",
     "name": "Angle Cock With Wall Flange",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "EU 4506",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "EU 4507",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",
-    "price": 5850.0
+    "price": 5850
   },
   {
     "code": "EU 4508",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",
-    "price": 5595.0
+    "price": 5595
   },
   {
     "code": "EU 4509",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",
-    "price": 6105.0
+    "price": 6105
   },
   {
     "code": "EU 4510",
     "name": "Swan Neck With Casted Swivel Spout",
-    "price": 10495.0
+    "price": 10495
   },
   {
     "code": "EU 4511",
     "name": "Sink Cock With Casted Swivel Spout & Wall Flange",
-    "price": 10495.0
+    "price": 10495
   },
   {
     "code": "EU 4513",
     "name": "2-Way Bib Cock With Wall Flange",
-    "price": 8145.0
+    "price": 8145
   },
   {
     "code": "EU 4514",
     "name": "2-Way Angle Cock With Wall Flange",
-    "price": 8145.0
+    "price": 8145
   },
   {
     "code": "EU 4515",
     "name": "Bath Cock With Wall Flange",
-    "price": 8095.0
+    "price": 8095
   },
   {
     "code": "EU 4518",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 15030.0
+    "price": 15030
   },
   {
     "code": "EU 4518A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 15540.0
+    "price": 15540
   },
   {
     "code": "8295",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 21050.0
+    "price": 21050
   },
   {
     "code": "EU 4520",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 21150.0
+    "price": 21150
   },
   {
     "code": "EU 4521",
     "name": "Wall Mixer With Tipton For Telephonic Shower System",
-    "price": 20465.0
+    "price": 20465
   },
   {
     "code": "EU 4522",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 18015.0
+    "price": 18015
   },
   {
     "code": "EU 4523",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 24060.0
+    "price": 24060
   },
   {
     "code": "EU 4524",
     "name": "Sink Mixer Wall Mounted With Casted Swivel Spout",
-    "price": 16690.0
+    "price": 16690
   },
   {
     "code": "EU 4528",
     "name": "Spout Plain With Wall Flange 15 mm",
-    "price": 4630.0
+    "price": 4630
   },
   {
     "code": "EU 4529",
     "name": "Spout Tipton With Wall Flange & Provision For Telephonic Shower",
-    "price": 6870.0
+    "price": 6870
   },
   {
     "code": "EU 4532",
     "name": "Shower Arm With Wall Flange",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "EU 4533",
     "name": "Overhead Shower (Hex)",
-    "price": 2995.0
+    "price": 2995
   },
   {
     "code": "EU 4534",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "EU 4541",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 19545.0
+    "price": 19545
   },
   {
     "code": "EU 4542",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 14980.0
+    "price": 14980
   },
   {
     "code": "EU 4543",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 19535.0
+    "price": 19535
   },
   {
     "code": "EU 4543A",
     "name": "Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",
-    "price": 7485.0
+    "price": 7485
   },
   {
     "code": "EU 4544",
     "name": "Single Lever Wall Mixer With Telephonic Shower Arrangement",
-    "price": 21050.0
+    "price": 21050
   },
   {
     "code": "EU 4545",
     "name": "Single Lever Wall Mixer W/O Telephonic Shower Arrangement",
-    "price": 19545.0
+    "price": 19545
   },
   {
     "code": "EU 4546",
     "name": "Single Lever Sink Mixer With Swinging Spout",
-    "price": 15035.0
+    "price": 15035
   },
   {
     "code": "EU 4546A",
     "name": "Single Lever Sink Mixer Table Mounted",
-    "price": 12330.0
+    "price": 12330
   },
   {
     "code": "EU 4547",
     "name": "Single  Lever Basin Mixer Wall Mounted",
-    "price": 21025.0
+    "price": 21025
   },
   {
     "code": "EU 4547A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 10825.0
+    "price": 10825
   },
   {
     "code": "EU 4549",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 20475.0
+    "price": 20475
   },
   {
     "code": "EU 4549A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 7485.0
+    "price": 7485
   },
   {
     "code": "EU 4550",
     "name": "Single Lever Sink Mixture Wall Mounted High Neck",
-    "price": 17325.0
+    "price": 17325
   },
   {
     "code": "INS 2601",
     "name": "Pillar Cock",
-    "price": 5010.0
+    "price": 5010
   },
   {
     "code": "INS 2604",
     "name": "Bib Cock Long Nose With Wall Flange",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "INS 2604B",
     "name": "Bib Cock Long Nose 25mm",
-    "price": 6615.0
+    "price": 6615
   },
   {
     "code": "INS 2604S",
     "name": "Bib Cock Long Nose Straight Line With Wall Flange",
-    "price": 5520.0
+    "price": 5520
   },
   {
     "code": "INS 2605",
     "name": "Angle Cock With Wall Flange",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "INS 2607",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",
-    "price": 5850.0
+    "price": 5850
   },
   {
     "code": "INS 2609",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",
-    "price": 6105.0
+    "price": 6105
   },
   {
     "code": "INS 2610",
     "name": "Swan Neck With Round Swivel Spout",
-    "price": 7180.0
+    "price": 7180
   },
   {
     "code": "INS 2611",
     "name": "Sink Cock With Round Swivel Spout & Wall Flange",
-    "price": 7180.0
+    "price": 7180
   },
   {
     "code": "INS 2613",
     "name": "2-Way Bib Cock With Wall Flange",
-    "price": 6870.0
+    "price": 6870
   },
   {
     "code": "INS 2614",
     "name": "2-Way Angle Cock With Wall Flange",
-    "price": 6870.0
+    "price": 6870
   },
   {
     "code": "INS 2615",
     "name": "Bath Cock With Wall Flange",
-    "price": 7510.0
+    "price": 7510
   },
   {
     "code": "INS 2618",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 12560.0
+    "price": 12560
   },
   {
     "code": "INS 2618A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 13070.0
+    "price": 13070
   },
   {
     "code": "INS 2619",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 19620.0
+    "price": 19620
   },
   {
     "code": "INS 2620",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 19750.0
+    "price": 19750
   },
   {
     "code": "INS 2621",
     "name": "Wall Mixer With Tipton For Telephonic Shower System",
-    "price": 18575.0
+    "price": 18575
   },
   {
     "code": "INS 2622",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 16050.0
+    "price": 16050
   },
   {
     "code": "INS 2623",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 22935.0
+    "price": 22935
   },
   {
     "code": "INS 2624",
     "name": "Sink Mixer Wall Mounted With Round Swivel Spout",
-    "price": 14265.0
+    "price": 14265
   },
   {
     "code": "INS 2628",
     "name": "Spout Plain With Wall Flange",
-    "price": 5060.0
+    "price": 5060
   },
   {
     "code": "INS 2629",
     "name": "Spout Tipton With Wall Flange & Provision For Telephonic Shower",
-    "price": 7050.0
+    "price": 7050
   },
   {
     "code": "INS 2632",
     "name": "Shower Arm With Wall Flange",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "INS 2633",
     "name": "Over Head Shower (Piston)",
-    "price": 1925.0
+    "price": 1925
   },
   {
     "code": "INS 2634",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "INS 2641",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 16050.0
+    "price": 16050
   },
   {
     "code": "INS 2642",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 12735.0
+    "price": 12735
   },
   {
     "code": "INS  2643",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 18235.0
+    "price": 18235
   },
   {
     "code": "INS 2643A",
     "name": "Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",
-    "price": 6185.0
+    "price": 6185
   },
   {
     "code": "INS 2647",
     "name": "Single  Lever Basin Mixer Wall Mounted",
-    "price": 21065.0
+    "price": 21065
   },
   {
     "code": "INS 2647A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 10875.0
+    "price": 10875
   },
   {
     "code": "INS 2649",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 19175.0
+    "price": 19175
   },
   {
     "code": "INS 2649A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 6185.0
+    "price": 6185
   },
   {
     "code": "INR 2401",
     "name": "Pillar Cock",
-    "price": 4550.0
+    "price": 4550
   },
   {
     "code": "INR 2402",
     "name": "Pillar Cock With '300mm' Extended Body",
-    "price": 7970.0
+    "price": 7970
   },
   {
     "code": "INR 2403",
     "name": "Bib Cock",
-    "price": 4195.0
+    "price": 4195
   },
   {
     "code": "INR 2404",
     "name": "Bib Cock Long Nose",
-    "price": 4375.0
+    "price": 4375
   },
   {
     "code": "INR 2405",
     "name": "Angle Cock",
-    "price": 3890.0
+    "price": 3890
   },
   {
     "code": "INR 2406",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "INR 2407",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",
-    "price": 5595.0
+    "price": 5595
   },
   {
     "code": "INR 2408",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "INR 2409",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",
-    "price": 5850.0
+    "price": 5850
   },
   {
     "code": "INR 2410",
     "name": "Swan Neck With Round Swivel Spout",
-    "price": 6820.0
+    "price": 6820
   },
   {
     "code": "INR 2411",
     "name": "Sink Cock With Round Swivel Spout",
-    "price": 6670.0
+    "price": 6670
   },
   {
     "code": "INR 2413",
     "name": "2-Way Bib Cock",
-    "price": 6870.0
+    "price": 6870
   },
   {
     "code": "INR 2414",
     "name": "2-Way Angle Cock",
-    "price": 6670.0
+    "price": 6670
   },
   {
     "code": "INR 2418",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 11565.0
+    "price": 11565
   },
   {
     "code": "INR 2418A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 12075.0
+    "price": 12075
   },
   {
     "code": "INR 2419",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 17430.0
+    "price": 17430
   },
   {
     "code": "INR 2420",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 17555.0
+    "price": 17555
   },
   {
     "code": "INR 2422",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 14010.0
+    "price": 14010
   },
   {
     "code": "INR 2423",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 21740.0
+    "price": 21740
   },
   {
     "code": "INR 2424",
     "name": "Sink Mixer Wall Mounted With Round Swivel Spout",
-    "price": 13630.0
+    "price": 13630
   },
   {
     "code": "INR 2428",
     "name": "Spout Plain",
-    "price": 3635.0
+    "price": 3635
   },
   {
     "code": "INR 2429",
     "name": "Spout Tipton With Provision For Telephonic Shower",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "INR 2432",
     "name": "Shower Arm",
-    "price": 2665.0
+    "price": 2665
   },
   {
     "code": "INR 2433",
     "name": "Over Head Shower (Piston)",
-    "price": 1925.0
+    "price": 1925
   },
   {
     "code": "INR 2434",
     "name": "Telephonic Shower With 1.5 mtr. CP Tube & Hook",
-    "price": 3635.0
+    "price": 3635
   },
   {
     "code": "INR 2441",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 16050.0
+    "price": 16050
   },
   {
     "code": "INR 2442",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses(New)",
-    "price": 12735.0
+    "price": 12735
   },
   {
     "code": "INR 2443",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 18235.0
+    "price": 18235
   },
   {
     "code": "INR 2443A",
     "name": "Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",
-    "price": 6185.0
+    "price": 6185
   },
   {
     "code": "INR 2446A",
     "name": "Single Lever Sink Mixer Table Mounted",
-    "price": 12330.0
+    "price": 12330
   },
   {
     "code": "INR 2446B",
     "name": "Single Lever Sink/Basin Mixer With J Type Spout",
-    "price": 14010.0
+    "price": 14010
   },
   {
     "code": "INR 2446C",
     "name": "Single Lever Sink/Basin Mixer With Spring  Type Spout",
-    "price": 41820.0
+    "price": 41820
   },
   {
     "code": "INR 2446D",
     "name": "Single Lever Sink/Basin Mixer High Neck",
-    "price": 15110.0
+    "price": 15110
   },
   {
     "code": "INR 2447",
     "name": "Single  Lever Basin Mixer Wall Mounted",
-    "price": 18945.0
+    "price": 18945
   },
   {
     "code": "INR 2447A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 8910.0
+    "price": 8910
   },
   {
     "code": "INR 2448",
     "name": "Single Lever Concealed Deusch Mixer with Provision for Connection to Overhead Shower only",
-    "price": 10505.0
+    "price": 10505
   },
   {
     "code": "INR 2449",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 19175.0
+    "price": 19175
   },
   {
     "code": "INR 2449A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 6185.0
+    "price": 6185
   },
   {
     "code": "INR 2450",
     "name": "Single Lever Sink Mixer Wall Mounted High Neck",
-    "price": 16305.0
+    "price": 16305
   },
   {
     "code": "BL 1001",
     "name": "Pillar Cock",
-    "price": 4500.0
+    "price": 4500
   },
   {
     "code": "BL 1003",
     "name": "Bib Cock With Wall Flange",
-    "price": 4040.0
+    "price": 4040
   },
   {
     "code": "BL 1003A",
     "name": "Bib Cock With Nozzle & Wall Flange",
-    "price": 3275.0
+    "price": 3275
   },
   {
     "code": "BL 1004",
     "name": "Bib Cock Long Nose With Wall Flange",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "BL 1004A",
     "name": "Bib Cock Long Body With Wall Flange",
-    "price": 4230.0
+    "price": 4230
   },
   {
     "code": "BL 1005",
     "name": "Angle Cock With Wall Flange",
-    "price": 3125.0
+    "price": 3125
   },
   {
     "code": "BL 1006",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "BL 1008",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "BL 1010",
     "name": "Swan Neck With Casted Swivel Spout",
-    "price": 7305.0
+    "price": 7305
   },
   {
     "code": "BL 1011",
     "name": "Sink Cock With Casted Swivel Spout & Wall Flange",
-    "price": 7305.0
+    "price": 7305
   },
   {
     "code": "BL 1013",
     "name": "2-Way Bib Cock With Wall Flange",
-    "price": 6615.0
+    "price": 6615
   },
   {
     "code": "BL 1014",
     "name": "2-Way Angle Cock With Wall Flange",
-    "price": 6615.0
+    "price": 6615
   },
   {
     "code": "BL 1015",
     "name": "Bath Cock With Wall Flange",
-    "price": 7500.0
+    "price": 7500
   },
   {
     "code": "BL 1018",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 11820.0
+    "price": 11820
   },
   {
     "code": "BL 1018A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 12330.0
+    "price": 12330
   },
   {
     "code": "BL 1019",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 16640.0
+    "price": 16640
   },
   {
     "code": "BL 1020",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 16765.0
+    "price": 16765
   },
   {
     "code": "BL 1021",
     "name": "Wall Mixer With Tipton For Telephonic Shower System",
-    "price": 16050.0
+    "price": 16050
   },
   {
     "code": "BL 1022",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 12815.0
+    "price": 12815
   },
   {
     "code": "BL 1023",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 19620.0
+    "price": 19620
   },
   {
     "code": "BL 1024",
     "name": "Sink Mixer Wall Mounted With Casted Swivel Spout",
-    "price": 12735.0
+    "price": 12735
   },
   {
     "code": "BL 1028",
     "name": "Spout Plain With Wall Flange '15mm'",
-    "price": 3555.0
+    "price": 3555
   },
   {
     "code": "BL 1029",
     "name": "Spout Tipton With Wall Flange & Provision For Telephonic Shower",
-    "price": 5725.0
+    "price": 5725
   },
   {
     "code": "BL 1032",
     "name": "Shower Arm With Wall Flange",
-    "price": 2665.0
+    "price": 2665
   },
   {
     "code": "BL 1033",
     "name": "Over Head Shower (Regular)",
-    "price": 2080.0
+    "price": 2080
   },
   {
     "code": "BL 1034",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 3710.0
+    "price": 3710
   },
   {
     "code": "SL 8601",
     "name": "Pillar Cock",
-    "price": 3785.0
+    "price": 3785
   },
   {
     "code": "SL 8601B",
     "name": "Pillar Cock B (Long)",
-    "price": 5570.0
+    "price": 5570
   },
   {
     "code": "SL 8602",
     "name": "Pillar Cock With '300mm' Extended Body",
-    "price": 7635.0
+    "price": 7635
   },
   {
     "code": "SL 8603",
     "name": "Bib Cock",
-    "price": 4525.0
+    "price": 4525
   },
   {
     "code": "SL 8604",
     "name": "Bib Cock Long Nose",
-    "price": 4830.0
+    "price": 4830
   },
   {
     "code": "SL 8605",
     "name": "Angle Cock",
-    "price": 3125.0
+    "price": 3125
   },
   {
     "code": "SL 8606",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "SL 8607",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm' Heavy",
-    "price": 5595.0
+    "price": 5595
   },
   {
     "code": "SL 8608",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",
-    "price": 5595.0
+    "price": 5595
   },
   {
     "code": "SL 8609",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm' Heavy",
-    "price": 6105.0
+    "price": 6105
   },
   {
     "code": "SL 8610",
     "name": "Swan Neck With Round Swivel Spout",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "SL 8611",
     "name": "Sink Cock With Round Swivel Spout",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "SL 8613",
     "name": "2-Way Bib Cock",
-    "price": 5850.0
+    "price": 5850
   },
   {
     "code": "SL 8614",
     "name": "2-Way Angle Cock",
-    "price": 5850.0
+    "price": 5850
   },
   {
     "code": "SL 8618",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 11970.0
+    "price": 11970
   },
   {
     "code": "SL 8618A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 12480.0
+    "price": 12480
   },
   {
     "code": "SL 8619",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 16055.0
+    "price": 16055
   },
   {
     "code": "SL 8620",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 16180.0
+    "price": 16180
   },
   {
     "code": "SL 8621",
     "name": "Wall Mixer Tipton for Telephonic Shower System",
-    "price": 15540.0
+    "price": 15540
   },
   {
     "code": "SL 8622",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 13500.0
+    "price": 13500
   },
   {
     "code": "SL 8623",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 18855.0
+    "price": 18855
   },
   {
     "code": "SL 8624",
     "name": "Sink Mixer Wall Mounted With Round Swivel Spout",
-    "price": 12815.0
+    "price": 12815
   },
   {
     "code": "SL 8628",
     "name": "Spout Plain '15mm'",
-    "price": 4985.0
+    "price": 4985
   },
   {
     "code": "SL 8629",
     "name": "Spout Tipton With Provision For Telephonic Shower",
-    "price": 6615.0
+    "price": 6615
   },
   {
     "code": "SL 8641",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 16050.0
+    "price": 16050
   },
   {
     "code": "SL 8642",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 12990.0
+    "price": 12990
   },
   {
     "code": "SL 8643",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 18450.0
+    "price": 18450
   },
   {
     "code": "SL 8643A",
     "name": "Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",
-    "price": 6400.0
+    "price": 6400
   },
   {
     "code": "SL 8646D",
     "name": "Single Lever Sink/Basin Mixture Table Mounted High Neck",
-    "price": 15110.0
+    "price": 15110
   },
   {
     "code": "SL 8647",
     "name": "Single Lever Basin Mixer Wall Mounted",
-    "price": 20885.0
+    "price": 20885
   },
   {
     "code": "SL 8647A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 10695.0
+    "price": 10695
   },
   {
     "code": "SL 8648",
     "name": "Single Lever Deusch Mixer",
-    "price": 10505.0
+    "price": 10505
   },
   {
     "code": "SL 8649",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 19395.0
+    "price": 19395
   },
   {
     "code": "SL 8649A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 6400.0
+    "price": 6400
   },
   {
     "code": "SL 8650",
     "name": "Single Lever Sink Mixer Wall Mounted High Neck",
-    "price": 16305.0
+    "price": 16305
   },
   {
     "code": "SL 8663",
     "name": "Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 21510.0
+    "price": 21510
   },
   {
     "code": "SL 8669",
     "name": "3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 22455.0
+    "price": 22455
   },
   {
     "code": "VS 7701",
     "name": "Pillar Cock",
-    "price": 4145.0
+    "price": 4145
   },
   {
     "code": "VS 7701B",
     "name": "Pillar Cock",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "VS 7702",
     "name": "Pillar Cock With '300mm' Extended Body",
-    "price": 7815.0
+    "price": 7815
   },
   {
     "code": "VS 7703",
     "name": "Bib Cock",
-    "price": 3555.0
+    "price": 3555
   },
   {
     "code": "VS 7704",
     "name": "Bib Cock Long Nose",
-    "price": 3865.0
+    "price": 3865
   },
   {
     "code": "VS 7705",
     "name": "Angle Cock",
-    "price": 2995.0
+    "price": 2995
   },
   {
     "code": "VS 7706",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",
-    "price": 4575.0
+    "price": 4575
   },
   {
     "code": "VS 7708",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",
-    "price": 4910.0
+    "price": 4910
   },
   {
     "code": "VS 7710",
     "name": "Swan Neck With Round Swivel Spout",
-    "price": 6310.0
+    "price": 6310
   },
   {
     "code": "VS 7711",
     "name": "Sink Cock With Round Swivel Spout",
-    "price": 6310.0
+    "price": 6310
   },
   {
     "code": "VS 7713",
     "name": "2-Way Bib Cock",
-    "price": 5725.0
+    "price": 5725
   },
   {
     "code": "VS 7714",
     "name": "2-Way Angle Cock",
-    "price": 5725.0
+    "price": 5725
   },
   {
     "code": "VS 7718",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 11105.0
+    "price": 11105
   },
   {
     "code": "VS 7718A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 11615.0
+    "price": 11615
   },
   {
     "code": "VS 7719",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 14775.0
+    "price": 14775
   },
   {
     "code": "VS 7720",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 14905.0
+    "price": 14905
   },
   {
     "code": "VS 7722",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 12225.0
+    "price": 12225
   },
   {
     "code": "VS 7723",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 17660.0
+    "price": 17660
   },
   {
     "code": "VS 7724",
     "name": "Sink Mixer Wall Mounted With Round Swivel Spout",
-    "price": 12480.0
+    "price": 12480
   },
   {
     "code": "VS 7728",
     "name": "Spout Plain With Wall Flange",
-    "price": 4830.0
+    "price": 4830
   },
   {
     "code": "VS 7729",
     "name": "Spout Tipton With Wall Flange & Provision For Telephonic Shower",
-    "price": 6745.0
+    "price": 6745
   },
   {
     "code": "VS 7741",
     "name": "Single Lever Basin Mixer With Ext, Body",
-    "price": 20385.0
+    "price": 20385
   },
   {
     "code": "VS 7742",
     "name": "Single Lever Basin Mixer With 450 mm long Braided Hoses",
-    "price": 16815.0
+    "price": 16815
   },
   {
     "code": "VS 7743",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 18745.0
+    "price": 18745
   },
   {
     "code": "VS 7743A",
     "name": "Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",
-    "price": 6695.0
+    "price": 6695
   },
   {
     "code": "VS 7749",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 21805.0
+    "price": 21805
   },
   {
     "code": "VS 7749A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 6695.0
+    "price": 6695
   },
   {
     "code": "VS 7763",
     "name": "Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 21510.0
+    "price": 21510
   },
   {
     "code": "VS 7769",
     "name": "3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 22455.0
+    "price": 22455
   },
   {
     "code": "NK 7501",
     "name": "Pillar Cock",
-    "price": 3685.0
+    "price": 3685
   },
   {
     "code": "NK 7501B",
     "name": "Pillar Cock B (Long)",
-    "price": 5570.0
+    "price": 5570
   },
   {
     "code": "NK 7502",
     "name": "Pillar Cock With '300mm' Extended Body",
-    "price": 7635.0
+    "price": 7635
   },
   {
     "code": "NK 7503",
     "name": "Bib Cock",
-    "price": 3455.0
+    "price": 3455
   },
   {
     "code": "NK 7504",
     "name": "Bib Cock Long Nose",
-    "price": 3610.0
+    "price": 3610
   },
   {
     "code": "NK 7505",
     "name": "Angle Cock",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "NK 7506",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",
-    "price": 4145.0
+    "price": 4145
   },
   {
     "code": "NK 7508",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",
-    "price": 4655.0
+    "price": 4655
   },
   {
     "code": "NK 7510",
     "name": "Swan Neck With Round Swivel Spout",
-    "price": 6160.0
+    "price": 6160
   },
   {
     "code": "NK 7511",
     "name": "Sink Cock With Round Swivel Spout",
-    "price": 6160.0
+    "price": 6160
   },
   {
     "code": "NK 7513",
     "name": "2-Way Bib Cock",
-    "price": 5545.0
+    "price": 5545
   },
   {
     "code": "NK 7514",
     "name": "2-Way Angle Cock",
-    "price": 5545.0
+    "price": 5545
   },
   {
     "code": "NK 7518",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 9880.0
+    "price": 9880
   },
   {
     "code": "NK 7518A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 10390.0
+    "price": 10390
   },
   {
     "code": "NK 7519",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 14395.0
+    "price": 14395
   },
   {
     "code": "NK 7520",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 14520.0
+    "price": 14520
   },
   {
     "code": "NK 7521",
     "name": "Wall Mixer With Tipton For Telephonic Shower System",
-    "price": 13885.0
+    "price": 13885
   },
   {
     "code": "NK 7522",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 11895.0
+    "price": 11895
   },
   {
     "code": "NK 7523",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 17325.0
+    "price": 17325
   },
   {
     "code": "NK 7524",
     "name": "Sink Mixer Wall Mounted With Round Swivel Spout",
-    "price": 11030.0
+    "price": 11030
   },
   {
     "code": "NK 7528",
     "name": "Spout Plain '15mm'",
-    "price": 4170.0
+    "price": 4170
   },
   {
     "code": "NK 7529",
     "name": "Spout Tipton With Provision For Telephonic Shower",
-    "price": 6160.0
+    "price": 6160
   },
   {
     "code": "NK 7541",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 14265.0
+    "price": 14265
   },
   {
     "code": "NK 7542",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 11285.0
+    "price": 11285
   },
   {
     "code": "NK 7543",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 18410.0
+    "price": 18410
   },
   {
     "code": "NK 7543A",
     "name": "Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "NK 7546B",
     "name": "Single Lever Sink/Basin Mixer With J Type Spout",
-    "price": 14010.0
+    "price": 14010
   },
   {
     "code": "NK 7546D",
     "name": "Single Lever Sink/Basin Mixer High Neck",
-    "price": 15110.0
+    "price": 15110
   },
   {
     "code": "NK 7547",
     "name": "Single Lever Basin Mixer Wall Mounted",
-    "price": 19560.0
+    "price": 19560
   },
   {
     "code": "NK 7547A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 9370.0
+    "price": 9370
   },
   {
     "code": "NK 7549",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 19355.0
+    "price": 19355
   },
   {
     "code": "NK 7549A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "NK 7550",
     "name": "Single Lever Sink Mixer Wall Mounted High Neck",
-    "price": 16305.0
+    "price": 16305
   },
   {
     "code": "NK 7563",
     "name": "Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 21510.0
+    "price": 21510
   },
   {
     "code": "NK 7569",
     "name": "3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 22455.0
+    "price": 22455
   },
   {
     "code": "ZE 501",
     "name": "Pillar Cock",
-    "price": 3610.0
+    "price": 3610
   },
   {
     "code": "ZE 503",
     "name": "Bib Cock",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "ZE 503A",
     "name": "Bib Cock With Nozzle",
-    "price": 2895.0
+    "price": 2895
   },
   {
     "code": "ZE 504",
     "name": "Bib Cock Long Nose",
-    "price": 3555.0
+    "price": 3555
   },
   {
     "code": "ZE 504A",
     "name": "Bib Cock Long Body",
-    "price": 3555.0
+    "price": 3555
   },
   {
     "code": "ZE 505",
     "name": "Angle Cock",
-    "price": 2665.0
+    "price": 2665
   },
   {
     "code": "ZE 506",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",
-    "price": 4145.0
+    "price": 4145
   },
   {
     "code": "ZE 508",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",
-    "price": 4655.0
+    "price": 4655
   },
   {
     "code": "ZE 510",
     "name": "Swan Neck With Casted Swivel Spout",
-    "price": 6285.0
+    "price": 6285
   },
   {
     "code": "ZE 511",
     "name": "Sink Cock With Casted Swivel Spout",
-    "price": 6285.0
+    "price": 6285
   },
   {
     "code": "ZE 513",
     "name": "2-Way Bib Cock",
-    "price": 5930.0
+    "price": 5930
   },
   {
     "code": "ZE 514",
     "name": "2-Way Angle Cock",
-    "price": 5930.0
+    "price": 5930
   },
   {
     "code": "ZE",
     "name": "Wall Flange (Optional)",
-    "price": 155.0
+    "price": 155
   },
   {
     "code": "ZE 518",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 9625.0
+    "price": 9625
   },
   {
     "code": "ZE 518A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 10135.0
+    "price": 10135
   },
   {
     "code": "ZE 519",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 14010.0
+    "price": 14010
   },
   {
     "code": "ZE 520",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 14140.0
+    "price": 14140
   },
   {
     "code": "ZE 521",
     "name": "Wall Mixer With Tipton For Telephonic Shower System",
-    "price": 13605.0
+    "price": 13605
   },
   {
     "code": "ZE 522",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 12125.0
+    "price": 12125
   },
   {
     "code": "ZE 523",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 17325.0
+    "price": 17325
   },
   {
     "code": "ZE 524",
     "name": "Sink Mixer Wall Mounted With Casted Swivel Spout",
-    "price": 11205.0
+    "price": 11205
   },
   {
     "code": "ZE 528",
     "name": "Spout Plain '15mm'",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "ZE 529",
     "name": "Spout Tipton With Provision For Telephonic Shower",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "ZE 532",
     "name": "Shower Arm",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "ZE 533",
     "name": "Over Head Shower",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "ZE 534",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 3200.0
+    "price": 3200
   },
   {
     "code": "VN 7401",
     "name": "Pillar Cock",
-    "price": 3505.0
+    "price": 3505
   },
   {
     "code": "VN 7401B",
     "name": "Pillar Cock B (Long)",
-    "price": 5570.0
+    "price": 5570
   },
   {
     "code": "VN 7402",
     "name": "Pillar Cock With '300mm' Extended Body",
-    "price": 7635.0
+    "price": 7635
   },
   {
     "code": "VN 7403",
     "name": "Bib Cock",
-    "price": 3020.0
+    "price": 3020
   },
   {
     "code": "VN 7404",
     "name": "Bib Cock Long Nose",
-    "price": 3275.0
+    "price": 3275
   },
   {
     "code": "VN 7405",
     "name": "Angle Cock",
-    "price": 2590.0
+    "price": 2590
   },
   {
     "code": "VN 7406",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",
-    "price": 3940.0
+    "price": 3940
   },
   {
     "code": "VN 7408",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",
-    "price": 4575.0
+    "price": 4575
   },
   {
     "code": "VN 7410",
     "name": "Swan Neck With Round Swivel Spout",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "VN 7411",
     "name": "Sink Cock With Round Swivel Spout",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "VN 7413",
     "name": "2-Way Bib Cock",
-    "price": 5395.0
+    "price": 5395
   },
   {
     "code": "VN 7414",
     "name": "2-Way Angle Cock",
-    "price": 5395.0
+    "price": 5395
   },
   {
     "code": "VN 7418",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 8910.0
+    "price": 8910
   },
   {
     "code": "VN 7418A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 9675.0
+    "price": 9675
   },
   {
     "code": "VN 7419",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 12735.0
+    "price": 12735
   },
   {
     "code": "VN 7420",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 13120.0
+    "price": 13120
   },
   {
     "code": "VN 7421",
     "name": "Wall Mixer Tipton For Telephonic Shower System",
-    "price": 12480.0
+    "price": 12480
   },
   {
     "code": "VN 7422",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 10440.0
+    "price": 10440
   },
   {
     "code": "VN 7423",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 16305.0
+    "price": 16305
   },
   {
     "code": "VN 7424",
     "name": "Sink Mixer Wall Mounted With Round Swivel Spout",
-    "price": 10595.0
+    "price": 10595
   },
   {
     "code": "VN 7428",
     "name": "Spout Plain '15mm'",
-    "price": 3635.0
+    "price": 3635
   },
   {
     "code": "VN 7429",
     "name": "Spout Tipton",
-    "price": 6030.0
+    "price": 6030
   },
   {
     "code": "VN 7441",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 13245.0
+    "price": 13245
   },
   {
     "code": "VN 7442",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 10265.0
+    "price": 10265
   },
   {
     "code": "VN 7443",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 18235.0
+    "price": 18235
   },
   {
     "code": "VN 7443A",
     "name": "Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",
-    "price": 6185.0
+    "price": 6185
   },
   {
     "code": "VN 7447",
     "name": "Single Lever Basin Mixer Wall Mounted",
-    "price": 19535.0
+    "price": 19535
   },
   {
     "code": "VN 7447A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 9345.0
+    "price": 9345
   },
   {
     "code": "VN 7449",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 19175.0
+    "price": 19175
   },
   {
     "code": "VN 7449A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 6185.0
+    "price": 6185
   },
   {
     "code": "VN 7463",
     "name": "Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 21510.0
+    "price": 21510
   },
   {
     "code": "VN 7469",
     "name": "3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 22455.0
+    "price": 22455
   },
   {
     "code": "HD 301",
     "name": "Pillar Cock",
-    "price": 3125.0
+    "price": 3125
   },
   {
     "code": "HD 303",
     "name": "Bib Cock",
-    "price": 2665.0
+    "price": 2665
   },
   {
     "code": "HD 304",
     "name": "Bib Cock Long Nose",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HD 305",
     "name": "Angle Cock",
-    "price": 2205.0
+    "price": 2205
   },
   {
     "code": "HD 306",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "HD 308",
     "name": "Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",
-    "price": 4400.0
+    "price": 4400
   },
   {
     "code": "HD 310",
     "name": "Swan Neck With Round Swivel Spout",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "HD 311",
     "name": "Sink Cock With Round Swivel Spout",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "HD 313",
     "name": "2-Way Bib Cock",
-    "price": 5265.0
+    "price": 5265
   },
   {
     "code": "HD 314",
     "name": "2-Way Angle Cock",
-    "price": 5265.0
+    "price": 5265
   },
   {
     "code": "HD 318",
     "name": "Central Hole Basin Mixer With Connecting Legs",
-    "price": 8735.0
+    "price": 8735
   },
   {
     "code": "HD 318A",
     "name": "Central Hole Basin Mixer With Braided Hose Set",
-    "price": 9245.0
+    "price": 9245
   },
   {
     "code": "HD 319",
     "name": "Wall Mixer With L-Bend For Overhead Shower System",
-    "price": 11460.0
+    "price": 11460
   },
   {
     "code": "HD 320",
     "name": "Wall Mixer With Arrangement For Telephonic Shower",
-    "price": 11590.0
+    "price": 11590
   },
   {
     "code": "HD 322",
     "name": "Wall Mixer Non Telephonic Shower System",
-    "price": 10265.0
+    "price": 10265
   },
   {
     "code": "HD 323",
     "name": "Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",
-    "price": 14775.0
+    "price": 14775
   },
   {
     "code": "HD 324",
     "name": "Sink Mixer Wall Mounted With Round Swivel Spout",
-    "price": 9370.0
+    "price": 9370
   },
   {
     "code": "HD 341",
     "name": "Single Lever Basin Mixer With Extended Body",
-    "price": 11920.0
+    "price": 11920
   },
   {
     "code": "HD 342",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 8860.0
+    "price": 8860
   },
   {
     "code": "HD 342H",
     "name": "Single Lever Basin Mixer With 450 mm Long Braided Hoses",
-    "price": 9755.0
+    "price": 9755
   },
   {
     "code": "HD 343",
     "name": "Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",
-    "price": 17085.0
+    "price": 17085
   },
   {
     "code": "HD 343A",
     "name": "Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",
-    "price": 5035.0
+    "price": 5035
   },
   {
     "code": "HD 346D",
     "name": "Single Lever Sink/Basin Mixture Table Mounted High Neck",
-    "price": 15110.0
+    "price": 15110
   },
   {
     "code": "HD 347",
     "name": "Single Lever Basin Mixer Wall Mounted",
-    "price": 19280.0
+    "price": 19280
   },
   {
     "code": "HD 347A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 9090.0
+    "price": 9090
   },
   {
     "code": "HD 349",
     "name": "3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",
-    "price": 18030.0
+    "price": 18030
   },
   {
     "code": "HD 349A",
     "name": "3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",
-    "price": 5035.0
+    "price": 5035
   },
   {
     "code": "HD 350",
     "name": "Single Lever Sink Mixer Wall Mounted High Neck",
-    "price": 16305.0
+    "price": 16305
   },
   {
     "code": "HD 363",
     "name": "Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 21510.0
+    "price": 21510
   },
   {
     "code": "HD 369",
     "name": "3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4\"",
-    "price": 22455.0
+    "price": 22455
   },
   {
     "code": "CR 7036",
     "name": "Kitchen Filter Faucet",
-    "price": 18475.0
+    "price": 18475
   },
   {
     "code": "CR 7037",
     "name": "Dual Lever RO Filter Faucet",
-    "price": 14265.0
+    "price": 14265
   },
   {
     "code": "CR 7042",
     "name": "Single Lever Basin Mixer",
-    "price": 23780.0
+    "price": 23780
   },
   {
     "code": "CR 7042 M",
     "name": "Single Lever Basin Mixer With Medium Long Spout",
-    "price": 9320.0
+    "price": 9320
   },
   {
     "code": "CR 7046B",
     "name": "Single Lever Sink/Basin Mixer Table Mounted With Swan Type Neck",
-    "price": 24010.0
+    "price": 24010
   },
   {
     "code": "CR 7046PR",
     "name": "Single Lever Sink Mixer Table Mounted With Pull Out Spout(Round)",
-    "price": 19110.0
+    "price": 19110
   },
   {
     "code": "CR 7046PS",
     "name": "Single Lever Sink Mixer Table Mounted With Pull Out Spout(Square)",
-    "price": 19110.0
+    "price": 19110
   },
   {
     "code": "CR 7046PW",
     "name": "Single Lever Sink Mixer Table Mounted With Pull Out Spout Water Fall",
-    "price": 19110.0
+    "price": 19110
   },
   {
     "code": "EKO 146P",
     "name": "Single Lever Sink/Basin Mixer Table Mounted With Pull Out Spout",
-    "price": 12990.0
+    "price": 12990
   },
   {
     "code": "DN 9141",
     "name": "Single Lever Basin Mixture Extended Body",
-    "price": 11770.0
+    "price": 11770
   },
   {
     "code": "DN 9142",
     "name": "Single Lever Basin Mixture",
-    "price": 8735.0
+    "price": 8735
   },
   {
     "code": "AT 941",
     "name": "Single Lever Basin Mixture Extended Body",
-    "price": 15465.0
+    "price": 15465
   },
   {
     "code": "AT 942",
     "name": "Single Lever Basin Mixture",
-    "price": 11515.0
+    "price": 11515
   },
   {
     "code": "PR 8041 C",
     "name": "Single Lever Basin Mixture Extended Body",
-    "price": 13400.0
+    "price": 13400
   },
   {
     "code": "PR 8042 C",
     "name": "Single Lever Basin Mixture",
-    "price": 10315.0
+    "price": 10315
   },
   {
     "code": "EKO 141 N",
     "name": "Single Lever Basin Mixture Ext Body",
-    "price": 10645.0
+    "price": 10645
   },
   {
     "code": "EKO 142",
     "name": "Single Lever Basin Mixer with 450 mm Long Braided Hoses",
-    "price": 10265.0
+    "price": 10265
   },
   {
     "code": "EKO 142 N",
     "name": "Single Lever Basin Mixture",
-    "price": 8860.0
+    "price": 8860
   },
   {
     "code": "EKO 143",
     "name": "Single Lever Concealed Divertor With 35 mm Cartridge For Spout & Overhead Shower System",
-    "price": 13300.0
+    "price": 13300
   },
   {
     "code": "EKO 143A",
     "name": "Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343 A )",
-    "price": 4145.0
+    "price": 4145
   },
   {
     "code": "EKO 146",
     "name": "Single Lever Sink Mixer Wall Mounted With Swinging Spout",
-    "price": 14240.0
+    "price": 14240
   },
   {
     "code": "EKO 146 A",
     "name": "Single Lever Sink Mixer Table Mounted With Base Emerging Spout",
-    "price": 12330.0
+    "price": 12330
   },
   {
     "code": "EKO 146 P",
     "name": "Single Lever Sink Mixer Table Mounted With Pull Out Spout",
-    "price": 13680.0
+    "price": 13680
   },
   {
     "code": "EKO 147",
     "name": "Single Lever Basin Mixer Wall Mounted",
-    "price": 19620.0
+    "price": 19620
   },
   {
     "code": "EKO 147A",
     "name": "Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",
-    "price": 9420.0
+    "price": 9420
   },
   {
     "code": "AL 306",
     "name": "Concealed Stop Cock Body 15 mm(Light)",
-    "price": 2615.0
+    "price": 2615
   },
   {
     "code": "AL 305",
     "name": "Concealed Stop Cock Body 15 mm(Regular)",
-    "price": 2995.0
+    "price": 2995
   },
   {
     "code": "AL 307",
     "name": "Concealed Stop Cock Body 15 mm (Heavy)",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "AL 308",
     "name": "Concealed Stop Cock Body 20 mm",
-    "price": 3200.0
+    "price": 3200
   },
   {
     "code": "AL 309",
     "name": "Concealed Stop Cock Body 20 mm (Heavy)",
-    "price": 3965.0
+    "price": 3965
   },
   {
     "code": "AL 343",
     "name": "Concealed Body For Single Lever Hi-Flow Divertor With Button Assembly & Cartridge but Without Exposed Part",
-    "price": 12050.0
+    "price": 12050
   },
   {
     "code": "AL 343A",
     "name": "Concealed Body For Single Lever Divertor, 35 mm Cartridge With Button Assembly but Without Exposed Part",
-    "price": 9115.0
+    "price": 9115
   },
   {
     "code": "AL 347",
     "name": "Concealed Body For Single Lever Basin Mixer With Cartridge but Without Exposed Part",
-    "price": 10185.0
+    "price": 10185
   },
   {
     "code": "AL 349",
     "name": "Concealed Body For 3 inlet Single Lever Hi-Flow Divertor With Button Assembly & Cartridge but Without Exposed Part",
-    "price": 12990.0
+    "price": 12990
   },
   {
     "code": "AL 363",
     "name": "Concealed Body For Single Lever Hi-Flow Divertor Without Exposed Part 3/4",
-    "price": 15110.0
+    "price": 15110
   },
   {
     "code": "AL 369",
     "name": "Concealed Body For 3 inlet Divertor Without Exposed Part",
-    "price": 16050.0
+    "price": 16050
   },
   {
     "code": "T 37",
     "name": "Flush Cock Half Turn 25mm",
-    "price": 5265.0
+    "price": 5265
   },
   {
     "code": "T 38",
     "name": "Flush Cock Push Button 25mm",
-    "price": 7305.0
+    "price": 7305
   },
   {
     "code": "T 39",
     "name": "Flush Cock Lever Tpe 25mm",
-    "price": 7305.0
+    "price": 7305
   },
   {
     "code": "T 40",
     "name": "Metropole Flush Valve 32mm",
-    "price": 14010.0
+    "price": 14010
   },
   {
     "code": "T 51",
     "name": "Surgical Pillar Cock",
-    "price": 6440.0
+    "price": 6440
   },
   {
     "code": "T 54",
     "name": "Surgical Long Nose Bib Cock",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "T 57",
     "name": "Surgical Single Lever Mixture Wall Mounted",
-    "price": 14675.0
+    "price": 14675
   },
   {
     "code": "T 61",
     "name": "Pressmatic Auto Closing Pillar Cock",
-    "price": 6540.0
+    "price": 6540
   },
   {
     "code": "T 63",
     "name": "Pressmatic Auto Closing Bib Cock",
-    "price": 6415.0
+    "price": 6415
   },
   {
     "code": "T 65",
     "name": "Pressmatic Auto Closing Angle Cock",
-    "price": 5700.0
+    "price": 5700
   },
   {
     "code": "T 96",
     "name": "Waste Coupling (POP UP) Chrome",
-    "price": 1315.0
+    "price": 1315
   },
   {
     "code": "T 96 L",
     "name": "Waste Coupling (POP UP) Chrome Long",
-    "price": 1850.0
+    "price": 1850
   },
   {
     "code": "T 96 EL",
     "name": "Waste Coupling (POP UP) Chrome Extra Long",
-    "price": 2715.0
+    "price": 2715
   },
   {
     "code": "T 96 EEL",
     "name": "Waste Coupling (POP UP) Chrome extra extra Long 9\"",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "T 97",
     "name": "Waste Coupling (POP UP) Chrome Ceramic",
-    "price": 1440.0
+    "price": 1440
   },
   {
     "code": "T 97 L",
     "name": "Waste Coupling (POP UP) Chrome Long Ceramic",
-    "price": 2130.0
+    "price": 2130
   },
   {
     "code": "T 97 EL",
     "name": "Waste Coupling (POP UP) Chrome Extra Long Ceramic",
-    "price": 2995.0
+    "price": 2995
   },
   {
     "code": "T 98",
     "name": "Waste Coupling (POP UP) Chrome (Heavy)",
-    "price": 2590.0
+    "price": 2590
   },
   {
     "code": "T 98 L",
     "name": "Waste Coupling (POP UP) Brass (Heavy) Long",
-    "price": 3100.0
+    "price": 3100
   },
   {
     "code": "T 98 EL",
     "name": "Waste Coupling (POP UP) Brass (Heavy) Extra Long",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "T 99",
     "name": "Waste Coupling (POP UP) Brass Ceramic (Heavy)",
-    "price": 2740.0
+    "price": 2740
   },
   {
     "code": "T 99 L",
     "name": "Waste Coupling (POP UP) Brass Ceramic (Heavy) Long",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "T 99 EL",
     "name": "Waste Coupling (POP UP) Brass Ceramic (Heavy) Extra Long",
-    "price": 3940.0
+    "price": 3940
   },
   {
     "code": "T 100",
     "name": "Waste Coupling (POP UP) Brass (Med)",
-    "price": 2025.0
+    "price": 2025
   },
   {
     "code": "T 100 L",
     "name": "Waste Coupling (POP UP) Brass Long (Med)",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "T 100 BK",
     "name": "Waste Coupling (POP UP) Brass  Black",
-    "price": 2360.0
+    "price": 2360
   },
   {
     "code": "T 100 LBK",
     "name": "Waste Coupling (POP UP) Brass Long Black",
-    "price": 3125.0
+    "price": 3125
   },
   {
     "code": "T 100 ELBK",
     "name": "Waste Coupling (POP UP) Brass Extra Long Black",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "T 100 RG",
     "name": "Waste Coupling (POP UP) Brass Gold/Rose Gold",
-    "price": 2485.0
+    "price": 2485
   },
   {
     "code": "T 100 LRG",
     "name": "Waste Coupling (POP UP) Brass Long Gold/Rose Gold",
-    "price": 3430.0
+    "price": 3430
   },
   {
     "code": "T 100 ELRG",
     "name": "Waste Coupling (POP UP) Brass Extra Long Gold/Rose Gold",
-    "price": 4575.0
+    "price": 4575
   },
   {
     "code": "T 101",
     "name": "Waste Coupling (POP UP) Brass Ceramic",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "T 101 L",
     "name": "Waste Coupling (POP UP) Brass Long Ceramic",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "T 102 HT",
     "name": "Waste Coupling Chrome Half Thread",
-    "price": 905.0
+    "price": 905
   },
   {
     "code": "T 102 FT",
     "name": "Waste Coupling Chrome Full Thread",
-    "price": 905.0
+    "price": 905
   },
   {
     "code": "T 102 L",
     "name": "Waste Coupling Chrome long",
-    "price": 1595.0
+    "price": 1595
   },
   {
     "code": "T 102 FLT",
     "name": "Waste Coupling Chrome Flat",
-    "price": 905.0
+    "price": 905
   },
   {
     "code": "T 102 EL",
     "name": "Waste Coupling Chrome Extra Long",
-    "price": 2230.0
+    "price": 2230
   },
   {
     "code": "T 103 HT",
     "name": "Waste Coupling Brass Half Thread",
-    "price": 1875.0
+    "price": 1875
   },
   {
     "code": "T 103 FT",
     "name": "Waste Coupling Brass Full Thread",
-    "price": 1875.0
+    "price": 1875
   },
   {
     "code": "T 103 L",
     "name": "Waste Coupling Brass Long",
-    "price": 2845.0
+    "price": 2845
   },
   {
     "code": "T 104SQ",
     "name": "Waste Coupling (POP UP) Square",
-    "price": 3355.0
+    "price": 3355
   },
   {
     "code": "MG 5051",
     "name": "Towel Rail 24\"",
-    "price": 5420.0
+    "price": 5420
   },
   {
     "code": "MG 5053",
     "name": "Towel Ring",
-    "price": 3890.0
+    "price": 3890
   },
   {
     "code": "MG 5054",
     "name": "Soap Dish",
-    "price": 4210.0
+    "price": 4210
   },
   {
     "code": "MG 5055",
     "name": "Tooth Brush Holder",
-    "price": 4210.0
+    "price": 4210
   },
   {
     "code": "MG 5056",
     "name": "Robe Hook",
-    "price": 2335.0
+    "price": 2335
   },
   {
     "code": "MG 5057",
     "name": "Set Of 5 Pieces",
-    "price": 20055.0
+    "price": 20055
   },
   {
     "code": "MG 5058",
     "name": "Toilet Paper Holder",
-    "price": 3660.0
+    "price": 3660
   },
   {
     "code": "MG 5058A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 4270.0
+    "price": 4270
   },
   {
     "code": "OP 2051",
     "name": "Towel Rail 24\"",
-    "price": 5395.0
+    "price": 5395
   },
   {
     "code": "OP 2053",
     "name": "Towel Ring",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "OP 2054",
     "name": "Soap Dish",
-    "price": 4360.0
+    "price": 4360
   },
   {
     "code": "OP 2055",
     "name": "Tooth Brush Holder",
-    "price": 4360.0
+    "price": 4360
   },
   {
     "code": "OP 2056",
     "name": "Robe Hook",
-    "price": 2385.0
+    "price": 2385
   },
   {
     "code": "OP 2057",
     "name": "Set Of 5 Pieces",
-    "price": 19675.0
+    "price": 19675
   },
   {
     "code": "OP 2058",
     "name": "Toilet Paper Holder",
-    "price": 3225.0
+    "price": 3225
   },
   {
     "code": "OP 2058A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "ZE 551",
     "name": "Towel Rail 24\"",
-    "price": 5060.0
+    "price": 5060
   },
   {
     "code": "ZE 553",
     "name": "Towel Ring",
-    "price": 2590.0
+    "price": 2590
   },
   {
     "code": "ZE 554",
     "name": "Soap Dish",
-    "price": 2665.0
+    "price": 2665
   },
   {
     "code": "ZE 555",
     "name": "Tooth Brush Holder",
-    "price": 2690.0
+    "price": 2690
   },
   {
     "code": "ZE 556",
     "name": "Robe Hook",
-    "price": 1570.0
+    "price": 1570
   },
   {
     "code": "ZE 557",
     "name": "Set Of 5 Pieces",
-    "price": 14575.0
+    "price": 14575
   },
   {
     "code": "ZE 558",
     "name": "Toilet Paper Holder",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "ZE 558A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 2920.0
+    "price": 2920
   },
   {
     "code": "T 151",
     "name": "Towel Rail 24\"",
-    "price": 3505.0
+    "price": 3505
   },
   {
     "code": "T 153",
     "name": "Towel Ring",
-    "price": 2180.0
+    "price": 2180
   },
   {
     "code": "T 154",
     "name": "Soap Dish",
-    "price": 1875.0
+    "price": 1875
   },
   {
     "code": "T 155",
     "name": "Tooth Brush Holder",
-    "price": 2230.0
+    "price": 2230
   },
   {
     "code": "T 156",
     "name": "Robe Hook",
-    "price": 1440.0
+    "price": 1440
   },
   {
     "code": "T 157",
     "name": "Set Of 5 Pieces",
-    "price": 11180.0
+    "price": 11180
   },
   {
     "code": "T 158",
     "name": "Toilet Paper Holder",
-    "price": 1975.0
+    "price": 1975
   },
   {
     "code": "T 158A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "SQ 151",
     "name": "Towel Rail 24\"",
-    "price": 2360.0
+    "price": 2360
   },
   {
     "code": "SQ 153",
     "name": "Towel Ring",
-    "price": 1770.0
+    "price": 1770
   },
   {
     "code": "SQ 154",
     "name": "Soap Dish",
-    "price": 1720.0
+    "price": 1720
   },
   {
     "code": "SQ 155",
     "name": "Tooth Brush Holder",
-    "price": 1850.0
+    "price": 1850
   },
   {
     "code": "SQ 156",
     "name": "Robe Hook",
-    "price": 1210.0
+    "price": 1210
   },
   {
     "code": "SQ 157",
     "name": "Set Of 5 Pieces",
-    "price": 8910.0
+    "price": 8910
   },
   {
     "code": "SQ 157A",
     "name": "Set Of 4 Pieces",
-    "price": 7635.0
+    "price": 7635
   },
   {
     "code": "SQ 158A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 2360.0
+    "price": 2360
   },
   {
     "code": "C 151",
     "name": "Towel Rail 24\"",
-    "price": 2360.0
+    "price": 2360
   },
   {
     "code": "C 153",
     "name": "Towel Ring",
-    "price": 1770.0
+    "price": 1770
   },
   {
     "code": "C 154",
     "name": "Soap Dish",
-    "price": 1720.0
+    "price": 1720
   },
   {
     "code": "C 155",
     "name": "Tooth Brush Holder",
-    "price": 1850.0
+    "price": 1850
   },
   {
     "code": "C 156",
     "name": "Robe Hook",
-    "price": 1210.0
+    "price": 1210
   },
   {
     "code": "C 157",
     "name": "Set Of 5 Pieces",
-    "price": 8910.0
+    "price": 8910
   },
   {
     "code": "C 157 A",
     "name": "Set Of 4 Pieces",
-    "price": 7635.0
+    "price": 7635
   },
   {
     "code": "C 158",
     "name": "Toilet Paper Holder",
-    "price": 1770.0
+    "price": 1770
   },
   {
     "code": "C 158 A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 2205.0
+    "price": 2205
   },
   {
     "code": "SL 8651",
     "name": "Towel Rail 24\"",
-    "price": 5060.0
+    "price": 5060
   },
   {
     "code": "SL 8653",
     "name": "Towel Ring",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "SL 8654",
     "name": "Soap Dish",
-    "price": 2335.0
+    "price": 2335
   },
   {
     "code": "SL 8655",
     "name": "Tooth Brush Holder",
-    "price": 2410.0
+    "price": 2410
   },
   {
     "code": "SL 8656",
     "name": "Robe Hook",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "SL 8657 A",
     "name": "Set Of 4 Pieces",
-    "price": 12595.0
+    "price": 12595
   },
   {
     "code": "SL 8658 A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 3380.0
+    "price": 3380
   },
   {
     "code": "SL 8650",
     "name": "Soap Dispensor With Stand",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "EU 4551",
     "name": "Towel Rail 24\"",
-    "price": 4655.0
+    "price": 4655
   },
   {
     "code": "EU 4553",
     "name": "Towel Ring",
-    "price": 3355.0
+    "price": 3355
   },
   {
     "code": "EU 4554",
     "name": "Soap Dish",
-    "price": 3250.0
+    "price": 3250
   },
   {
     "code": "EU 4555",
     "name": "Tooth Brush Holder",
-    "price": 3250.0
+    "price": 3250
   },
   {
     "code": "EU 4556",
     "name": "Robe Hook",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "EU 4557",
     "name": "Set Of 5 Pieces",
-    "price": 15540.0
+    "price": 15540
   },
   {
     "code": "EU 4557A",
     "name": "Set Of 4 Pieces",
-    "price": 14625.0
+    "price": 14625
   },
   {
     "code": "EU 4558A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "HR 6051",
     "name": "Towel Rail 24\"",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "HR 6053",
     "name": "Towel Ring",
-    "price": 2435.0
+    "price": 2435
   },
   {
     "code": "HR 6054",
     "name": "Soap Dish",
-    "price": 2485.0
+    "price": 2485
   },
   {
     "code": "HR 6055",
     "name": "Tooth Brush Holder",
-    "price": 2180.0
+    "price": 2180
   },
   {
     "code": "HR 6056",
     "name": "Robe Hook",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "HR 6057A",
     "name": "Set Of 4 Pieces",
-    "price": 10950.0
+    "price": 10950
   },
   {
     "code": "NK 7551",
     "name": "Towel Rail 24\"",
-    "price": 3380.0
+    "price": 3380
   },
   {
     "code": "NK 7553",
     "name": "Towel Ring",
-    "price": 2335.0
+    "price": 2335
   },
   {
     "code": "NK 7554",
     "name": "Soap Dish",
-    "price": 1950.0
+    "price": 1950
   },
   {
     "code": "NK 7555",
     "name": "Tooth Brush Holder",
-    "price": 2025.0
+    "price": 2025
   },
   {
     "code": "NK 7556",
     "name": "Robe Hook",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "NK 7557 A",
     "name": "Set Of 4 Pieces",
-    "price": 9625.0
+    "price": 9625
   },
   {
     "code": "NK 7558 A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "NK 7550",
     "name": "Soap Dispensor With Stand",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "AT 951",
     "name": "Towel Rail 24\"",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "AT 953",
     "name": "Towel Ring",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "AT 954",
     "name": "Soap Dish",
-    "price": 2510.0
+    "price": 2510
   },
   {
     "code": "AT 955",
     "name": "Tooth Brush Holder",
-    "price": 2510.0
+    "price": 2510
   },
   {
     "code": "AT 956",
     "name": "Robe Hook",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "AT 957A",
     "name": "Set Of 4 Pieces",
-    "price": 12915.0
+    "price": 12915
   },
   {
     "code": "AT 958A",
     "name": "Toilet Paper Holder With Flap",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "AT 950",
     "name": "Soap Dispensor With Stand",
-    "price": 3430.0
+    "price": 3430
   },
   {
     "code": "AR 6551",
     "name": "Towel Rail 24\"",
-    "price": 3380.0
+    "price": 3380
   },
   {
     "code": "AR 6553",
     "name": "Towel Ring",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "AR 6554",
     "name": "Soap Dish",
-    "price": 1925.0
+    "price": 1925
   },
   {
     "code": "AR 6555",
     "name": "Tooth Brush Holder",
-    "price": 1925.0
+    "price": 1925
   },
   {
     "code": "AR 6556",
     "name": "Robe Hook",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "AR 6557A",
     "name": "Set Of 4 Pieces",
-    "price": 9575.0
+    "price": 9575
   },
   {
     "code": "NK 7551 BK",
     "name": "Towel Rail 24\"Black",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "NK 7553 BK",
     "name": "Towel Ring Black",
-    "price": 2995.0
+    "price": 2995
   },
   {
     "code": "NK 7554 BK",
     "name": "Soap Dish Black",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "NK 7555 BK",
     "name": "Tooth Brush Holder Black",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "NK 7556 BK",
     "name": "Robe Hook Black",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "NK 7557 ABK",
     "name": "Set Of 4 Pieces Black",
-    "price": 12395.0
+    "price": 12395
   },
   {
     "code": "NK 7558 ABK",
     "name": "Toilet Paper Holder With Flap Black",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "NK 7551",
     "name": "Towel Rail 24\" Antique/Rose Gold",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "NK 7553",
     "name": "Towel Ring Antique/Rose Gold",
-    "price": 3505.0
+    "price": 3505
   },
   {
     "code": "NK 7554",
     "name": "Soap Dish Antique/Rose Gold",
-    "price": 2920.0
+    "price": 2920
   },
   {
     "code": "NK 7555",
     "name": "Tooth Brush Holder Antique/Rose Gold",
-    "price": 2920.0
+    "price": 2920
   },
   {
     "code": "NK 7556",
     "name": "Robe Hook Antique/Rose Gold",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "NK 7557 A",
     "name": "Set Of 4 Pieces Antique/Rose Gold",
-    "price": 14435.0
+    "price": 14435
   },
   {
     "code": "NK 7558 ARG",
     "name": "Toilet Paper Holder With Flap Antique/Rose Gold",
-    "price": 4705.0
+    "price": 4705
   },
   {
     "code": "T 159A",
     "name": "Towel Rack Round",
-    "price": 9320.0
+    "price": 9320
   },
   {
     "code": "T 159B",
     "name": "Towel Rack Oval",
-    "price": 13425.0
+    "price": 13425
   },
   {
     "code": "T 159C",
     "name": "Towel Rack Square",
-    "price": 15850.0
+    "price": 15850
   },
   {
     "code": "SL 8659",
     "name": "Towel Rack Oval New",
-    "price": 5595.0
+    "price": 5595
   },
   {
     "code": "C 159",
     "name": "Towel Rack Chrome",
-    "price": 7330.0
+    "price": 7330
   },
   {
     "code": "GB 12",
     "name": "Grab Bar Dome Crome",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "GB 22",
     "name": "Grab Bar Round Crome",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "GB 32",
     "name": "Grab Bar Round Heavy Brass",
-    "price": 3125.0
+    "price": 3125
   },
   {
     "code": "SD 54 A",
     "name": "Soap Dish Round",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "SD 54 B",
     "name": "Soap Dish Oval",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "SD 54 C",
     "name": "Soap Dish Square",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "SD 55",
     "name": "Soap Dish SL Type",
-    "price": 1900.0
+    "price": 1900
   },
   {
     "code": "SD 56",
     "name": "Soap Dish Square Flat",
-    "price": 2335.0
+    "price": 2335
   },
   {
     "code": "T 150A",
     "name": "Corner 9\"X9\" Plain",
-    "price": 2845.0
+    "price": 2845
   },
   {
     "code": "T 150B",
     "name": "Corner 12\"X12\" Plain",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "T 150C",
     "name": "Shelf 5.5\"X14\" Plain",
-    "price": 2920.0
+    "price": 2920
   },
   {
     "code": "T 150D",
     "name": "Shelf 5.5\"X18\" Plain",
-    "price": 3355.0
+    "price": 3355
   },
   {
     "code": "T 150AF",
     "name": "Corner 9\"X9\" Frosted",
-    "price": 3100.0
+    "price": 3100
   },
   {
     "code": "T 150BF",
     "name": "Corner 12\"X12\" Frosted",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 150CF",
     "name": "Shelf 5.5\"X14\" Plain Frosted",
-    "price": 3225.0
+    "price": 3225
   },
   {
     "code": "T 150DF",
     "name": "Shelf 5.5\"X18\" Plain Frosted",
-    "price": 3685.0
+    "price": 3685
   },
   {
     "code": "EU 4534",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 4830.0
+    "price": 4830
   },
   {
     "code": "OL 3034",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 4550.0
+    "price": 4550
   },
   {
     "code": "INR 2434",
     "name": "Telephonic Shower With 1.5 mtr. CP Tube & Hook",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "BL 1034",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "ZE 534",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "RE 5134",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Square",
-    "price": 5470.0
+    "price": 5470
   },
   {
     "code": "SL 8634",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Round",
-    "price": 5470.0
+    "price": 5470
   },
   {
     "code": "NK 7534",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Leaf",
-    "price": 5470.0
+    "price": 5470
   },
   {
     "code": "VN 7434",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Leaf Fish",
-    "price": 4270.0
+    "price": 4270
   },
   {
     "code": "VS 7734",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Leaf Select",
-    "price": 4550.0
+    "price": 4550
   },
   {
     "code": "TS 1057/ Hades",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Leaf Slim",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "TS 1050",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Leaf Blister",
-    "price": 3940.0
+    "price": 3940
   },
   {
     "code": "TS 1025",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Leaf Square",
-    "price": 4195.0
+    "price": 4195
   },
   {
     "code": "TS 1009",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Leaf 5 Way",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "TS 79",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Hexa",
-    "price": 3250.0
+    "price": 3250
   },
   {
     "code": "TS 84",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Disc",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "TS 90",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Sieve",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "TS 109",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Atom",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "TS 109L",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Atom Hydroelectrical",
-    "price": 9040.0
+    "price": 9040
   },
   {
     "code": "TS 230",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Euphoria Square",
-    "price": 6105.0
+    "price": 6105
   },
   {
     "code": "TS 231",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Euphoria Round",
-    "price": 6105.0
+    "price": 6105
   },
   {
     "code": "TS 231BK",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Euphoria Round Black",
-    "price": 7890.0
+    "price": 7890
   },
   {
     "code": "TS 231RG",
     "name": "Telephonic Shower With 1.5 mtr.CP Tube & Hook Euphoria Round Gold/Rose Gold",
-    "price": 9165.0
+    "price": 9165
   },
   {
     "code": "ZE 532/33",
     "name": "ZE Shower With Arm",
-    "price": 2625.0
+    "price": 2625
   },
   {
     "code": "BL 1032/33",
     "name": "BL Shower With Arm",
-    "price": 2780.0
+    "price": 2780
   },
   {
     "code": "INR 2432/33",
     "name": "INR Shower With Arm",
-    "price": 2650.0
+    "price": 2650
   },
   {
     "code": "OL 3032/33",
     "name": "OL Shower With Arm",
-    "price": 3380.0
+    "price": 3380
   },
   {
     "code": "EU 4532/33",
     "name": "EU Shower With Arm",
-    "price": 3545.0
+    "price": 3545
   },
   {
     "code": "T 180",
     "name": "Shower Square 4\"X4\"  Regular",
-    "price": 2870.0
+    "price": 2870
   },
   {
     "code": "T 180A",
     "name": "Shower Square 4\"X4\" Ultra Slim",
-    "price": 1720.0
+    "price": 1720
   },
   {
     "code": "T 180B",
     "name": "Shower Square 4\"X4\" Amaze/Drizzle",
-    "price": 2180.0
+    "price": 2180
   },
   {
     "code": "T 180C",
     "name": "Shower Square 4\"X4\" Arc Edge",
-    "price": 1770.0
+    "price": 1770
   },
   {
     "code": "T 180D",
     "name": "Shower Square 4\"X4\" Choller",
-    "price": 2080.0
+    "price": 2080
   },
   {
     "code": "T 180E",
     "name": "Shower Square 4\"X4\" Elegant",
-    "price": 2155.0
+    "price": 2155
   },
   {
     "code": "T 181",
     "name": "Shower Square 6\"X6\" Regular",
-    "price": 5340.0
+    "price": 5340
   },
   {
     "code": "T 181A",
     "name": "Shower Square 6\"X6\" Ultra Slim",
-    "price": 2320.0
+    "price": 2320
   },
   {
     "code": "T 181B",
     "name": "Shower Square 6\"X6\" Amaze/Drizzle",
-    "price": 3495.0
+    "price": 3495
   },
   {
     "code": "T 181C",
     "name": "Shower Square 6\"X6\" Arc Edge",
-    "price": 4120.0
+    "price": 4120
   },
   {
     "code": "T 181D",
     "name": "Shower Square 6\"X6\" Choller",
-    "price": 3100.0
+    "price": 3100
   },
   {
     "code": "T 181E",
     "name": "Shower Square 6\"X6\" Elegant",
-    "price": 3495.0
+    "price": 3495
   },
   {
     "code": "T 181EBK",
     "name": "Shower Square 6\"X6\" Elegant Black",
-    "price": 7125.0
+    "price": 7125
   },
   {
     "code": "T 181ERG",
     "name": "Shower Square 6\"X6\" Elegant Gold/Rose Gold",
-    "price": 7125.0
+    "price": 7125
   },
   {
     "code": "T 181F",
     "name": "Shower Square 6\"X6\" 4 Hole",
-    "price": 3530.0
+    "price": 3530
   },
   {
     "code": "T 182",
     "name": "Shower Square 8\"X8\" Regular",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "T 182A",
     "name": "Shower Square 8'X8\" Ultra Slim",
-    "price": 2820.0
+    "price": 2820
   },
   {
     "code": "T 182B",
     "name": "Shower Square 8\"X8\"  Amaze/Drizzle",
-    "price": 4885.0
+    "price": 4885
   },
   {
     "code": "T 182C",
     "name": "Shower Square 8\"X8\"  Arc Edge",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "T 182D",
     "name": "Shower Square 8\"X8\"  Choller",
-    "price": 4780.0
+    "price": 4780
   },
   {
     "code": "T 182E",
     "name": "Shower Square 8\"X8\"  Elegant",
-    "price": 4885.0
+    "price": 4885
   },
   {
     "code": "T 182EBK",
     "name": "Shower Square 8\"X8\"  Elegant Black",
-    "price": 10185.0
+    "price": 10185
   },
   {
     "code": "T 182ERG",
     "name": "Shower Square 8\"X8\"  Elegant Rose Gold",
-    "price": 10185.0
+    "price": 10185
   },
   {
     "code": "T 182EG",
     "name": "Shower Square 8\"X8\"  Elegant Gold",
-    "price": 10185.0
+    "price": 10185
   },
   {
     "code": "T 182F",
     "name": "Shower Square 8\"X8\"  4 Hole",
-    "price": 5010.0
+    "price": 5010
   },
   {
     "code": "T 183A",
     "name": "Shower Square 10\"X10\" Ultra Slim",
-    "price": 5725.0
+    "price": 5725
   },
   {
     "code": "T 183B",
     "name": "Shower Square 10\"X10\" Amaze/Drizzle",
-    "price": 11155.0
+    "price": 11155
   },
   {
     "code": "T 183D",
     "name": "Shower Square 10\"X10\" Choler",
-    "price": 10185.0
+    "price": 10185
   },
   {
     "code": "T 183E",
     "name": "Shower Square 10\"X10\" Elegant",
-    "price": 11155.0
+    "price": 11155
   },
   {
     "code": "T 183F",
     "name": "Shower Square 10\"X10\" 4 Hole",
-    "price": 11665.0
+    "price": 11665
   },
   {
     "code": "T 184A",
     "name": "Shower Square 12\"X12\" Ultra Slim",
-    "price": 6875.0
+    "price": 6875
   },
   {
     "code": "T 184B",
     "name": "Shower Square 12\"X12\" Amaze/Drizzle",
-    "price": 13475.0
+    "price": 13475
   },
   {
     "code": "T 184D",
     "name": "Shower Square 12\"X12\" Choller",
-    "price": 12025.0
+    "price": 12025
   },
   {
     "code": "T 184E",
     "name": "Shower Square 12\"X12\" Elegant",
-    "price": 13475.0
+    "price": 13475
   },
   {
     "code": "T 184EBK",
     "name": "Shower Square 12\"X12\" Elegant Black",
-    "price": 25485.0
+    "price": 25485
   },
   {
     "code": "T 184ERG",
     "name": "Shower Square 12\"X12\" Elegant Gold/Rose Gold",
-    "price": 25485.0
+    "price": 25485
   },
   {
     "code": "T 184F",
     "name": "Shower Square 12\"X12\" 4 Hole",
-    "price": 13580.0
+    "price": 13580
   },
   {
     "code": "T 185B",
     "name": "Shower Square 16\"X16\" Amaze/Drizzle",
-    "price": 24775.0
+    "price": 24775
   },
   {
     "code": "T 185E",
     "name": "Shower Square 16\"X16\" Elegant",
-    "price": 24860.0
+    "price": 24860
   },
   {
     "code": "SH 1080",
     "name": "Shower Square 4\"X4\" Cozy",
-    "price": 1770.0
+    "price": 1770
   },
   {
     "code": "SH 1081",
     "name": "Shower Square 6\"X6\" Cozy",
-    "price": 3505.0
+    "price": 3505
   },
   {
     "code": "SH 1082",
     "name": "Shower Square 8\"X8\" Cozy",
-    "price": 4885.0
+    "price": 4885
   },
   {
     "code": "SH 2081",
     "name": "Shower Square 6\"X6\" Step",
-    "price": 3505.0
+    "price": 3505
   },
   {
     "code": "SH 2082",
     "name": "Shower Square 8\"X8\" Step",
-    "price": 4885.0
+    "price": 4885
   },
   {
     "code": "SH 3081",
     "name": "Shower Square 6\"X6\" My",
-    "price": 3100.0
+    "price": 3100
   },
   {
     "code": "T 192",
     "name": "Shower Round 4\" Regular",
-    "price": 2870.0
+    "price": 2870
   },
   {
     "code": "T 192IM",
     "name": "Shower Round 4\" Regular Economical",
-    "price": 1515.0
+    "price": 1515
   },
   {
     "code": "T 192A",
     "name": "Shower Round 4\" Ultra Slim",
-    "price": 1720.0
+    "price": 1720
   },
   {
     "code": "T 192B",
     "name": "Shower Round 4\" Amaze/Drizzle",
-    "price": 2180.0
+    "price": 2180
   },
   {
     "code": "T 192D",
     "name": "Shower Round 4\" Choller",
-    "price": 2080.0
+    "price": 2080
   },
   {
     "code": "T 193",
     "name": "Shower Round 5\" Regular",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "T 193IM",
     "name": "Shower Round 5\" Regular Economical",
-    "price": 2000.0
+    "price": 2000
   },
   {
     "code": "T 193 A",
     "name": "Shower Dome 5\" Round",
-    "price": 2640.0
+    "price": 2640
   },
   {
     "code": "T 193 B",
     "name": "Shower Dome 5\" Square",
-    "price": 2690.0
+    "price": 2690
   },
   {
     "code": "T 194",
     "name": "Shower Round 6\" Regular",
-    "price": 5445.0
+    "price": 5445
   },
   {
     "code": "T 194A",
     "name": "Shower Round 6\" Ultra Slim",
-    "price": 2335.0
+    "price": 2335
   },
   {
     "code": "T 194B",
     "name": "Shower Round 6\" Amaze/Drizzle",
-    "price": 3505.0
+    "price": 3505
   },
   {
     "code": "T 194D",
     "name": "Shower Round 6\" Choller",
-    "price": 3100.0
+    "price": 3100
   },
   {
     "code": "SH 1094",
     "name": "Shower Round 6\" My",
-    "price": 3100.0
+    "price": 3100
   },
   {
     "code": "T 195",
     "name": "Shower Round 8\" Regular",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "T 195A",
     "name": "Shower Round 8\" Ultra Slim",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "T 195B",
     "name": "Shower Round 8\" Amaze/Drizzle",
-    "price": 4885.0
+    "price": 4885
   },
   {
     "code": "T 195D",
     "name": "Shower Round 8\" Choller",
-    "price": 4780.0
+    "price": 4780
   },
   {
     "code": "T 196B",
     "name": "Shower Round 10\" Amaze/Drizzle",
-    "price": 10185.0
+    "price": 10185
   },
   {
     "code": "T 197B",
     "name": "Shower Round 12\" Amaze/Drizzle",
-    "price": 13475.0
+    "price": 13475
   },
   {
     "code": "T 198",
     "name": "Shower Oval 5\"X8\"",
-    "price": 3530.0
+    "price": 3530
   },
   {
     "code": "T 198A",
     "name": "Shower Oval 7\"X10\"",
-    "price": 5725.0
+    "price": 5725
   },
   {
     "code": "T 198B",
     "name": "Shower Oval 9\"X14\"",
-    "price": 12100.0
+    "price": 12100
   },
   {
     "code": "T 199",
     "name": "shower Leaf 4\"X6\"",
-    "price": 3275.0
+    "price": 3275
   },
   {
     "code": "T 199A",
     "name": "Shower Leaf 6\"X10\"",
-    "price": 5700.0
+    "price": 5700
   },
   {
     "code": "T 199B",
     "name": "Shower Leaf 8\"X12\"",
-    "price": 12735.0
+    "price": 12735
   },
   {
     "code": "SH 79",
     "name": "Shower 4\" Round Hexa",
-    "price": 1260.0
+    "price": 1260
   },
   {
     "code": "SH 80",
     "name": "Shower 6\" Round Disc",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "SH 81",
     "name": "Shower Globe Square",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "SH 82",
     "name": "Shower Globe Round",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "SH 83",
     "name": "Shower Solar",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "SH 84",
     "name": "Shower Disk",
-    "price": 6105.0
+    "price": 6105
   },
   {
     "code": "SH 85",
     "name": "Shower Mesh 10\" (Auto Cleaning)",
-    "price": 8400.0
+    "price": 8400
   },
   {
     "code": "SH 89",
     "name": "Shower Pearl",
-    "price": 4830.0
+    "price": 4830
   },
   {
     "code": "SH 90",
     "name": "Shower Sieve",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "SH 91",
     "name": "Shower Daimond Round",
-    "price": 13500.0
+    "price": 13500
   },
   {
     "code": "SH 92",
     "name": "Shower Daimond Rectangular",
-    "price": 13500.0
+    "price": 13500
   },
   {
     "code": "SH 93",
     "name": "Shower Diamond Rectangular 9\"X6\"",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "SH 94",
     "name": "Shower Rain Dance 8\"X14\"",
-    "price": 15030.0
+    "price": 15030
   },
   {
     "code": "SH 95",
     "name": "Shower Rain Dance 12\"",
-    "price": 14265.0
+    "price": 14265
   },
   {
     "code": "SH 96",
     "name": "Shower Statement 10\"X14\"",
-    "price": 12025.0
+    "price": 12025
   },
   {
     "code": "SH 97",
     "name": "Shower Euphoria 12\"",
-    "price": 11105.0
+    "price": 11105
   },
   {
     "code": "SH 97BG",
     "name": "Shower Euphoria 12\" Brush Gold",
-    "price": 17835.0
+    "price": 17835
   },
   {
     "code": "SH 98",
     "name": "Shower Mist 10\"",
-    "price": 12990.0
+    "price": 12990
   },
   {
     "code": "SH 99",
     "name": "Shower Filter",
-    "price": 4985.0
+    "price": 4985
   },
   {
     "code": "SH 101",
     "name": "Shower Lamp",
-    "price": 44230.0
+    "price": 44230
   },
   {
     "code": "SH 200",
     "name": "Rain Shower  8\"x 20\" Classic",
-    "price": 23395.0
+    "price": 23395
   },
   {
     "code": "SH 201",
     "name": "Rain Shower 10\"x 22\" Waterfall",
-    "price": 45885.0
+    "price": 45885
   },
   {
     "code": "SH 204",
     "name": "Shower 10\"x15\" Single Flow",
-    "price": 40020.0
+    "price": 40020
   },
   {
     "code": "SH 205",
     "name": "Shower 12\"x12\" Single Flow",
-    "price": 40020.0
+    "price": 40020
   },
   {
     "code": "SH 111",
     "name": "Shower 16\"x16\" Single Flow",
-    "price": 46395.0
+    "price": 46395
   },
   {
     "code": "SH 111BK",
     "name": "Shower 16\"x16\" Single Flow Black",
-    "price": 69730.0
+    "price": 69730
   },
   {
     "code": "SH 111RG",
     "name": "Shower 16\"x16\" Single Flow Rose Gold",
-    "price": 69730.0
+    "price": 69730
   },
   {
     "code": "SH 112L",
     "name": "Shower 16\"x16\" Dual Flow Rain & Mist with All Side LED",
-    "price": 86430.0
+    "price": 86430
   },
   {
     "code": "SH 212",
     "name": "Shower 16\"x18\" Dual Flow Rain & Mist",
-    "price": 67305.0
+    "price": 67305
   },
   {
     "code": "SH 213",
     "name": "Shower 16\"x18\" Triple Flow Rain & Mist with Water Fall",
-    "price": 73425.0
+    "price": 73425
   },
   {
     "code": "SH 213L",
     "name": "Shower 16\"x18\" Triple Flow Rain & Mist with Water Fall & LED",
-    "price": 79545.0
+    "price": 79545
   },
   {
     "code": "SH",
     "name": "Shower 20\"x20\" Dual Flow Rain & Mist",
-    "price": 79545.0
+    "price": 79545
   },
   {
     "code": "SH 312",
     "name": "Shower 20\"x22\" Dual Flow Rain & Mist",
-    "price": 79545.0
+    "price": 79545
   },
   {
     "code": "SH 313",
     "name": "Shower 20\"x22\" Triple Flow Rain & Mist with Water Fall",
-    "price": 87195.0
+    "price": 87195
   },
   {
     "code": "SH 313L",
     "name": "Shower 20\"x22\" Triple Flow Rain & Mist with Water Fall & LED",
-    "price": 94845.0
+    "price": 94845
   },
   {
     "code": "SH 313LBK",
     "name": "Shower 20\"x22\" Triple Flow Rain & Mist with Water Fall & LED Black",
-    "price": 142275.0
+    "price": 142275
   },
   {
     "code": "SH 313LRG",
     "name": "Shower 20\"x22\" Triple Flow Rain & Mist with Water Fall & LED Rose Gold",
-    "price": 142275.0
+    "price": 142275
   },
   {
     "code": "SH 314L",
     "name": "Shower 20\"x22\" Four Flow Rain & Mist with Water Fall & LED",
-    "price": 102495.0
+    "price": 102495
   },
   {
     "code": "T 161",
     "name": "Shower Arm (Fancy) Brass",
-    "price": 10160.0
+    "price": 10160
   },
   {
     "code": "T 162",
     "name": "Shower Arm Square 24\" Brass",
-    "price": 9985.0
+    "price": 9985
   },
   {
     "code": "T 163",
     "name": "Shower Arm Square 18\" Brass",
-    "price": 8835.0
+    "price": 8835
   },
   {
     "code": "T 164",
     "name": "Shower Arm Square 15\" Brass",
-    "price": 7380.0
+    "price": 7380
   },
   {
     "code": "T 165",
     "name": "Shower Arm Square 12\" Brass",
-    "price": 6590.0
+    "price": 6590
   },
   {
     "code": "T 166",
     "name": "Shower Arm Square 9\" Brass",
-    "price": 5725.0
+    "price": 5725
   },
   {
     "code": "T 162A",
     "name": "Shower Arm Round 24\" Brass",
-    "price": 5190.0
+    "price": 5190
   },
   {
     "code": "T 163A",
     "name": "Shower Arm Round 18\" Brass",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "T 164A",
     "name": "Shower Arm Round 15\" Brass",
-    "price": 3630.0
+    "price": 3630
   },
   {
     "code": "T 165A",
     "name": "Shower Arm Round 12\" Brass",
-    "price": 2995.0
+    "price": 2995
   },
   {
     "code": "T 166A",
     "name": "Shower Arm Round 9\" Brass",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "T 172",
     "name": "Shower Arm Square 24\" (S.S.)",
-    "price": 4195.0
+    "price": 4195
   },
   {
     "code": "T 173",
     "name": "Shower Arm Square 18\" (S.S)",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 173BL",
     "name": "Shower Arm Square 18\" Black",
-    "price": 4830.0
+    "price": 4830
   },
   {
     "code": "T 173G",
     "name": "Shower Arm Square 18\" Gold",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "T 173RG",
     "name": "Shower Arm Square 18\" Rose Gold",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "T 174",
     "name": "Shower Arm Square 15\" (S.S)",
-    "price": 2665.0
+    "price": 2665
   },
   {
     "code": "T 175",
     "name": "Shower Arm Square 12\" (S.S)",
-    "price": 2025.0
+    "price": 2025
   },
   {
     "code": "T 176",
     "name": "Shower Arm Square 9\" (S.S)",
-    "price": 1770.0
+    "price": 1770
   },
   {
     "code": "T 173A",
     "name": "Shower Arm Sq Angle  (S.S)                                                                                                                                     Square S.S",
-    "price": 65.0
+    "price": 65
   },
   {
     "code": "T 173B",
     "name": "Shower Arm Rect. 18\" (S.S)                                                                                                                                      Square S.S",
-    "price": 155.0
+    "price": 155
   },
   {
     "code": "T 163S",
     "name": "Shower Arm Round 18\" S.S. 28mm",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 164L",
     "name": "Shower Arm Round 15\"/16\" S.S.",
-    "price": 805.0
+    "price": 805
   },
   {
     "code": "T 165L",
     "name": "Shower Arm Round 12\" S.S.",
-    "price": 700.0
+    "price": 700
   },
   {
     "code": "T 166SS",
     "name": "Shower Arm Round 9\" (Economical)",
-    "price": 1250.0
+    "price": 1250
   },
   {
     "code": "T 167",
     "name": "Shower Arm Pulsify",
-    "price": 4575.0
+    "price": 4575
   },
   {
     "code": "T167BG",
     "name": "Shower Arm Pulsify Brush Gold",
-    "price": 7380.0
+    "price": 7380
   },
   {
     "code": "HF 127",
     "name": "Health Faucet Brass Square With CP Tube & Hook",
-    "price": 3555.0
+    "price": 3555
   },
   {
     "code": "HF 128",
     "name": "Health Faucet Brass Sleek  With CP Tube & Hook",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "HF 129",
     "name": "Health Faucet Brass Cute With CP Tube & Hook",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "HF 130",
     "name": "Health Faucet Brass Heavy With CP Tube & Hook",
-    "price": 3555.0
+    "price": 3555
   },
   {
     "code": "HF 134",
     "name": "Health Faucet (BRASS) With CP Tube & Hook",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "HF 135",
     "name": "Health Faucet ABS Crome With CP Tube & Hook",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "HF 135H",
     "name": "Health Faucet ABS Crome Heavy With CP Tube & Hook",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "HF 136",
     "name": "Health Faucet ABS Round With CP Tube & Hook",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "HF 137",
     "name": "Health Faucet ABS Popular With CP Tube & Hook",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "HF 138",
     "name": "Health Faucet ABS Cute With CP Tube & Hook",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "HF 139",
     "name": "Health Faucet ABS Square With CP Tube & Hook",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "HF 140",
     "name": "Health Faucet ABS Grohe With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 141",
     "name": "Health Faucet ABS Slider With CP Tube & Hook",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "HF 142",
     "name": "Health Faucet ABS Slider With CP Tube & Hook",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "HF 143",
     "name": "Health Faucet ABS Uplift With CP Tube & Hook",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "HF 144",
     "name": "Health Faucet Squarish ABS With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 145",
     "name": "Health Faucet ABS American With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 146",
     "name": "Health Faucet ABS Round With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 147",
     "name": "Health Faucet ABS Moon With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 148",
     "name": "Health Faucet ABS Grip With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 149",
     "name": "Health Faucet ABS Bullet With CP Tube & Hook",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "HF 150",
     "name": "Health Faucet ABS Push With CP Tube & Hook",
-    "price": 3045.0
+    "price": 3045
   },
   {
     "code": "HF 151",
     "name": "Health Faucet ABS Dual Flow With CP Tube & Hook",
-    "price": 3810.0
+    "price": 3810
   },
   {
     "code": "HF 152",
     "name": "Health Faucet ABS Opal With CP Tube & Hook",
-    "price": 2410.0
+    "price": 2410
   },
   {
     "code": "HF 153",
     "name": "Health Faucet ABS Oval With CP Tube & Hook",
-    "price": 2410.0
+    "price": 2410
   },
   {
     "code": "HF 154B",
     "name": "Health Faucet ABS Kohler Black With CP Tube & Hook",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "HF 155",
     "name": "Health Faucet ABS Diamond Magnetic With CP Tube & Hook",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "HF 156",
     "name": "Health Faucet ABS Heavy With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 157",
     "name": "Health Faucet ABS Saturn With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 158",
     "name": "Health Faucet ABS Mic Squarish With CP Tube & Hook",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "HF 168",
     "name": "Health Faucet ABS Kohler Type With Spiral Tube & Hook",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "HF 169",
     "name": "Health Faucet ABS Grohe Type Black  With Spiral Tube & Hook",
-    "price": 4065.0
+    "price": 4065
   },
   {
     "code": "HF 170",
     "name": "Health Faucet ABS Puro Dual Flow With CP Tube & Hook",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "HF 171",
     "name": "Health Faucet ABS Elate With CP Tube & Hook",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "HF 171BK",
     "name": "Health Faucet ABS Elate With CP Tube & Hook Black",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "HF 171WT",
     "name": "Health Faucet ABS Elate With CP Tube & Hook White",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "HF 171RG",
     "name": "Health Faucet ABS Elate With CP Tube & Hook Gold/Rose Gold/Brush Gold",
-    "price": 5085.0
+    "price": 5085
   },
   {
     "code": "HF 172",
     "name": "Health Faucet ABS Pressmatic With CP Tube & Hook",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 363",
     "name": "Round Drainer 3\"",
-    "price": 100.0
+    "price": 100
   },
   {
     "code": "T 364/364A",
     "name": "Round Drainer 4\"Plain/Cut",
-    "price": 120.0
+    "price": 120
   },
   {
     "code": "T 365/365A",
     "name": "Round Drainer 5\" Plain/Cut",
-    "price": 155.0
+    "price": 155
   },
   {
     "code": "T 366/366A",
     "name": "Round Drainer 5\" with Lock Plain/Cut",
-    "price": 250.0
+    "price": 250
   },
   {
     "code": "T 366/366SA",
     "name": "Round Drainer 5\" with Lock Plain/Cut Heavy",
-    "price": 625.0
+    "price": 625
   },
   {
     "code": "T 372/ 372A",
     "name": "Square Drainer 5x5 Matt Round Trap Without Moulding Plain/Cut",
-    "price": 700.0
+    "price": 700
   },
   {
     "code": "T 373/373A",
     "name": "Square Drainer 5x5 Round Trap Without Moulding Plain/Cut Lining",
-    "price": 700.0
+    "price": 700
   },
   {
     "code": "T 376/ 376A",
     "name": "Square Drainer 5x5 Matt Round Trap Mosaic Plain/Cut",
-    "price": 700.0
+    "price": 700
   },
   {
     "code": "T 378/ 378A",
     "name": "Square Drainer 5x5 Matt Round Trap Lining Plain/Cut",
-    "price": 700.0
+    "price": 700
   },
   {
     "code": "T 379/379A",
     "name": "Square Drainer 5x5  Sq. Trap Without Moulding Plain/Cut Mosaic",
-    "price": 765.0
+    "price": 765
   },
   {
     "code": "T 380/ 380A",
     "name": "Square Drainer 5x5 Matt Sq. Trap Without Moulding Plain/Cut",
-    "price": 765.0
+    "price": 765
   },
   {
     "code": "T 381/T 381A",
     "name": "Square Drainer 5x5 Matt Sq. Trap Mosaic Plain/Cut",
-    "price": 855.0
+    "price": 855
   },
   {
     "code": "T 382/T382A",
     "name": "Square Drainer 5x5 Matt  Sq. Trap Four Line Plain/Cut",
-    "price": 855.0
+    "price": 855
   },
   {
     "code": "T 383/T383A",
     "name": "Square Drainer 5x5 Matt  Sq. Trap Three Line Plain/Cut",
-    "price": 855.0
+    "price": 855
   },
   {
     "code": "T 386/T 386 A",
     "name": "Square Drainer 6x6  Mosaic Plain/Cut",
-    "price": 1435.0
+    "price": 1435
   },
   {
     "code": "T 387/T 387A",
     "name": "Square Drainer 6x6  Four Line Plain/Cut",
-    "price": 1435.0
+    "price": 1435
   },
   {
     "code": "T 393",
     "name": "Square Drainer 5x5 For Tile Fitting",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 394",
     "name": "Square Drainer 6x6 For Tile Fitting",
-    "price": 3915.0
+    "price": 3915
   },
   {
     "code": "T 394P",
     "name": "Square Drainer 6\"X6\" Pop Up",
-    "price": 1620.0
+    "price": 1620
   },
   {
     "code": "T 395",
     "name": "Shower Drainer 4x12",
-    "price": 6720.0
+    "price": 6720
   },
   {
     "code": "T 395 A",
     "name": "Shower Drainer 4x24",
-    "price": 9780.0
+    "price": 9780
   },
   {
     "code": "T 395 B",
     "name": "Shower Drainer 4x36",
-    "price": 19570.0
+    "price": 19570
   },
   {
     "code": "T 395 C",
     "name": "Shower Drainer 4x16",
-    "price": 7945.0
+    "price": 7945
   },
   {
     "code": "T 395 CC",
     "name": "Shower Drainer with Center Hole 4x16",
-    "price": 7945.0
+    "price": 7945
   },
   {
     "code": "T 396",
     "name": "Shower Drainer 4x12 for Tile Fitting",
-    "price": 7635.0
+    "price": 7635
   },
   {
     "code": "T 396 A",
     "name": "Shower Drainer 4x24 for Tile Fitting",
-    "price": 10695.0
+    "price": 10695
   },
   {
     "code": "T 396 B",
     "name": "Shower Drainer 4x36 for Tile Fitting",
-    "price": 20490.0
+    "price": 20490
   },
   {
     "code": "T 396 C",
     "name": "Shower Drainer 4x16 for Tile Fitting",
-    "price": 8860.0
+    "price": 8860
   },
   {
     "code": "T 9863",
     "name": "Square Drainer Brass 5x5 (Fish)",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 9866",
     "name": "Square Drainer Brass 5x5 (Small flower)",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 9885",
     "name": "Square Drainer Brass 5x5 (Star)",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 9973",
     "name": "Square Drainer Brass 5x5 (Flower)",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "T 366 B",
     "name": "Round Drainer 5\" with Cockroach Trap",
-    "price": 1005.0
+    "price": 1005
   },
   {
     "code": "T 376 B",
     "name": "Square Drainer 5x5 Round with Cockroach Trap",
-    "price": 1340.0
+    "price": 1340
   },
   {
     "code": "T 381 B",
     "name": "Square Drainer 5x5 Square with Cockroach Trap",
-    "price": 1465.0
+    "price": 1465
   },
   {
     "code": "T 386 B",
     "name": "Square Drainer 6x6 with Cockroach Trap",
-    "price": 2155.0
+    "price": 2155
   },
   {
     "code": "T 9863 B",
     "name": "Square Drainer 5x5 (Brass) with Cockroach Trap",
-    "price": 4015.0
+    "price": 4015
   },
   {
     "code": "HK 23",
     "name": "Hook Capsule 3 pin",
-    "price": 1950.0
+    "price": 1950
   },
   {
     "code": "HK 24",
     "name": "Hook Capsule 4 pin",
-    "price": 2590.0
+    "price": 2590
   },
   {
     "code": "HK 25",
     "name": "Hook Capsule 5 pin",
-    "price": 3250.0
+    "price": 3250
   },
   {
     "code": "HK 53",
     "name": "Hook Wave 3 pin",
-    "price": 2435.0
+    "price": 2435
   },
   {
     "code": "HK 54",
     "name": "Hook Wave 4 pin",
-    "price": 3300.0
+    "price": 3300
   },
   {
     "code": "HK 55",
     "name": "Hook Wave 5 pin",
-    "price": 4170.0
+    "price": 4170
   },
   {
     "code": "T 105",
     "name": "Extention Nipple 6\"",
-    "price": 1495.0
+    "price": 1495
   },
   {
     "code": "T 106",
     "name": "Extention Nipple 4\"",
-    "price": 955.0
+    "price": 955
   },
   {
     "code": "T 107B",
     "name": "Extention Nipple 3\"",
-    "price": 750.0
+    "price": 750
   },
   {
     "code": "T 107",
     "name": "Extension Nipple 2.5''",
-    "price": 650.0
+    "price": 650
   },
   {
     "code": "T 107A",
     "name": "Extension Nipple 2''",
-    "price": 535.0
+    "price": 535
   },
   {
     "code": "T 108",
     "name": "Extention Nipple 1.5\"",
-    "price": 400.0
+    "price": 400
   },
   {
     "code": "T 109",
     "name": "Extention Nipple 1\"",
-    "price": 300.0
+    "price": 300
   },
   {
     "code": "T 114",
     "name": "Hex Nipple",
-    "price": 495.0
+    "price": 495
   },
   {
     "code": "T 107M",
     "name": "Extension Nipple 2.5''",
-    "price": 650.0
+    "price": 650
   },
   {
     "code": "T 107AM",
     "name": "Extension Nipple 2''",
-    "price": 450.0
+    "price": 450
   },
   {
     "code": "T 108M",
     "name": "Extention Nipple 1.5\"",
-    "price": 385.0
+    "price": 385
   },
   {
     "code": "T 109M",
     "name": "Extention Nipple 1\"",
-    "price": 250.0
+    "price": 250
   },
   {
     "code": "T 105SS",
     "name": "Extention Nipple SS 6\"",
-    "price": 690.0
+    "price": 690
   },
   {
     "code": "T 106SS",
     "name": "Extention Nipple SS 4\"",
-    "price": 495.0
+    "price": 495
   },
   {
     "code": "T 107BSS",
     "name": "Extention Nipple SS 3\"",
-    "price": 326.0
+    "price": 326
   },
   {
     "code": "T 107SS",
     "name": "Extension Nipple SS 2.5''",
-    "price": 266.0
+    "price": 266
   },
   {
     "code": "T 107ASS",
     "name": "Extension Nipple SS 2''",
-    "price": 206.0
+    "price": 206
   },
   {
     "code": "T 108SS",
     "name": "Extention Nipple SS 1.5\"",
-    "price": 146.0
+    "price": 146
   },
   {
     "code": "T 109SS",
     "name": "Extention Nipple SS 1\"",
-    "price": 98.0
+    "price": 98
   },
   {
     "code": "T 141 A",
     "name": "C.P Connection Pipe 18\"",
-    "price": 420.0
+    "price": 420
   },
   {
     "code": "T 142 A",
     "name": "C.P Connection Pipe 24\"",
-    "price": 470.0
+    "price": 470
   },
   {
     "code": "T 143 A",
     "name": "C.P Connection Pipe 36\"",
-    "price": 575.0
+    "price": 575
   },
   {
     "code": "T 141",
     "name": "C.P Connection Pipe 18\" Blue Packing",
-    "price": 525.0
+    "price": 525
   },
   {
     "code": "T 142",
     "name": "C.P Connection Pipe 24\" Blue Packing",
-    "price": 600.0
+    "price": 600
   },
   {
     "code": "T 143",
     "name": "C.P Connection Pipe 36\" Blue Packing",
-    "price": 750.0
+    "price": 750
   },
   {
     "code": "T 144",
     "name": "PVC Connection 18\" Heavy",
-    "price": 395.0
+    "price": 395
   },
   {
     "code": "T 145",
     "name": "PVC Connection 24\" Heavy",
-    "price": 445.0
+    "price": 445
   },
   {
     "code": "T 146",
     "name": "PVC Connection 36\" Heavy",
-    "price": 575.0
+    "price": 575
   },
   {
     "code": "T 147",
     "name": "PTMT Connection Pipe 18\"",
-    "price": 240.0
+    "price": 240
   },
   {
     "code": "T 148",
     "name": "PTMT Connection Pipe 24\"",
-    "price": 295.0
+    "price": 295
   },
   {
     "code": "",
     "name": "PTMT Connection Pipe 36\"",
-    "price": 345.0
+    "price": 345
   },
   {
     "code": "T 149",
     "name": "Waste pipe (Spring)",
-    "price": 100.0
+    "price": 100
   },
   {
     "code": "T 149 A",
     "name": "Waste pipe Heavy (Spring)",
-    "price": 230.0
+    "price": 230
   },
   {
     "code": "T 149 B",
     "name": "Waste pipe Plain",
-    "price": 240.0
+    "price": 240
   },
   {
     "code": "T 149 C",
     "name": "Waste pipe Threaded",
-    "price": 345.0
+    "price": 345
   },
   {
     "code": "T 149 T",
     "name": "Waste pipe Flexible Troika",
-    "price": 260.0
+    "price": 260
   },
   {
     "code": "S 8804",
     "name": "Sensotronic Sensor Faucet Regular AC/DC",
-    "price": 27015.0
+    "price": 27015
   },
   {
     "code": "S 8903",
     "name": "Sensotronic Sensor Mixer Ion Type DC Only",
-    "price": 47060.0
+    "price": 47060
   },
   {
     "code": "S 8906",
     "name": "Sensotronic Sensor Mixer With Inbuilt Eye AC/DC",
-    "price": 53920.0
+    "price": 53920
   },
   {
     "code": "S 8909",
     "name": "Sensotronic Sensor Mixer Eureka Type AC/DC",
-    "price": 50450.0
+    "price": 50450
   },
   {
     "code": "T 122",
     "name": "Rag Bolts For Wall Hanging",
-    "price": 2255.0
+    "price": 2255
   },
   {
     "code": "T 122A",
     "name": "Rag Bolts L-Key (Fisher Set)",
-    "price": 1825.0
+    "price": 1825
   },
   {
     "code": "T 122B",
     "name": "Rag Bolts L-Key (Fisher Set Brass )",
-    "price": 2435.0
+    "price": 2435
   },
   {
     "code": "T 123",
     "name": "Rag Bolts For Wash Basin",
-    "price": 205.0
+    "price": 205
   },
   {
     "code": "T 126",
     "name": "Urinal Spreader",
-    "price": 1825.0
+    "price": 1825
   },
   {
     "code": "T 1070",
     "name": "Cloth Liner",
-    "price": 3125.0
+    "price": 3125
   },
   {
     "code": "T 1071",
     "name": "Bottle Trap",
-    "price": 6080.0
+    "price": 6080
   },
   {
     "code": "T 1071A",
     "name": "Bottle Trap Light",
-    "price": 3480.0
+    "price": 3480
   },
   {
     "code": "T 1071B",
     "name": "Bottle Trap With 12\" Pipe",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "",
     "name": "Kitchen Sink Copuling Square",
-    "price": 955.0
+    "price": 955
   },
   {
     "code": "T 1072A",
     "name": "Jet Shower L Type R- Nozzle",
-    "price": 1595.0
+    "price": 1595
   },
   {
     "code": "T 1072B",
     "name": "Jet Shower L Type Multi",
-    "price": 1415.0
+    "price": 1415
   },
   {
     "code": "T 1072C",
     "name": "Jet Shower L Type Butterfly",
-    "price": 1415.0
+    "price": 1415
   },
   {
     "code": "T 1073A",
     "name": "Nozzle Cock",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "T 1073",
     "name": "Washing Mashine Tap",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "T 1074R",
     "name": "Magnifying Glass Round",
-    "price": 7000.0
+    "price": 7000
   },
   {
     "code": "T 1074SQ",
     "name": "Magnifying Glass Square",
-    "price": 8655.0
+    "price": 8655
   },
   {
     "code": "T 1075",
     "name": "CP Tap Hole Cover",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "T 1076",
     "name": "Bidet Spray Round Handle",
-    "price": 8020.0
+    "price": 8020
   },
   {
     "code": "T 1077",
     "name": "Bidet Spray Lever Handle",
-    "price": 8020.0
+    "price": 8020
   },
   {
     "code": "T 1081",
     "name": "Toilet Brush Holder With Glass",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "T 1083",
     "name": "Toilet Brush Holder With SS Cover",
-    "price": 5215.0
+    "price": 5215
   },
   {
     "code": "T 58",
     "name": "Toilet Paper  Holder With Mobile Stand",
-    "price": 3175.0
+    "price": 3175
   },
   {
     "code": "T 1080",
     "name": "Soap Dispenser",
-    "price": 2080.0
+    "price": 2080
   },
   {
     "code": "AL 203",
     "name": "CP Tube 1 Meter",
-    "price": 1440.0
+    "price": 1440
   },
   {
     "code": "AL 204",
     "name": "CP Tube 1.5 Meter",
-    "price": 1770.0
+    "price": 1770
   },
   {
     "code": "S 201",
     "name": "C/S/C Disc 22x1.5",
-    "price": 830.0
+    "price": 830
   },
   {
     "code": "S 202",
     "name": "C/S/C Disc 28x1.5",
-    "price": 1070.0
+    "price": 1070
   },
   {
     "code": "S 203",
     "name": "Standard Disc 22x1.5",
-    "price": 665.0
+    "price": 665
   },
   {
     "code": "S 204",
     "name": "Standard Disc 28x1.5",
-    "price": 805.0
+    "price": 805
   },
   {
     "code": "S 206",
     "name": "Standard Disc 15mm",
-    "price": 470.0
+    "price": 470
   },
   {
     "code": "S 206 I",
     "name": "Standard Disc 15mm Italian",
-    "price": 610.0
+    "price": 610
   },
   {
     "code": "S 207",
     "name": "C/S/C Disc 15mm",
-    "price": 740.0
+    "price": 740
   },
   {
     "code": "S 208",
     "name": "Braided Hose Set",
-    "price": 1060.0
+    "price": 1060
   },
   {
     "code": "S 208A",
     "name": "Braided Hose Set Italian 18\"",
-    "price": 1340.0
+    "price": 1340
   },
   {
     "code": "S 209",
     "name": "Braided Hose Set SS 24\"",
-    "price": 1135.0
+    "price": 1135
   },
   {
     "code": "S 209A",
     "name": "Braided Hose Set Italian 24\"",
-    "price": 1390.0
+    "price": 1390
   },
   {
     "code": "S 210",
     "name": "Wall Mixer Leg Set Only",
-    "price": 1975.0
+    "price": 1975
   },
   {
     "code": "S 211",
     "name": "Wall Mixer Leg Set With Flange",
-    "price": 2535.0
+    "price": 2535
   },
   {
     "code": "S 216/217",
     "name": "Crutch",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "S 224",
     "name": "Foam Flow",
-    "price": 115.0
+    "price": 115
   },
   {
     "code": "S 225",
     "name": "Permix Female / Male",
-    "price": 305.0
+    "price": 305
   },
   {
     "code": "S 226",
     "name": "CP Nozzel for Bib Cock",
-    "price": 255.0
+    "price": 255
   },
   {
     "code": "S 252",
     "name": "Wall Flange Round Brass",
-    "price": 195.0
+    "price": 195
   },
   {
     "code": "S 252C",
     "name": "Wall Flange Round chrome SS",
-    "price": 80.0
+    "price": 80
   },
   {
     "code": "S 252F",
     "name": "Wall Flange Round Flat SS",
-    "price": 76.0
+    "price": 76
   },
   {
     "code": "S 252MF",
     "name": "Wall Flange Round Mirror Finish SS",
-    "price": 76.0
+    "price": 76
   },
   {
     "code": "S 252H",
     "name": "Wall Flange Round Chrome Heavy SS",
-    "price": 115.0
+    "price": 115
   },
   {
     "code": "S 254",
     "name": "Wall Flange Square Brass",
-    "price": 195.0
+    "price": 195
   },
   {
     "code": "S 254 H",
     "name": "Wall Flange Square Brass Heavy",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "S 254 MF",
     "name": "Wall Flange Square Mirror Finish S.S",
-    "price": 76.0
+    "price": 76
   },
   {
     "code": "",
     "name": "Pillar Cock Flange",
-    "price": 165.0
+    "price": 165
   },
   {
     "code": "TT 01",
     "name": "Teflon Tape Shrink Pack 12mm",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "TT 02",
     "name": "Teflon Tape High Density 12mm",
-    "price": 65.0
+    "price": 65
   },
   {
     "code": "TT 05",
     "name": "Teflon Tape 20mm",
-    "price": 85.0
+    "price": 85
   },
   {
     "code": "T75C",
     "name": "SOAP DISEPSOR Peral",
-    "price": 1495.0
+    "price": 1495
   },
   {
     "code": "T76C",
     "name": "SOAP DISEPSOR Prayag",
-    "price": 1495.0
+    "price": 1495
   },
   {
     "code": "",
     "name": "SOAP DISEPSOR New",
-    "price": 1595.0
+    "price": 1595
   },
   {
     "code": "T 115",
     "name": "Universal Angle Cock",
-    "price": 1595.0
+    "price": 1595
   },
   {
     "code": "T 115 A",
     "name": "Universal Angle Cock (Round Handle)",
-    "price": 1745.0
+    "price": 1745
   },
   {
     "code": "T 115 B",
     "name": "Universal Angle Cock Medium",
-    "price": 1295.0
+    "price": 1295
   },
   {
     "code": "T 115 S",
     "name": "Univeral Angle Cock Chrome",
-    "price": 0.0
+    "price": 0
   },
   {
     "code": "T 115 OP",
     "name": "Universal Angle Cock Opal",
-    "price": 1390.0
+    "price": 1390
   },
   {
     "code": "T 115 VG",
     "name": "Univarsal angle Cock Vignette",
-    "price": 1390.0
+    "price": 1390
   },
   {
     "code": "T 115 AR",
     "name": "Universal Angle Cock Arya",
-    "price": 1390.0
+    "price": 1390
   },
   {
     "code": "T 115 ST",
     "name": "Universal Angle Cock Step",
-    "price": 1390.0
+    "price": 1390
   },
   {
     "code": "T 115 AL",
     "name": "Universal Angle Cock Alive",
-    "price": 1390.0
+    "price": 1390
   },
   {
     "code": "T 115 MR",
     "name": "Universal Angle Cock Mars",
-    "price": 1390.0
+    "price": 1390
   },
   {
     "code": "T 116",
     "name": "Angle Cock Half Turn",
-    "price": 2280.0
+    "price": 2280
   },
   {
     "code": "T 10015",
     "name": "Angle Cock",
-    "price": 2385.0
+    "price": 2385
   },
   {
     "code": "T 10016",
     "name": "Angle Cock",
-    "price": 2385.0
+    "price": 2385
   },
   {
     "code": "EKO 145",
     "name": "EKO Angle Cock Half Turn",
-    "price": 2360.0
+    "price": 2360
   },
   {
     "code": "BV 15",
     "name": "Ball Valve Brass 1/2''",
-    "price": 1210.0
+    "price": 1210
   },
   {
     "code": "BV 20",
     "name": "Ball Valve Brass 3/4''",
-    "price": 1850.0
+    "price": 1850
   },
   {
     "code": "BV 25",
     "name": "Ball Valve Brass 1\"",
-    "price": 2740.0
+    "price": 2740
   },
   {
     "code": "BV 32",
     "name": "Ball Valve Brass 1.1/4''",
-    "price": 4320.0
+    "price": 4320
   },
   {
     "code": "BV 40",
     "name": "Ball Valve Brass 1.1/2''",
-    "price": 6360.0
+    "price": 6360
   },
   {
     "code": "BV 50",
     "name": "Ball Valve Brass 2\"",
-    "price": 9930.0
+    "price": 9930
   },
   {
     "code": "BV 15 H",
     "name": "Ball Valve Brass 1/2'' (Heavy)",
-    "price": 2025.0
+    "price": 2025
   },
   {
     "code": "BV 20 H",
     "name": "Ball Valve Brass 3/4'' (Heavy)",
-    "price": 2790.0
+    "price": 2790
   },
   {
     "code": "BV 25 H",
     "name": "Ball Valve Brass 1\" (Heavy)",
-    "price": 4575.0
+    "price": 4575
   },
   {
     "code": "",
@@ -4738,16 +4738,240 @@
   {
     "code": "SH 4081",
     "name": "Shower Square 6\"X6\" Drizzle",
-    "price": 3495.0
+    "price": 3495
   },
   {
     "code": "SH 4082",
     "name": "Shower Square 8\"X8\" Drizzle",
-    "price": 4885.0
+    "price": 4885
   },
   {
     "code": "SH 4084",
     "name": "Shower Square 12\"X12\" Drizzle",
-    "price": 13475.0
+    "price": 13475
+  },
+  {
+    "code": "HD 381 SY",
+    "name": "One Pc Set Hades",
+    "size": "645*365*760",
+    "price": 28795,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "EU 4581 SY",
+    "name": "One Pc Set Eureka",
+    "size": "680*390*780",
+    "price": 34995,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "HL 8581 SY",
+    "name": "One Pc Set Helios",
+    "size": "685*380*775",
+    "price": 36795,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "AR 6581 SY",
+    "name": "One Pc Set Aries",
+    "size": "680*380*770",
+    "price": 36795,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "CU 881 SY",
+    "name": "One Pc Set Cupid",
+    "size": "720*380*740",
+    "price": 38995,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "OL 3081 SY",
+    "name": "One Pc Set Olga",
+    "size": "680*360*700",
+    "price": 38995,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "NP 481 SY",
+    "name": "One Pc Set Benito/Neptune",
+    "size": "665*350*750",
+    "price": 23495,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "ZE 591",
+    "name": "Wall Hung Winta/Zeus",
+    "size": "485*355*360",
+    "price": 17275,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "NK 7591",
+    "name": "Wall Hung Nike",
+    "size": "505*365*350",
+    "price": 20995,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "NK 7574",
+    "name": "Table Top Basin Nike T.H.",
+    "size": "475*365*125",
+    "price": 7595,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "ZE 574",
+    "name": "Table Top Basin Zeus",
+    "size": "410*410*140",
+    "price": 7995,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "HD 374",
+    "name": "Table Top Basin Hades",
+    "size": "463*325*135",
+    "price": 7395,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "VN 7474",
+    "name": "Table Top Basin Fonza/Venus",
+    "size": "480*390*150",
+    "price": 7695,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "VC 6974",
+    "name": "Table Top Basin Kuma/Valcun T.H.",
+    "size": "455*355*130",
+    "price": 7195,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "HL 8574",
+    "name": "Table Top Basin Erich/Hellios",
+    "size": "520*405*160",
+    "price": 8195,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "ZE 571+77",
+    "name": "Wash Basin Zeus & Pedestal",
+    "size": "510*400*770",
+    "price": 8595,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "ZE 77",
+    "name": "Pedestal Zeus",
+    "size": null,
+    "price": 4165,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "EU 4571+77",
+    "name": "Wash Basin Eureka & Pedestal",
+    "size": "562*435*830",
+    "price": 9495,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "VC 6971+77",
+    "name": "Wash Basin Vulcan & Pedestal",
+    "size": "550*410*845",
+    "price": 10495,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "EU/VC 77",
+    "name": "Pedestal EU/VC",
+    "size": null,
+    "price": 4595,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "ET 6871",
+    "name": "Wash Basin Rolf/Eather",
+    "size": "410*320*145",
+    "price": 3495,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "CU 871",
+    "name": "Wash Basin Marit/Cupid",
+    "size": "355*305*135",
+    "price": 4695,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "ET/CU 77",
+    "name": "Pedestal Bruno Square/Et & CU",
+    "size": null,
+    "price": 4195,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "HE 6371",
+    "name": "Wash Basin Tuscon/Hera W Hung",
+    "size": "480*360*180",
+    "price": 3095,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "SW-3UV4C",
+    "name": "Corner Wash Basin Otis/Round",
+    "size": "1525 14*17",
+    "price": 3295,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "ZE 575",
+    "name": "Integrated Wash Basin Zeus",
+    "size": "475*425*360",
+    "price": 9995,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "VC 6975",
+    "name": "Integrated Wash Basin Vulcan",
+    "size": "500*425*360",
+    "price": 10895,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "SW-4LRAO",
+    "name": "Urinal Lars/Venus",
+    "size": "290*285*405",
+    "price": 4695,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "SW-TVEKX",
+    "name": "Ladies Urinal Jessen",
+    "size": "490*380*110",
+    "price": 4995,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "SW-PWUKT",
+    "name": "City Pan",
+    "size": "530*430*190",
+    "price": 3695,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "SW-S5UOW",
+    "name": "Orrisa Pan",
+    "size": "525*430*240",
+    "price": 3495,
+    "category": "Sanitary Ware"
+  },
+  {
+    "code": "SW-WKTGN",
+    "name": "P Trap",
+    "size": null,
+    "price": 795,
+    "category": "Sanitary Ware"
   }
 ]
