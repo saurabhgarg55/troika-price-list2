@@ -228,12 +228,18 @@ function ProductDetailPage({
 
   const handleDragEnd = (e: any, { offset }: any) => {
     const swipe = offset.x;
-    if (swipe < -50 && onNext) {
-      setDirection(1);
-      onNext();
-    } else if (swipe > 50 && onPrev) {
-      setDirection(-1);
-      onPrev();
+    if (swipe < -50) {
+      if (onNext) {
+        setDirection(1);
+        onNext();
+      }
+    } else if (swipe > 50) {
+      if (onPrev) {
+        setDirection(-1);
+        onPrev();
+      } else {
+        onBack();
+      }
     }
   };
 
@@ -646,6 +652,24 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
               Each faucet is assembled by hand by specially trained staff and subjected to comprehensive inspection and functional checks. All our faucets are vigorously tested at high operating and static pressures. We also subject our surface finishes to destructive testing to maintain the specified standards of life expectancy.
             </p>
           </div>
+
+          <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 mt-8">
+            <h3 className="font-bold text-[#1A365D] mb-4 flex items-center">
+              <Share className="h-5 w-5 mr-2" /> Share App
+            </h3>
+            <div className="flex flex-col items-center">
+              <p className="text-sm text-slate-500 text-center mb-4 leading-relaxed">
+                Scan this QR code to quickly share the digital catalog with clients, or save the image to print.
+              </p>
+              <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+                <img 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://troika-price-list2.vercel.app/" 
+                  alt="QR Code" 
+                  className="w-40 h-40"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -861,23 +885,35 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-200 flex justify-center items-center p-0 sm:p-4">
-      <div className="w-full max-w-md bg-slate-50 sm:rounded-[2rem] sm:shadow-2xl h-[100dvh] sm:h-[850px] sm:max-h-[90vh] relative overflow-hidden flex flex-col sm:border-[8px] sm:border-slate-800">
+      <div className="w-full max-w-md bg-slate-50 sm:rounded-[2rem] sm:shadow-2xl h-screen sm:h-[850px] sm:max-h-[90vh] relative overflow-hidden flex flex-col sm:border-[8px] sm:border-slate-800">
+        
+        {/* Layer 1: Home Screen */}
+        <motion.div 
+          className="w-full h-full absolute inset-0 z-10 flex flex-col bg-slate-50"
+          animate={{
+            scale: (selectedProduct || isCartOpen || isAboutOpen) ? 0.95 : 1,
+            opacity: (selectedProduct || isCartOpen || isAboutOpen) ? 0.5 : 1,
+          }}
+          transition={{ duration: 0.3 }}
+        >
+          <HomeScreen 
+            products={discountedFilteredProducts} 
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            categories={categories}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={handleSetCategory}
+            onSelectProduct={setSelectedProduct}
+            cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
+            onOpenCart={() => setIsCartOpen(true)}
+            onOpenAbout={() => setIsAboutOpen(true)}
+          />
+        </motion.div>
+
+        {/* Layer 2: Product Detail */}
         <AnimatePresence>
-          {isCartOpen ? (
-            <motion.div key="cart" className="w-full h-full absolute inset-0 z-30 flex flex-col bg-slate-50" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
-              <CartScreen 
-                cart={discountedCart}
-                onBack={() => setIsCartOpen(false)}
-                onUpdateQuantity={handleUpdateCartQuantity}
-                onRemoveItem={handleRemoveFromCart}
-              />
-            </motion.div>
-          ) : isAboutOpen ? (
-            <motion.div key="about" className="w-full h-full absolute inset-0 z-30 flex flex-col bg-slate-50" initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
-              <AboutScreen onBack={() => setIsAboutOpen(false)} />
-            </motion.div>
-          ) : selectedProduct ? (
-            <motion.div key="product" className="w-full h-full absolute inset-0 z-20 flex flex-col bg-slate-50" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
+          {selectedProduct && (
+            <motion.div key="product" className="w-full h-full absolute inset-0 z-20 flex flex-col bg-slate-50 shadow-[-10px_0_30px_rgba(0,0,0,0.1)]" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
               <ProductDetailPage 
                 product={discountedSelectedProduct!} 
                 onBack={() => setSelectedProduct(null)} 
@@ -886,20 +922,24 @@ export default function App() {
                 onPrev={handlePrevProduct}
               />
             </motion.div>
-          ) : (
-            <motion.div key="home" className="w-full h-full absolute inset-0 z-10 flex flex-col bg-slate-50" initial={{ opacity: 0.5, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0.5, scale: 0.95 }} transition={{ duration: 0.3 }}>
-              <HomeScreen 
-                products={discountedFilteredProducts} 
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
-                categories={categories}
-                selectedCategory={selectedCategory}
-                setSelectedCategory={handleSetCategory}
-                onSelectProduct={setSelectedProduct}
-                cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)}
-                onOpenCart={() => setIsCartOpen(true)}
-                onOpenAbout={() => setIsAboutOpen(true)}
+          )}
+        </AnimatePresence>
+
+        {/* Layer 3: Cart and About */}
+        <AnimatePresence>
+          {isCartOpen && (
+            <motion.div key="cart" className="w-full h-full absolute inset-0 z-30 flex flex-col bg-slate-50 shadow-[-10px_0_30px_rgba(0,0,0,0.1)]" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
+              <CartScreen 
+                cart={discountedCart}
+                onBack={() => setIsCartOpen(false)}
+                onUpdateQuantity={handleUpdateCartQuantity}
+                onRemoveItem={handleRemoveFromCart}
               />
+            </motion.div>
+          )}
+          {isAboutOpen && (
+            <motion.div key="about" className="w-full h-full absolute inset-0 z-30 flex flex-col bg-slate-50 shadow-[10px_0_30px_rgba(0,0,0,0.1)]" initial={{ x: '-100%' }} animate={{ x: 0 }} exit={{ x: '-100%' }} transition={{ type: 'spring', bounce: 0, duration: 0.4 }}>
+              <AboutScreen onBack={() => setIsAboutOpen(false)} />
             </motion.div>
           )}
         </AnimatePresence>

@@ -13,6 +13,14 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      window.addEventListener('error', (e) => {
+        document.body.innerHTML = `<div style="color: red; padding: 20px;"><h1>Early Error</h1><pre>${e.message}</pre><pre>${e.error?.stack}</pre></div>`;
+      });
+      window.addEventListener('unhandledrejection', (e) => {
+        document.body.innerHTML = `<div style="color: red; padding: 20px;"><h1>Early Promise Rejection</h1><pre>${e.reason?.message || e.reason}</pre><pre>${e.reason?.stack}</pre></div>`;
+      });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
