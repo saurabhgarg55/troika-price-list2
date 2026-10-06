@@ -1,499 +1,440 @@
 CAT No.,ITEM NAME,MRP
-RE 5101,"Pillar Cock",5850
-RE 5102,"Pillar Cock With '300mm' Extended Body",9295
-RE 5103,"Bib Cock With Wall Flange",4960
-RE 5104,"Bib Cock Long Nose With Wall Flange",5395
-RE 5105,"Angle Cock With Wall Flange",4210
-RE 5106,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",5420
-RE 5107,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",5930
-RE 5108,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",5675
-RE 5109,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",6185
-RE 5110,"Swan Neck With Casted Swivel Spout",10240
-RE 5111,"Sink Cock With Casted Swivel Spout & Wall Flange",10240
-RE 5113,"2-Way Bib Cock With Wall Flange",7715
-RE 5114,"2-Way Angle Cock With Wall Flange",7715
-RE 5118,"Central Hole Basin Mixer With Connecting Legs",15490
-RE 5118A,"Central Hole Basin Mixer With Braided Hose Set",16000
-RE 5119,"Wall Mixer With L-Bend For Overhead Shower System",20745
-RE 5120,"Wall Mixer With Arrangement For Telephonic Shower",20870
-RE 5121,"Wall Mixer With Tipton For Telephonic Shower System",19850
-RE 5122,"Wall Mixer Non Telephonic Shower System",17580
-RE 5123,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",23700
-RE 5124,"Sink Mixer Wall Mounted With Casted Swivel Spout",16690
-RE 5128,"Spout Plain With Wall Flange 15 mm",5215
-RE 5129,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",6925
-RE 5141,"Single Lever Basin Mixer With Extended Body",21405
-RE 5142,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",18015
-RE 5143,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",19535
-RE 5143A,"Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",7485
+RE 5101,"Pillar Cock",6595
+RE 5102,"Pillar Cock With '300mm' Extended Body",11595
+RE 5103,"Bib Cock With Wall Flange",5495
+RE 5104,"Bib Cock Long Nose With Wall Flange",5995
+RE 5105,"Angle Cock With Wall Flange",4595
+RE 5106,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",5995
+RE 5107,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",6495
+RE 5108,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",6395
+RE 5109,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",6895
+RE 5110,"Swan Neck With Casted Swivel Spout",11295
+RE 5111,"Sink Cock With Casted Swivel Spout & Wall Flange",11295
+RE 5113,"2-Way Bib Cock With Wall Flange",8495
+RE 5114,"2-Way Angle Cock With Wall Flange",8495
+RE 5118,"Central Hole Basin Mixer With Connecting Legs",0
+RE 5118A,"Central Hole Basin Mixer With Braided Hose Set",17695
+RE 5119,"Wall Mixer With L-Bend For Overhead Shower System",22495
+RE 5120,"Wall Mixer With Arrangement For Telephonic Shower",22995
+RE 5121,"Wall Mixer With Tipton For Telephonic Shower System",20995
+RE 5122,"Wall Mixer Non Telephonic Shower System",19995
+RE 5123,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",25995
+RE 5124,"Sink Mixer Wall Mounted With Casted Swivel Spout",17995
+RE 5128,"Spout Plain With Wall Flange 15 mm",6995
+RE 5129,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",8195
+RE 5141,"Single Lever Basin Mixer With Extended Body",24995
+RE 5142,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",19995
+RE 5143,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",22785
+RE 5143A,"Single Lever Concealed Divertor Exposed parts (Suitable for AL 343)",8985
 RE 5146D,"Single Lever Sink/Basin Mixer High Neck",15950
-RE 5147,"Single  Lever Basin Mixer Wall Mounted",21610
-RE 5147A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",11410
-RE 5149,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",20475
-RE 5149A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",7485
-RE 5150,"Single Lever Sink Mixer Wall Mounted High Neck",17300
-EU 4501,"Pillar Cock",5085
-EU 4502,"Pillar Cock With '300mm' Extended Body",8655
-EU 4503,"Bib Cock With Wall Flange",4830
-EU 4504,"Bib Cock Long Nose With Wall Flange",5085
-EU 4505,"Angle Cock With Wall Flange",4065
-EU 4506,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",5340
-EU 4507,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",5850
-EU 4508,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",5595
-EU 4509,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",6105
-EU 4510,"Swan Neck With Casted Swivel Spout",10495
-EU 4511,"Sink Cock With Casted Swivel Spout & Wall Flange",10495
-EU 4513,"2-Way Bib Cock With Wall Flange",8145
-EU 4514,"2-Way Angle Cock With Wall Flange",8145
-EU 4515,"Bath Cock With Wall Flange",8095
-EU 4518,"Central Hole Basin Mixer With Connecting Legs",15030
-EU 4518A,"Central Hole Basin Mixer With Braided Hose Set",15540
-8295,"Wall Mixer With L-Bend For Overhead Shower System",21050
-EU 4520,"Wall Mixer With Arrangement For Telephonic Shower",21150
-EU 4521,"Wall Mixer With Tipton For Telephonic Shower System",20465
-EU 4522,"Wall Mixer Non Telephonic Shower System",18015
-EU 4523,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",24060
-EU 4524,"Sink Mixer Wall Mounted With Casted Swivel Spout",16690
-EU 4528,"Spout Plain With Wall Flange 15 mm",4630
-EU 4529,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",6870
-EU 4532,"Shower Arm With Wall Flange",3300
-EU 4533,"Overhead Shower (Hex)",2995
-EU 4534,"Telephonic Shower With 1.5 mtr.CP Tube & Hook",5085
-EU 4541,"Single Lever Basin Mixer With Extended Body",19545
-EU 4542,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",14980
-EU 4543,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",19535
-EU 4543A,"Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",7485
+RE 5147,"Single Lever Basin Mixer Wall Mounted",25990
+RE 5147A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",14995
+RE 5149,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",24570
+RE 5149A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",8985
+RE 5150,"Single Lever Sink Mixer Wall Mounted High Neck",18995
+EU 4501,"Pillar Cock",6695
+EU 4502,"Pillar Cock With '300mm' Extended Body",9995
+EU 4503,"Bib Cock With Wall Flange",5800
+EU 4504,"Bib Cock Long Nose With Wall Flange",6105
+EU 4505,"Angle Cock With Wall Flange",4880
+EU 4506,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",6410
+EU 4507,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",7020
+EU 4508,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",6715
+EU 4509,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",7330
+EU 4510,"Swan Neck With Casted Swivel Spout",12595
+EU 4511,"Sink Cock With Casted Swivel Spout & Wall Flange",12595
+EU 4513,"2-Way Bib Cock With Wall Flange",9775
+EU 4514,"2-Way Angle Cock With Wall Flange",9775
+EU 4515,"Bath Cock With Wall Flange",9715
+EU 4518,"Central Hole Basin Mixer With Connecting Legs",0
+EU 4518A,"Central Hole Basin Mixer With Braided Hose Set",18650
+EU 4519,"Wall Mixer With L-Bend For Overhead Shower System",23995
+EU 4520,"Wall Mixer With Arrangement For Telephonic Shower",24495
+EU 4521,"Wall Mixer With Tipton For Telephonic Shower System",21995
+EU 4522,"Wall Mixer Non Telephonic Shower System",20995
+EU 4523,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",26995
+EU 4524,"Sink Mixer Wall Mounted With Casted Swivel Spout",19995
+EU 4528,"Spout Plain With Wall Flange 15 mm",5995
+EU 4529,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",7195
+EU 4532,"Shower Arm With Wall Flange",3960
+EU 4533,"Overhead Shower (Hex)",3175
+EU 4534,"Telephonic Shower With 1.5 mtr.CP Tube & Hook",6105
+EU 4541,"Single Lever Basin Mixer With Extended Body",19940
+EU 4542,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",17980
+EU 4543,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",22785
+EU 4543A,"Single Lever Concealed Divertor Exposed parts (Suitable for AL 343)",8985
 EU 4544,"Single Lever Wall Mixer With Telephonic Shower Arrangement",21050
 EU 4545,"Single Lever Wall Mixer W/O Telephonic Shower Arrangement",19545
 EU 4546,"Single Lever Sink Mixer With Swinging Spout",15035
-EU 4546A,"Single Lever Sink Mixer Table Mounted",12330
-EU 4547,"Single  Lever Basin Mixer Wall Mounted",21025
-EU 4547A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",10825
-EU 4549,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",20475
-EU 4549A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",7485
-EU 4550,"Single Lever Sink Mixture Wall Mounted High Neck",17325
-INS 2601,"Pillar Cock",5010
-INS 2604,"Bib Cock Long Nose With Wall Flange",5085
-INS 2604B,"Bib Cock Long Nose 25mm",6615
-INS 2604S,"Bib Cock Long Nose Straight Line With Wall Flange",5520
-INS 2605,"Angle Cock With Wall Flange",4065
-INS 2607,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",5850
-INS 2609,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",6105
-INS 2610,"Swan Neck With Round Swivel Spout",7180
-INS 2611,"Sink Cock With Round Swivel Spout & Wall Flange",7180
-INS 2613,"2-Way Bib Cock With Wall Flange",6870
-INS 2614,"2-Way Angle Cock With Wall Flange",6870
-INS 2615,"Bath Cock With Wall Flange",7510
-INS 2618,"Central Hole Basin Mixer With Connecting Legs",12560
-INS 2618A,"Central Hole Basin Mixer With Braided Hose Set",13070
-INS 2619,"Wall Mixer With L-Bend For Overhead Shower System",19620
-INS 2620,"Wall Mixer With Arrangement For Telephonic Shower",19750
-INS 2621,"Wall Mixer With Tipton For Telephonic Shower System",18575
-INS 2622,"Wall Mixer Non Telephonic Shower System",16050
-INS 2623,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",22935
-INS 2624,"Sink Mixer Wall Mounted With Round Swivel Spout",14265
-INS 2628,"Spout Plain With Wall Flange",5060
-INS 2629,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",7050
-INS 2632,"Shower Arm With Wall Flange",2790
-INS 2633,"Over Head Shower (Piston)",1925
-INS 2634,"Telephonic Shower With 1.5 mtr.CP Tube & Hook",4065
-INS 2641,"Single Lever Basin Mixer With Extended Body",16050
-INS 2642,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",12735
-INS  2643,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",18235
-INS 2643A,"Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",6185
-INS 2647,"Single  Lever Basin Mixer Wall Mounted",21065
-INS 2647A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",10875
-INS 2649,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",19175
-INS 2649A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",6185
-INR 2401,"Pillar Cock",4550
-INR 2402,"Pillar Cock With '300mm' Extended Body",7970
-INR 2403,"Bib Cock",4195
-INR 2404,"Bib Cock Long Nose",4375
-INR 2405,"Angle Cock",3890
-INR 2406,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",5085
-INR 2407,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",5595
-INR 2408,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",5340
-INR 2409,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",5850
-INR 2410,"Swan Neck With Round Swivel Spout",6820
-INR 2411,"Sink Cock With Round Swivel Spout",6670
-INR 2413,"2-Way Bib Cock",6870
-INR 2414,"2-Way Angle Cock",6670
-INR 2418,"Central Hole Basin Mixer With Connecting Legs",11565
-INR 2418A,"Central Hole Basin Mixer With Braided Hose Set",12075
-INR 2419,"Wall Mixer With L-Bend For Overhead Shower System",17430
-INR 2420,"Wall Mixer With Arrangement For Telephonic Shower",17555
-INR 2422,"Wall Mixer Non Telephonic Shower System",14010
-INR 2423,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",21740
-INR 2424,"Sink Mixer Wall Mounted With Round Swivel Spout",13630
-INR 2428,"Spout Plain",3635
-INR 2429,"Spout Tipton With Provision For Telephonic Shower",6360
-INR 2432,"Shower Arm",2665
+EU 4546A,"Single Lever Sink Mixer Table Mounted",12580
+EU 4547,"Single Lever Basin Mixer Wall Mounted",25990
+EU 4547A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",14995
+EU 4549,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",24165
+EU 4549A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",8985
+EU 4550,"Single Lever Sink Mixture Wall Mounted High Neck",19060
+INR 2401,"Pillar Cock",5695
+INR 2402,"Pillar Cock With '300mm' Extended Body",9565
+INR 2403,"Bib Cock",4495
+INR 2404,"Bib Cock Long Nose",4695
+INR 2405,"Angle Cock",4195
+INR 2406,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",5695
+INR 2407,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm Heavy",6195
+INR 2408,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",6095
+INR 2409,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm Heavy",6695
+INR 2410,"Swan Neck With Round Swivel Spout",8185
+INR 2411,"Sink Cock With Round Swivel Spout",8005
+INR 2413,"2-Way Bib Cock",8245
+INR 2414,"2-Way Angle Cock",8005
+INR 2418,"Central Hole Basin Mixer With Connecting Legs",0
+INR 2418A,"Central Hole Basin Mixer With Braided Hose Set",13495
+INR 2419,"Wall Mixer With L-Bend For Overhead Shower System",19595
+INR 2420,"Wall Mixer With Arrangement For Telephonic Shower",19995
+INR 2422,"Wall Mixer Non Telephonic Shower System",16815
+INR 2423,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",23995
+INR 2424,"Sink Mixer Wall Mounted With Round Swivel Spout",15995
+INR 2428,"Spout Plain",4595
+INR 2429,"Spout Tipton With Provision For Telephonic Shower",6995
+INR 2432,"Shower Arm",3200
 INR 2433,"Over Head Shower (Piston)",1925
 INR 2434,"Telephonic Shower With 1.5 mtr. CP Tube & Hook",3635
-INR 2441,"Single Lever Basin Mixer With Extended Body",16050
-INR 2442,"Single Lever Basin Mixer With 450 mm Long Braided Hoses(New)",12735
-INR 2443,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",18235
-INR 2443A,"Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",6185
-INR 2446A,"Single Lever Sink Mixer Table Mounted",12330
-INR 2446B,"Single Lever Sink/Basin Mixer With J Type Spout",14010
-INR 2446C,"Single Lever Sink/Basin Mixer With Spring  Type Spout",41820
-INR 2446D,"Single Lever Sink/Basin Mixer High Neck",15110
-INR 2447,"Single  Lever Basin Mixer Wall Mounted",18945
-INR 2447A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",8910
-INR 2448,"Single Lever Concealed Deusch Mixer with Provision for Connection to Overhead Shower only",10505
-INR 2449,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",19175
-INR 2449A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",6185
-INR 2450,"Single Lever Sink Mixer Wall Mounted High Neck",16305
-BL 1001,"Pillar Cock",4500
-BL 1003,"Bib Cock With Wall Flange",4040
-BL 1003A,"Bib Cock With Nozzle & Wall Flange",3275
-BL 1004,"Bib Cock Long Nose With Wall Flange",4320
-BL 1004A,"Bib Cock Long Body With Wall Flange",4230
-BL 1005,"Angle Cock With Wall Flange",3125
-BL 1006,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",5085
-BL 1008,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",5340
-BL 1010,"Swan Neck With Casted Swivel Spout",7305
-BL 1011,"Sink Cock With Casted Swivel Spout & Wall Flange",7305
-BL 1013,"2-Way Bib Cock With Wall Flange",6615
-BL 1014,"2-Way Angle Cock With Wall Flange",6615
-BL 1015,"Bath Cock With Wall Flange",7500
-BL 1018,"Central Hole Basin Mixer With Connecting Legs",11820
-BL 1018A,"Central Hole Basin Mixer With Braided Hose Set",12330
-BL 1019,"Wall Mixer With L-Bend For Overhead Shower System",16640
-BL 1020,"Wall Mixer With Arrangement For Telephonic Shower",16765
-BL 1021,"Wall Mixer With Tipton For Telephonic Shower System",16050
-BL 1022,"Wall Mixer Non Telephonic Shower System",12815
-BL 1023,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",19620
-BL 1024,"Sink Mixer Wall Mounted With Casted Swivel Spout",12735
-BL 1028,"Spout Plain With Wall Flange '15mm'",3555
-BL 1029,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",5725
-BL 1032,"Shower Arm With Wall Flange",2665
-BL 1033,"Over Head Shower (Regular)",2080
-BL 1034,"Telephonic Shower With 1.5 mtr.CP Tube & Hook",3710
-SL 8601,"Pillar Cock",3785
-SL 8601B,"Pillar Cock B (Long)",5570
-SL 8602,"Pillar Cock With '300mm' Extended Body",7635
-SL 8603,"Bib Cock",4525
-SL 8604,"Bib Cock Long Nose",4830
-SL 8605,"Angle Cock",3125
-SL 8606,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",5085
-SL 8607,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm' Heavy",5595
-SL 8608,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",5595
-SL 8609,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm' Heavy",6105
-SL 8610,"Swan Neck With Round Swivel Spout",6360
-SL 8611,"Sink Cock With Round Swivel Spout",6360
-SL 8613,"2-Way Bib Cock",5850
-SL 8614,"2-Way Angle Cock",5850
-SL 8618,"Central Hole Basin Mixer With Connecting Legs",11970
-SL 8618A,"Central Hole Basin Mixer With Braided Hose Set",12480
-SL 8619,"Wall Mixer With L-Bend For Overhead Shower System",16055
-SL 8620,"Wall Mixer With Arrangement For Telephonic Shower",16180
-SL 8621,"Wall Mixer Tipton for Telephonic Shower System",15540
-SL 8622,"Wall Mixer Non Telephonic Shower System",13500
-SL 8623,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",18855
-SL 8624,"Sink Mixer Wall Mounted With Round Swivel Spout",12815
-SL 8628,"Spout Plain '15mm'",4985
-SL 8629,"Spout Tipton With Provision For Telephonic Shower",6615
-SL 8641,"Single Lever Basin Mixer With Extended Body",16050
-SL 8642,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",12990
-SL 8643,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",18450
-SL 8643A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",6400
-SL 8646D,"Single Lever Sink/Basin Mixture Table Mounted High Neck",15110
-SL 8647,"Single Lever Basin Mixer Wall Mounted",20885
-SL 8647A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",10695
-SL 8648,"Single Lever Deusch Mixer",10505
-SL 8649,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",19395
-SL 8649A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",6400
+INR 2441,"Single Lever Basin Mixer With Extended Body",16095
+INR 2442,"Single Lever Basin Mixer With 450 mm Long Braided Hoses(New)",12995
+INR 2443,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",21245
+INR 2443A,"Single Lever Concealed Divertor Exposed parts (Suitable for AL 343)",7445
+INR 2446A,"Single Lever Sink Mixer Table Mounted",12395
+INR 2446B,"Single Lever Sink/Basin Mixer With J Type Spout",14495
+INR 2446C,"Single Lever Sink/Basin Mixer With Spring Type Spout",41820
+INR 2446D,"Single Lever Sink/Basin Mixer High Neck",15495
+INR 2447,"Single Lever Basin Mixer Wall Mounted",21990
+INR 2447A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",10995
+INR 2448,"Single Lever Concealed Deusch Mixer with Provision for Connection to Overhead Shower only",12610
+INR 2449,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",22435
+INR 2449A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",7425
+INR 2450,"Single Lever Sink Mixer Wall Mounted High Neck",17940
+BL 1001,"Pillar Cock",5695
+BL 1003,"Bib Cock With Wall Flange",5195
+BL 1003A,"Bib Cock With Nozzle & Wall Flange",3930
+BL 1004,"Bib Cock Long Nose With Wall Flange",5595
+BL 1004A,"Bib Cock Long Body With Wall Flange",5495
+BL 1005,"Angle Cock With Wall Flange",3995
+BL 1006,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",5995
+BL 1008,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",6395
+BL 1010,"Swan Neck With Casted Swivel Spout",7995
+BL 1011,"Sink Cock With Casted Swivel Spout & Wall Flange",7995
+BL 1013,"2-Way Bib Cock With Wall Flange",7895
+BL 1014,"2-Way Angle Cock With Wall Flange",7895
+BL 1015,"Bath Cock With Wall Flange",8095
+BL 1018,"Central Hole Basin Mixer With Connecting Legs",0
+BL 1018A,"Central Hole Basin Mixer With Braided Hose Set",13995
+BL 1019,"Wall Mixer With L-Bend For Overhead Shower System",19375
+BL 1020,"Wall Mixer With Arrangement For Telephonic Shower",19895
+BL 1021,"Wall Mixer With Tipton For Telephonic Shower System",18395
+BL 1022,"Wall Mixer Non Telephonic Shower System",16395
+BL 1023,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",22395
+BL 1024,"Sink Mixer Wall Mounted With Casted Swivel Spout",14995
+BL 1028,"Spout Plain With Wall Flange '15mm'",4275
+BL 1029,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",6875
+BL 1032,"Shower Arm With Wall Flange",3195
+BL 1033,"Over Head Shower (Regular)",2085
+BL 1034,"Telephonic Shower With 1.5 mtr.CP Tube & Hook",3695
+SL 8601,"Pillar Cock",4895
+SL 8601B,"Pillar Cock B (Long)",6895
+SL 8602,"Pillar Cock With '300mm' Extended Body",9165
+SL 8603,"Bib Cock",4955
+SL 8604,"Bib Cock Long Nose",5295
+SL 8605,"Angle Cock",3495
+SL 8606,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",5595
+SL 8607,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm' Heavy",6095
+SL 8608,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",5895
+SL 8609,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm' Heavy",6495
+SL 8610,"Swan Neck With Round Swivel Spout",6995
+SL 8611,"Sink Cock With Round Swivel Spout",6995
+SL 8613,"2-Way Bib Cock",6445
+SL 8614,"2-Way Angle Cock",6445
+SL 8618,"Central Hole Basin Mixer With Connecting Legs",0
+SL 8618A,"Central Hole Basin Mixer With Braided Hose Set",12995
+SL 8619,"Wall Mixer With L-Bend For Overhead Shower System",17995
+SL 8620,"Wall Mixer With Arrangement For Telephonic Shower",18395
+SL 8621,"Wall Mixer Tipton for Telephonic Shower System",16995
+SL 8622,"Wall Mixer Non Telephonic Shower System",14995
+SL 8623,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",20595
+SL 8624,"Sink Mixer Wall Mounted With Round Swivel Spout",14095
+SL 8628,"Spout Plain '15mm'",6895
+SL 8629,"Spout Tipton With Provision For Telephonic Shower",7995
+SL 8641,"Single Lever Basin Mixer With Extended Body",16095
+SL 8642,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",12995
+SL 8643,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",21480
+SL 8643A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",7680
+SL 8646D,"Single Lever Sink/Basin Mixture Table Mounted High Neck",15195
+SL 8647,"Single Lever Basin Mixer Wall Mounted",24390
+SL 8647A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",13395
+SL 8648,"Single Lever Deusch Mixer",12610
+SL 8649,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",22695
+SL 8649A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",7490
 SL 8650,"Single Lever Sink Mixer Wall Mounted High Neck",16305
-SL 8663,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",21510
-SL 8669,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",22455
-VS 7701,"Pillar Cock",4145
-VS 7701B,"Pillar Cock",6360
-VS 7702,"Pillar Cock With '300mm' Extended Body",7815
-VS 7703,"Bib Cock",3555
-VS 7704,"Bib Cock Long Nose",3865
-VS 7705,"Angle Cock",2995
-VS 7706,"Concealed Stop Cock With Adjustable Sheet Wall Flange 15mm",4575
-VS 7708,"Concealed Stop Cock With Adjustable Sheet Wall Flange 20mm",4910
-VS 7710,"Swan Neck With Round Swivel Spout",6310
-VS 7711,"Sink Cock With Round Swivel Spout",6310
-VS 7713,"2-Way Bib Cock",5725
-VS 7714,"2-Way Angle Cock",5725
-VS 7718,"Central Hole Basin Mixer With Connecting Legs",11105
-VS 7718A,"Central Hole Basin Mixer With Braided Hose Set",11615
-VS 7719,"Wall Mixer With L-Bend For Overhead Shower System",14775
-VS 7720,"Wall Mixer With Arrangement For Telephonic Shower",14905
-VS 7722,"Wall Mixer Non Telephonic Shower System",12225
-VS 7723,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",17660
-VS 7724,"Sink Mixer Wall Mounted With Round Swivel Spout",12480
-VS 7728,"Spout Plain With Wall Flange",4830
-VS 7729,"Spout Tipton With Wall Flange & Provision For Telephonic Shower",6745
-VS 7741,"Single Lever Basin Mixer With Ext, Body",20385
-VS 7742,"Single Lever Basin Mixer With 450 mm long Braided Hoses",16815
-VS 7743,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",18745
-VS 7743A,"Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343)",6695
-VS 7749,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",21805
-VS 7749A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",6695
-VS 7763,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",21510
-VS 7769,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",22455
-NK 7501,"Pillar Cock",3685
-NK 7501B,"Pillar Cock B (Long)",5570
-NK 7502,"Pillar Cock With '300mm' Extended Body",7635
-NK 7503,"Bib Cock",3455
-NK 7504,"Bib Cock Long Nose",3610
-NK 7505,"Angle Cock",2790
-NK 7506,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",4145
-NK 7508,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",4655
-NK 7510,"Swan Neck With Round Swivel Spout",6160
-NK 7511,"Sink Cock With Round Swivel Spout",6160
-NK 7513,"2-Way Bib Cock",5545
-NK 7514,"2-Way Angle Cock",5545
-NK 7518,"Central Hole Basin Mixer With Connecting Legs",9880
-NK 7518A,"Central Hole Basin Mixer With Braided Hose Set",10390
-NK 7519,"Wall Mixer With L-Bend For Overhead Shower System",14395
-NK 7520,"Wall Mixer With Arrangement For Telephonic Shower",14520
-NK 7521,"Wall Mixer With Tipton For Telephonic Shower System",13885
-NK 7522,"Wall Mixer Non Telephonic Shower System",11895
-NK 7523,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",17325
-NK 7524,"Sink Mixer Wall Mounted With Round Swivel Spout",11030
-NK 7528,"Spout Plain '15mm'",4170
-NK 7529,"Spout Tipton With Provision For Telephonic Shower",6160
-NK 7541,"Single Lever Basin Mixer With Extended Body",14265
-NK 7542,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",11285
-NK 7543,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",18410
-NK 7543A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",6360
-NK 7546B,"Single Lever Sink/Basin Mixer With J Type Spout",14010
-NK 7546D,"Single Lever Sink/Basin Mixer High Neck",15110
-NK 7547,"Single Lever Basin Mixer Wall Mounted",19560
-NK 7547A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",9370
-NK 7549,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",19355
-NK 7549A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",6360
-NK 7550,"Single Lever Sink Mixer Wall Mounted High Neck",16305
-NK 7563,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",21510
-NK 7569,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",22455
-ZE 501,"Pillar Cock",3610
-ZE 503,"Bib Cock",3300
-ZE 503A,"Bib Cock With Nozzle",2895
-ZE 504,"Bib Cock Long Nose",3555
-ZE 504A,"Bib Cock Long Body",3555
-ZE 505,"Angle Cock",2665
-ZE 506,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",4145
-ZE 508,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",4655
-ZE 510,"Swan Neck With Casted Swivel Spout",6285
-ZE 511,"Sink Cock With Casted Swivel Spout",6285
-ZE 513,"2-Way Bib Cock",5930
-ZE 514,"2-Way Angle Cock",5930
-ZE,"Wall Flange (Optional)",155
-ZE 518,"Central Hole Basin Mixer With Connecting Legs",9625
-ZE 518A,"Central Hole Basin Mixer With Braided Hose Set",10135
-ZE 519,"Wall Mixer With L-Bend For Overhead Shower System",14010
-ZE 520,"Wall Mixer With Arrangement For Telephonic Shower",14140
-ZE 521,"Wall Mixer With Tipton For Telephonic Shower System",13605
-ZE 522,"Wall Mixer Non Telephonic Shower System",12125
-ZE 523,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",17325
-ZE 524,"Sink Mixer Wall Mounted With Casted Swivel Spout",11205
-ZE 528,"Spout Plain '15mm'",3045
-ZE 529,"Spout Tipton With Provision For Telephonic Shower",5085
-ZE 532,"Shower Arm",2535
-ZE 533,"Over Head Shower",1900
-ZE 534,"Telephonic Shower With 1.5 mtr.CP Tube & Hook",3200
-VN 7401,"Pillar Cock",3505
-VN 7401B,"Pillar Cock B (Long)",5570
-VN 7402,"Pillar Cock With '300mm' Extended Body",7635
-VN 7403,"Bib Cock",3020
-VN 7404,"Bib Cock Long Nose",3275
-VN 7405,"Angle Cock",2590
-VN 7406,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",3940
-VN 7408,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",4575
-VN 7410,"Swan Neck With Round Swivel Spout",5340
-VN 7411,"Sink Cock With Round Swivel Spout",5340
-VN 7413,"2-Way Bib Cock",5395
-VN 7414,"2-Way Angle Cock",5395
-VN 7418,"Central Hole Basin Mixer With Connecting Legs",8910
-VN 7418A,"Central Hole Basin Mixer With Braided Hose Set",9675
-VN 7419,"Wall Mixer With L-Bend For Overhead Shower System",12735
-VN 7420,"Wall Mixer With Arrangement For Telephonic Shower",13120
-VN 7421,"Wall Mixer Tipton For Telephonic Shower System",12480
-VN 7422,"Wall Mixer Non Telephonic Shower System",10440
-VN 7423,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",16305
-VN 7424,"Sink Mixer Wall Mounted With Round Swivel Spout",10595
-VN 7428,"Spout Plain '15mm'",3635
-VN 7429,"Spout Tipton",6030
-VN 7441,"Single Lever Basin Mixer With Extended Body",13245
-VN 7442,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",10265
-VN 7443,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",18235
-VN 7443A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",6185
-VN 7447,"Single Lever Basin Mixer Wall Mounted",19535
-VN 7447A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",9345
-VN 7449,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",19175
-VN 7449A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",6185
-VN 7463,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",21510
-VN 7469,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",22455
-HD 301,"Pillar Cock",3125
-HD 303,"Bib Cock",2665
-HD 304,"Bib Cock Long Nose",2790
-HD 305,"Angle Cock",2205
-HD 306,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",3810
-HD 308,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",4400
-HD 310,"Swan Neck With Round Swivel Spout",5085
-HD 311,"Sink Cock With Round Swivel Spout",5085
-HD 313,"2-Way Bib Cock",5265
-HD 314,"2-Way Angle Cock",5265
-HD 318,"Central Hole Basin Mixer With Connecting Legs",8735
-HD 318A,"Central Hole Basin Mixer With Braided Hose Set",9245
-HD 319,"Wall Mixer With L-Bend For Overhead Shower System",11460
-HD 320,"Wall Mixer With Arrangement For Telephonic Shower",11590
-HD 322,"Wall Mixer Non Telephonic Shower System",10265
-HD 323,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",14775
-HD 324,"Sink Mixer Wall Mounted With Round Swivel Spout",9370
-HD 341,"Single Lever Basin Mixer With Extended Body",11920
-HD 342,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",8860
-HD 342H,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",9755
-HD 343,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",17085
-HD 343A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",5035
-HD 346D,"Single Lever Sink/Basin Mixture Table Mounted High Neck",15110
-HD 347,"Single Lever Basin Mixer Wall Mounted",19280
-HD 347A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",9090
-HD 349,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",18030
-HD 349A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",5035
-HD 350,"Single Lever Sink Mixer Wall Mounted High Neck",16305
-HD 363,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",21510
-HD 369,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",22455
-CR 7036,"Kitchen Filter Faucet",18475
+SL 8663,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",24675
+SL 8669,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",25825
+NK 7501,"Pillar Cock",4795
+NK 7501B,"Pillar Cock B (Long)",6895
+NK 7502,"Pillar Cock With '300mm' Extended Body",9165
+NK 7503,"Bib Cock",3895
+NK 7504,"Bib Cock Long Nose",4195
+NK 7505,"Angle Cock",2895
+NK 7506,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",4395
+NK 7508,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",4895
+NK 7510,"Swan Neck With Round Swivel Spout",6395
+NK 7511,"Sink Cock With Round Swivel Spout",6395
+NK 7513,"2-Way Bib Cock",6445
+NK 7514,"2-Way Angle Cock",6445
+NK 7518,"Central Hole Basin Mixer With Connecting Legs",0
+NK 7518A,"Central Hole Basin Mixer With Braided Hose Set",11995
+NK 7519,"Wall Mixer With L-Bend For Overhead Shower System",15895
+NK 7520,"Wall Mixer With Arrangement For Telephonic Shower",16395
+NK 7521,"Wall Mixer With Tipton For Telephonic Shower System",14895
+NK 7522,"Wall Mixer Non Telephonic Shower System",12895
+NK 7523,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",18895
+NK 7524,"Sink Mixer Wall Mounted With Round Swivel Spout",11995
+NK 7528,"Spout Plain '15mm'",4995
+NK 7529,"Spout Tipton With Provision For Telephonic Shower",6995
+NK 7541,"Single Lever Basin Mixer With Extended Body",15495
+NK 7542,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",11995
+NK 7543,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",21435
+NK 7543A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",7635
+NK 7546B,"Single Lever Sink/Basin Mixer With J Type Spout",14195
+NK 7546D,"Single Lever Sink/Basin Mixer High Neck",15195
+NK 7547,"Single Lever Basin Mixer Wall Mounted",21990
+NK 7547A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",10995
+NK 7549,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",22840
+NK 7549A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",7635
+NK 7550,"Single Lever Sink Mixer Wall Mounted High Neck",16195
+NK 7563,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",0
+NK 7569,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",0
+ZE 501,"Pillar Cock",4395
+ZE 503,"Bib Cock",3695
+ZE 503A,"Bib Cock With Nozzle",3215
+ZE 504,"Bib Cock Long Nose",4295
+ZE 504A,"Bib Cock Long Body",4295
+ZE 505,"Angle Cock",2995
+ZE 506,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",4545
+ZE 508,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",4945
+ZE 510,"Swan Neck With Casted Swivel Spout",7795
+ZE 511,"Sink Cock With Casted Swivel Spout",7795
+ZE 513,"2-Way Bib Cock",6495
+ZE 514,"2-Way Angle Cock",6495
+ZE,"Wall Flange (Optional)",195
+ZE 518,"Central Hole Basin Mixer With Connecting Legs",0
+ZE 518A,"Central Hole Basin Mixer With Braided Hose Set",12995
+ZE 519,"Wall Mixer With L-Bend For Overhead Shower System",16395
+ZE 520,"Wall Mixer With Arrangement For Telephonic Shower",16795
+ZE 521,"Wall Mixer With Tipton For Telephonic Shower System",15995
+ZE 522,"Wall Mixer Non Telephonic Shower System",13395
+ZE 523,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",18995
+ZE 524,"Sink Mixer Wall Mounted With Casted Swivel Spout",12395
+ZE 528,"Spout Plain '15mm'",3595
+ZE 529,"Spout Tipton With Provision For Telephonic Shower",6095
+ZE 532,"Shower Arm",2995
+ZE 533,"Over Head Shower",2095
+ZE 534,"Telephonic Shower With 1.5 mtr.CP Tube & Hook",3195
+VN 7401,"Pillar Cock",5195
+VN 7401B,"Pillar Cock B (Long)",6965
+VN 7402,"Pillar Cock With '300mm' Extended Body",9165
+VN 7403,"Bib Cock",3895
+VN 7404,"Bib Cock Long Nose",4595
+VN 7405,"Angle Cock",2850
+VN 7406,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",4495
+VN 7408,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",5195
+VN 7410,"Swan Neck With Round Swivel Spout",6695
+VN 7411,"Sink Cock With Round Swivel Spout",6695
+VN 7413,"2-Way Bib Cock",6395
+VN 7414,"2-Way Angle Cock",6395
+VN 7418,"Central Hole Basin Mixer With Connecting Legs",0
+VN 7418A,"Central Hole Basin Mixer With Braided Hose Set",11495
+VN 7419,"Wall Mixer With L-Bend For Overhead Shower System",14795
+VN 7420,"Wall Mixer With Arrangement For Telephonic Shower",14995
+VN 7421,"Wall Mixer Tipton For Telephonic Shower System",13795
+VN 7422,"Wall Mixer Non Telephonic Shower System",11795
+VN 7423,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",18915
+VN 7424,"Sink Mixer Wall Mounted With Round Swivel Spout",11695
+VN 7428,"Spout Plain '15mm'",4595
+VN 7429,"Spout Tipton",6995
+VN 7441,"Single Lever Basin Mixer With Extended Body",15395
+VN 7442,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",11895
+VN 7443,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",21195
+VN 7443A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",7395
+VN 7447,"Single Lever Basin Mixer Wall Mounted",23990
+VN 7447A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",12995
+VN 7449,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",22630
+VN 7449A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",7425
+VN 7463,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",0
+VN 7469,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",0
+HD 301,"Pillar Cock",3995
+HD 303,"Bib Cock",3385
+HD 304,"Bib Cock Long Nose",3485
+HD 305,"Angle Cock",2425
+HD 306,"Concealed Stop Cock With Adjustable Sheet Wall Flange '15mm'",4195
+HD 308,"Concealed Stop Cock With Adjustable Sheet Wall Flange '20mm'",4645
+HD 310,"Swan Neck With Round Swivel Spout",5995
+HD 311,"Sink Cock With Round Swivel Spout",5995
+HD 313,"2-Way Bib Cock",5995
+HD 314,"2-Way Angle Cock",5995
+HD 318,"Central Hole Basin Mixer With Connecting Legs",0
+HD 318A,"Central Hole Basin Mixer With Braided Hose Set",10795
+HD 319,"Wall Mixer With L-Bend For Overhead Shower System",12595
+HD 320,"Wall Mixer With Arrangement For Telephonic Shower",12995
+HD 322,"Wall Mixer Non Telephonic Shower System",11295
+HD 323,"Wall Mixer 3 in 1 With Arrangement For Both Telephonic Shower & Overhead Shower System",15595
+HD 324,"Sink Mixer Wall Mounted With Round Swivel Spout",10095
+HD 341,"Single Lever Basin Mixer With Extended Body",15295
+HD 342,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",11795
+HD 342H,"Single Lever Basin Mixer With 450 mm Long Braided Hoses",11795
+HD 343,"Single Lever Concealed Divertor for Spout & Over Head Shower System Hi-Flow",19895
+HD 343A,"Single Lever Concealed Divertor Exposed Parts (Suitable for AL 343)",6095
+HD 346D,"Single Lever Sink/Basin Mixture Table Mounted High Neck",15195
+HD 347,"Single Lever Basin Mixer Wall Mounted",21990
+HD 347A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",10995
+HD 349,"3 inlet Single Lever Concealed Divertor For Spout & Over Head Shower System Hi-Flow",21280
+HD 349A,"3 Inlet Single Lever Concealed Divertor Exposed Parts (Suitable for AL 349)",6045
+HD 350,"Single Lever Sink Mixer Wall Mounted High Neck",16195
+HD 363,"Single Lever Conc.Divetor for Spout & Shower System Hi-Flow 3/4""",23175
+HD 369,"3 Inlet Single Lever Conc.Divertor for Spout & Shower System Hi-Flow 3/4""",0
+CR 7036,"Kitchen Filter Faucet",19955
 CR 7037,"Dual Lever RO Filter Faucet",14265
 CR 7042,"Single Lever Basin Mixer",23780
-CR 7042 M,"Single Lever Basin Mixer With Medium Long Spout",9320
+CR 7042 M,"Single Lever Basin Mixer With Medium Long Spout",11185
 CR 7046B,"Single Lever Sink/Basin Mixer Table Mounted With Swan Type Neck",24010
 CR 7046PR,"Single Lever Sink Mixer Table Mounted With Pull Out Spout(Round)",19110
 CR 7046PS,"Single Lever Sink Mixer Table Mounted With Pull Out Spout(Square)",19110
 CR 7046PW,"Single Lever Sink Mixer Table Mounted With Pull Out Spout Water Fall",19110
 EKO 146P,"Single Lever Sink/Basin Mixer Table Mounted With Pull Out Spout",12990
-DN 9141,"Single Lever Basin Mixture Extended Body",11770
-DN 9142,"Single Lever Basin Mixture",8735
-AT 941,"Single Lever Basin Mixture Extended Body",15465
-AT 942,"Single Lever Basin Mixture",11515
-PR 8041 C,"Single Lever Basin Mixture Extended Body",13400
-PR 8042 C,"Single Lever Basin Mixture",10315
-EKO 141 N,"Single Lever Basin Mixture Ext Body",10645
-EKO 142,"Single Lever Basin Mixer with 450 mm Long Braided Hoses",10265
-EKO 142 N,"Single Lever Basin Mixture",8860
-EKO 143,"Single Lever Concealed Divertor With 35 mm Cartridge For Spout & Overhead Shower System",13300
-EKO 143A,"Single Lever Concealed Divertor Exposed  parts (Suitable for AL 343 A )",4145
+DN 9141,"Single Lever Basin Mixture Extended Body",12715
+DN 9142,"Single Lever Basin Mixture",9435
+AT 941,"Single Lever Basin Mixture Extended Body",17170
+AT 942,"Single Lever Basin Mixture",13475
+PR 8041 C,"Single Lever Basin Mixture Extended Body",14740
+PR 8042 C,"Single Lever Basin Mixture",11350
+EKO 141 N,"Single Lever Basin Mixture Ext Body",12995
+EKO 142,"Single Lever Basin Mixer with 450 mm Long Braided Hoses",11805
+EKO 142 N,"Single Lever Basin Mixture",9570
+EKO 143,"Single Lever Concealed Divertor With 35 mm Cartridge For Spout & Overhead Shower System",15960
+EKO 143A,"Single Lever Concealed Divertor Exposed parts (Suitable for AL 343 A )",4975
 EKO 146,"Single Lever Sink Mixer Wall Mounted With Swinging Spout",14240
 EKO 146 A,"Single Lever Sink Mixer Table Mounted With Base Emerging Spout",12330
 EKO 146 P,"Single Lever Sink Mixer Table Mounted With Pull Out Spout",13680
-EKO 147,"Single Lever Basin Mixer Wall Mounted",19620
-EKO 147A,"Single Lever Basin Mixer Wall Mounted Exposed  parts (Suitable for AL 347)",9420
-AL 306,"Concealed Stop Cock Body 15 mm(Light)",2615
-AL 305,"Concealed Stop Cock Body 15 mm(Regular)",2995
-AL 307,"Concealed Stop Cock Body 15 mm (Heavy)",3810
-AL 308,"Concealed Stop Cock Body 20 mm",3200
-AL 309,"Concealed Stop Cock Body 20 mm (Heavy)",3965
-AL 343,"Concealed Body For Single Lever Hi-Flow Divertor With Button Assembly & Cartridge but Without Exposed Part",12050
-AL 343A,"Concealed Body For Single Lever Divertor, 35 mm Cartridge With Button Assembly but Without Exposed Part",9115
-AL 347,"Concealed Body For Single Lever Basin Mixer With Cartridge but Without Exposed Part",10185
-AL 349,"Concealed Body For 3 inlet Single Lever Hi-Flow Divertor With Button Assembly & Cartridge but Without Exposed Part",12990
-AL 363,"Concealed Body For Single Lever Hi-Flow Divertor Without Exposed Part 3/4",15110
-AL 369,"Concealed Body For 3 inlet Divertor Without Exposed Part",16050
-T 37,"Flush Cock Half Turn 25mm",5265
-T 38,"Flush Cock Push Button 25mm",7305
-T 39,"Flush Cock Lever Tpe 25mm",7305
-T 40,"Metropole Flush Valve 32mm",14010
-T 51,"Surgical Pillar Cock",6440
-T 54,"Surgical Long Nose Bib Cock",6360
-T 57,"Surgical Single Lever Mixture Wall Mounted",14675
-T 61,"Pressmatic Auto Closing Pillar Cock",6540
-T 63,"Pressmatic Auto Closing Bib Cock",6415
-T 65,"Pressmatic Auto Closing Angle Cock",5700
-T 96,"Waste Coupling (POP UP) Chrome",1315
-T 96 L,"Waste Coupling (POP UP) Chrome Long",1850
-T 96 EL,"Waste Coupling (POP UP) Chrome Extra Long",2715
-T 96 EEL,"Waste Coupling (POP UP) Chrome extra extra Long 9""",3175
-T 97,"Waste Coupling (POP UP) Chrome Ceramic",1440
-T 97 L,"Waste Coupling (POP UP) Chrome Long Ceramic",2130
-T 97 EL,"Waste Coupling (POP UP) Chrome Extra Long Ceramic",2995
-T 98,"Waste Coupling (POP UP) Chrome (Heavy)",2590
-T 98 L,"Waste Coupling (POP UP) Brass (Heavy) Long",3100
-T 98 EL,"Waste Coupling (POP UP) Brass (Heavy) Extra Long",4320
-T 99,"Waste Coupling (POP UP) Brass Ceramic (Heavy)",2740
-T 99 L,"Waste Coupling (POP UP) Brass Ceramic (Heavy) Long",3175
-T 99 EL,"Waste Coupling (POP UP) Brass Ceramic (Heavy) Extra Long",3940
-T 100,"Waste Coupling (POP UP) Brass (Med)",2025
-T 100 L,"Waste Coupling (POP UP) Brass Long (Med)",2790
-T 100 BK,"Waste Coupling (POP UP) Brass  Black",2360
-T 100 LBK,"Waste Coupling (POP UP) Brass Long Black",3125
-T 100 ELBK,"Waste Coupling (POP UP) Brass Extra Long Black",4320
-T 100 RG,"Waste Coupling (POP UP) Brass Gold/Rose Gold",2485
-T 100 LRG,"Waste Coupling (POP UP) Brass Long Gold/Rose Gold",3430
-T 100 ELRG,"Waste Coupling (POP UP) Brass Extra Long Gold/Rose Gold",4575
-T 101,"Waste Coupling (POP UP) Brass Ceramic",2280
-T 101 L,"Waste Coupling (POP UP) Brass Long Ceramic",3045
-T 102 HT,"Waste Coupling Chrome Half Thread",905
-T 102 FT,"Waste Coupling Chrome Full Thread",905
-T 102 L,"Waste Coupling Chrome long",1595
-T 102 FLT,"Waste Coupling Chrome Flat",905
-T 102 EL,"Waste Coupling Chrome Extra Long",2230
-T 103 HT,"Waste Coupling Brass Half Thread",1875
-T 103 FT,"Waste Coupling Brass Full Thread",1875
-T 103 L,"Waste Coupling Brass Long",2845
-T 104SQ,"Waste Coupling (POP UP) Square",3355
-MG 5051,"Towel Rail 24""",5420
-MG 5053,"Towel Ring",3890
-MG 5054,"Soap Dish",4210
-MG 5055,"Tooth Brush Holder",4210
-MG 5056,"Robe Hook",2335
-MG 5057,"Set Of 5 Pieces",20055
-MG 5058,"Toilet Paper Holder",3660
-MG 5058A,"Toilet Paper Holder With Flap",4270
-OP 2051,"Towel Rail 24""",5395
-OP 2053,"Towel Ring",3175
-OP 2054,"Soap Dish",4360
-OP 2055,"Tooth Brush Holder",4360
-OP 2056,"Robe Hook",2385
-OP 2057,"Set Of 5 Pieces",19675
-OP 2058,"Toilet Paper Holder",3225
-OP 2058A,"Toilet Paper Holder With Flap",3810
-ZE 551,"Towel Rail 24""",5060
-ZE 553,"Towel Ring",2590
-ZE 554,"Soap Dish",2665
-ZE 555,"Tooth Brush Holder",2690
-ZE 556,"Robe Hook",1570
-ZE 557,"Set Of 5 Pieces",14575
-ZE 558,"Toilet Paper Holder",2280
-ZE 558A,"Toilet Paper Holder With Flap",2920
-T 151,"Towel Rail 24""",3505
-T 153,"Towel Ring",2180
-T 154,"Soap Dish",1875
-T 155,"Tooth Brush Holder",2230
-T 156,"Robe Hook",1440
-T 157,"Set Of 5 Pieces",11180
-T 158,"Toilet Paper Holder",1975
-T 158A,"Toilet Paper Holder With Flap",2535
-SQ 151,"Towel Rail 24""",2360
-SQ 153,"Towel Ring",1770
-SQ 154,"Soap Dish",1720
-SQ 155,"Tooth Brush Holder",1850
-SQ 156,"Robe Hook",1210
-SQ 157,"Set Of 5 Pieces",8910
-SQ 157A,"Set Of 4 Pieces",7635
-SQ 158A,"Toilet Paper Holder With Flap",2360
-C 151,"Towel Rail 24""",2360
-C 153,"Towel Ring",1770
-C 154,"Soap Dish",1720
-C 155,"Tooth Brush Holder",1850
-C 156,"Robe Hook",1210
-C 157,"Set Of 5 Pieces",8910
-C 157 A,"Set Of 4 Pieces",7635
-C 158,"Toilet Paper Holder",1770
-C 158 A,"Toilet Paper Holder With Flap",2205
-SL 8651,"Towel Rail 24""",5060
-SL 8653,"Towel Ring",2790
-SL 8654,"Soap Dish",2335
-SL 8655,"Tooth Brush Holder",2410
+EKO 147,"Single Lever Basin Mixer Wall Mounted",23545
+EKO 147A,"Single Lever Basin Mixer Wall Mounted Exposed parts (Suitable for AL 347)",11305
+AL 306,"Concealed Stop Cock Body 15 mm(Light)",3090
+AL 305,"Concealed Stop Cock Body 15 mm(Regular)",3595
+AL 307,"Concealed Stop Cock Body 15 mm (Heavy)",4575
+AL 308,"Concealed Stop Cock Body 20 mm",3840
+AL 309,"Concealed Stop Cock Body 20 mm (Heavy)",4760
+AL 343,"Concealed Body For Single Lever Hi-Flow Divertor With Button Assembly & Cartridge but Without Exposed Part",13800
+AL 343A,"Concealed Body For Single Lever Divertor, 35 mm Cartridge With Button Assembly but Without Exposed Part",10940
+AL 347,"Concealed Body For Single Lever Basin Mixer With Cartridge but Without Exposed Part",10995
+AL 349,"Concealed Body For 3 inlet Single Lever Hi-Flow Divertor With Button Assembly & Cartridge but Without Exposed Part",15200
+AL 363,"Concealed Body For Single Lever Hi-Flow Divertor Without Exposed Part 3/4",16995
+AL 369,"Concealed Body For 3 inlet Divertor Without Exposed Part",18140
+T 37,"Flush Cock Half Turn 25mm",6320
+T 38,"Flush Cock Push Button 25mm",8770
+T 39,"Flush Cock Lever Tpe 25mm",8770
+T 40,"Metropole Flush Valve 32mm",16815
+T 51,"Surgical Pillar Cock",7730
+T 54,"Surgical Long Nose Bib Cock",7635
+T 57,"Surgical Single Lever Mixture Wall Mounted",17610
+T 61,"Pressmatic Auto Closing Pillar Cock",7850
+T 63,"Pressmatic Auto Closing Bib Cock",7700
+T 65,"Pressmatic Auto Closing Angle Cock",6840
+T 96,"Waste Coupling (POP UP) Chrome",1375
+T 96 L,"Waste Coupling (POP UP) Chrome Long",1935
+T 96 EL,"Waste Coupling (POP UP) Chrome Extra Long",2835
+T 96 EEL,"Waste Coupling (POP UP) Chrome extra extra Long 9""",3315
+T 97,"Waste Coupling (POP UP) Chrome Ceramic",1515
+T 97 L,"Waste Coupling (POP UP) Chrome Long Ceramic",2235
+T 97 EL,"Waste Coupling (POP UP) Chrome Extra Long Ceramic",3115
+T 98,"Waste Coupling (POP UP) Chrome (Heavy)",2915
+T 98 L,"Waste Coupling (POP UP) Brass (Heavy) Long",3415
+T 98 EL,"Waste Coupling (POP UP) Brass (Heavy) Extra Long",4345
+T 99,"Waste Coupling (POP UP) Brass Ceramic (Heavy)",3075
+T 99 L,"Waste Coupling (POP UP) Brass Ceramic (Heavy) Long",3815
+T 99 EL,"Waste Coupling (POP UP) Brass Ceramic (Heavy) Extra Long",4335
+T 100,"Waste Coupling (POP UP) Brass (Med)",2175
+T 100 L,"Waste Coupling (POP UP) Brass Long (Med)",2995
+T 100 BK,"Waste Coupling (POP UP) Brass Black",2675
+T 100 LBK,"Waste Coupling (POP UP) Brass Long Black",3535
+T 100 ELBK,"Waste Coupling (POP UP) Brass Extra Long Black",4885
+T 100 RG,"Waste Coupling (POP UP) Brass Gold/Rose Gold",2815
+T 100 LRG,"Waste Coupling (POP UP) Brass Long Gold/Rose Gold",3885
+T 100 ELRG,"Waste Coupling (POP UP) Brass Extra Long Gold/Rose Gold",5175
+T 101,"Waste Coupling (POP UP) Brass Ceramic",2585
+T 101 L,"Waste Coupling (POP UP) Brass Long Ceramic",3445
+T 102 HT,"Waste Coupling Chrome Half Thread",955
+T 102 FT,"Waste Coupling Chrome Full Thread",955
+T 102 L,"Waste Coupling Chrome long",1675
+T 102 FLT,"Waste Coupling Chrome Flat",955
+T 102 EL,"Waste Coupling Chrome Extra Long",2345
+T 103 HT,"Waste Coupling Brass Half Thread",2065
+T 103 FT,"Waste Coupling Brass Full Thread",2065
+T 103 L,"Waste Coupling Brass Long",3130
+T 104 ANT,"Waste Coupling (POP UP) Antique",3695
+T 104 BK,"Waste Coupling (POP UP) Black",3695
+T 104 RB,"Waste Coupling (POP UP) Rose Brown",3695
+T 104SQ,"Waste Coupling (POP UP) Square",3695
+MG 5051,"Towel Rail 24""",5965
+MG 5053,"Towel Ring",4280
+MG 5054,"Soap Dish",4635
+MG 5055,"Tooth Brush Holder",4635
+MG 5056,"Robe Hook",2570
+MG 5057,"Set Of 5 Pieces",22065
+MG 5058,"Toilet Paper Holder",4030
+MG 5058A,"Toilet Paper Holder With Flap",4700
+OP 2051,"Towel Rail 24""",5935
+OP 2053,"Towel Ring",3495
+OP 2054,"Soap Dish",4800
+OP 2055,"Tooth Brush Holder",4800
+OP 2056,"Robe Hook",2625
+OP 2057,"Set Of 5 Pieces",21645
+OP 2058,"Toilet Paper Holder",3550
+OP 2058A,"Toilet Paper Holder With Flap",4195
+ZE 551,"Towel Rail 24""",5570
+ZE 553,"Towel Ring",2850
+ZE 554,"Soap Dish",2935
+ZE 555,"Tooth Brush Holder",2960
+ZE 556,"Robe Hook",1730
+ZE 557,"Set Of 5 Pieces",16035
+ZE 558,"Toilet Paper Holder",2510
+ZE 558A,"Toilet Paper Holder With Flap",3215
+T 151,"Towel Rail 24""",3860
+T 153,"Towel Ring",2400
+T 154,"Soap Dish",2065
+T 155,"Tooth Brush Holder",2455
+T 156,"Robe Hook",1585
+T 157,"Set Of 5 Pieces",12300
+T 158,"Toilet Paper Holder",2175
+T 158A,"Toilet Paper Holder With Flap",2790
+SQ 151,"Towel Rail 24""",2480
+SQ 153,"Towel Ring",1860
+SQ 154,"Soap Dish",1810
+SQ 155,"Tooth Brush Holder",1945
+SQ 156,"Robe Hook",1275
+SQ 157,"Set Of 5 Pieces",9360
+SQ 157A,"Set Of 4 Pieces",8020
+SQ 158A,"Toilet Paper Holder With Flap",2480
+C 151,"Towel Rail 24""",2480
+C 153,"Towel Ring",1860
+C 154,"Soap Dish",1810
+C 155,"Tooth Brush Holder",1945
+C 156,"Robe Hook",1275
+C 157,"Set Of 5 Pieces",9360
+C 157 A,"Set Of 4 Pieces",8020
+C 158,"Toilet Paper Holder",1860
+C 158 A,"Toilet Paper Holder With Flap",2320
+SL 8651,"Towel Rail 24""",5365
+SL 8653,"Towel Ring",2960
+SL 8654,"Soap Dish",2480
+SL 8655,"Tooth Brush Holder",2555
 SL 8656,"Robe Hook",0
-SL 8657 A,"Set Of 4 Pieces",12595
-SL 8658 A,"Toilet Paper Holder With Flap",3380
-SL 8650,"Soap Dispensor With Stand",3175
+SL 8657 A,"Set Of 4 Pieces",13355
+SL 8658 A,"Toilet Paper Holder With Flap",3585
+SL 8650,"Soap Dispensor With Stand",3370
 EU 4551,"Towel Rail 24""",4655
 EU 4553,"Towel Ring",3355
 EU 4554,"Soap Dish",3250
@@ -502,61 +443,61 @@ EU 4556,"Robe Hook",1900
 EU 4557,"Set Of 5 Pieces",15540
 EU 4557A,"Set Of 4 Pieces",14625
 EU 4558A,"Toilet Paper Holder With Flap",3810
-HR 6051,"Towel Rail 24""",3810
-HR 6053,"Towel Ring",2435
-HR 6054,"Soap Dish",2485
-HR 6055,"Tooth Brush Holder",2180
+HR 6051,"Towel Rail 24""",4040
+HR 6053,"Towel Ring",2585
+HR 6054,"Soap Dish",2635
+HR 6055,"Tooth Brush Holder",2315
 HR 6056,"Robe Hook",0
-HR 6057A,"Set Of 4 Pieces",10950
-NK 7551,"Towel Rail 24""",3380
-NK 7553,"Towel Ring",2335
-NK 7554,"Soap Dish",1950
-NK 7555,"Tooth Brush Holder",2025
+HR 6057A,"Set Of 4 Pieces",11610
+NK 7551,"Towel Rail 24""",3585
+NK 7553,"Towel Ring",2480
+NK 7554,"Soap Dish",2070
+NK 7555,"Tooth Brush Holder",2150
 NK 7556,"Robe Hook",0
-NK 7557 A,"Set Of 4 Pieces",9625
-NK 7558 A,"Toilet Paper Holder With Flap",3045
-NK 7550,"Soap Dispensor With Stand",3300
-AT 951,"Towel Rail 24""",5340
-AT 953,"Towel Ring",2535
-AT 954,"Soap Dish",2510
-AT 955,"Tooth Brush Holder",2510
+NK 7557 A,"Set Of 4 Pieces",10205
+NK 7558 A,"Toilet Paper Holder With Flap",3230
+NK 7550,"Soap Dispensor With Stand",3500
+AT 951,"Towel Rail 24""",5665
+AT 953,"Towel Ring",2690
+AT 954,"Soap Dish",2665
+AT 955,"Tooth Brush Holder",2665
 AT 956,"Robe Hook",0
-AT 957A,"Set Of 4 Pieces",12915
-AT 958A,"Toilet Paper Holder With Flap",3045
-AT 950,"Soap Dispensor With Stand",3430
-AR 6551,"Towel Rail 24""",3380
-AR 6553,"Towel Ring",2280
-AR 6554,"Soap Dish",1925
-AR 6555,"Tooth Brush Holder",1925
+AT 957A,"Set Of 4 Pieces",13690
+AT 958A,"Toilet Paper Holder With Flap",3230
+AT 950,"Soap Dispensor With Stand",3640
+AR 6551,"Towel Rail 24""",3585
+AR 6553,"Towel Ring",2420
+AR 6554,"Soap Dish",2045
+AR 6555,"Tooth Brush Holder",2045
 AR 6556,"Robe Hook",0
-AR 6557A,"Set Of 4 Pieces",9575
-NK 7551 BK,"Towel Rail 24""Black",4320
-NK 7553 BK,"Towel Ring Black",2995
-NK 7554 BK,"Soap Dish Black",2535
-NK 7555 BK,"Tooth Brush Holder Black",2535
+AR 6557A,"Set Of 4 Pieces",10150
+NK 7551 BK,"Towel Rail 24""Black",4580
+NK 7553 BK,"Towel Ring Black",3175
+NK 7554 BK,"Soap Dish Black",2690
+NK 7555 BK,"Tooth Brush Holder Black",2690
 NK 7556 BK,"Robe Hook Black",0
-NK 7557 ABK,"Set Of 4 Pieces Black",12395
-NK 7558 ABK,"Toilet Paper Holder With Flap Black",4065
-NK 7551,"Towel Rail 24"" Antique/Rose Gold",5085
-NK 7553,"Towel Ring Antique/Rose Gold",3505
-NK 7554,"Soap Dish Antique/Rose Gold",2920
-NK 7555,"Tooth Brush Holder Antique/Rose Gold",2920
+NK 7557 ABK,"Set Of 4 Pieces Black",13140
+NK 7558 ABK,"Toilet Paper Holder With Flap Black",4310
+NK 7551,"Towel Rail 24"" Antique/Rose Gold",5395
+NK 7553,"Towel Ring Antique/Rose Gold",3720
+NK 7554,"Soap Dish Antique/Rose Gold",3100
+NK 7555,"Tooth Brush Holder Antique/Rose Gold",3100
 NK 7556,"Robe Hook Antique/Rose Gold",0
-NK 7557 A,"Set Of 4 Pieces Antique/Rose Gold",14435
-NK 7558 ARG,"Toilet Paper Holder With Flap Antique/Rose Gold",4705
+NK 7557 A,"Set Of 4 Pieces Antique/Rose Gold",15305
+NK 7558 ARG,"Toilet Paper Holder With Flap Antique/Rose Gold",4990
 T 159A,"Towel Rack Round",9320
 T 159B,"Towel Rack Oval",13425
 T 159C,"Towel Rack Square",15850
 SL 8659,"Towel Rack Oval New",5595
 C 159,"Towel Rack Chrome",7330
-GB 12,"Grab Bar Dome Crome",1900
-GB 22,"Grab Bar Round Crome",1900
-GB 32,"Grab Bar Round Heavy Brass",3125
-SD 54 A,"Soap Dish Round",1900
-SD 54 B,"Soap Dish Oval",1900
-SD 54 C,"Soap Dish Square",1900
-SD 55,"Soap Dish SL Type",1900
-SD 56,"Soap Dish Square Flat",2335
+GB 12,"Grab Bar Dome Crome",1995
+GB 22,"Grab Bar Round Crome",1995
+GB 32,"Grab Bar Round Heavy Brass",3285
+SD 54 A,"Soap Dish Round",1995
+SD 54 B,"Soap Dish Oval",1995
+SD 54 C,"Soap Dish Square",1995
+SD 55,"Soap Dish SL Type",1995
+SD 56,"Soap Dish Square Flat",2455
 T 150A,"Corner 9""X9"" Plain",2845
 T 150B,"Corner 12""X12"" Plain",3045
 T 150C,"Shelf 5.5""X14"" Plain",2920
@@ -593,114 +534,114 @@ BL 1032/33,"BL Shower With Arm",2780
 INR 2432/33,"INR Shower With Arm",2650
 OL 3032/33,"OL Shower With Arm",3380
 EU 4532/33,"EU Shower With Arm",3545
-T 180,"Shower Square 4""X4""  Regular",2870
+T 180,"Shower Square 4""X4"" Regular",3045
 T 180A,"Shower Square 4""X4"" Ultra Slim",1720
-T 180B,"Shower Square 4""X4"" Amaze/Drizzle",2180
-T 180C,"Shower Square 4""X4"" Arc Edge",1770
-T 180D,"Shower Square 4""X4"" Choller",2080
-T 180E,"Shower Square 4""X4"" Elegant",2155
-T 181,"Shower Square 6""X6"" Regular",5340
+T 180B,"Shower Square 4""X4"" Amaze/Drizzle",2290
+T 180C,"Shower Square 4""X4"" Arc Edge",1860
+T 180D,"Shower Square 4""X4"" Choller",2185
+T 180E,"Shower Square 4""X4"" Elegant",2265
+T 181,"Shower Square 6""X6"" Regular",5715
 T 181A,"Shower Square 6""X6"" Ultra Slim",2320
-T 181B,"Shower Square 6""X6"" Amaze/Drizzle",3495
-T 181C,"Shower Square 6""X6"" Arc Edge",4120
-T 181D,"Shower Square 6""X6"" Choller",3100
-T 181E,"Shower Square 6""X6"" Elegant",3495
-T 181EBK,"Shower Square 6""X6"" Elegant Black",7125
-T 181ERG,"Shower Square 6""X6"" Elegant Gold/Rose Gold",7125
-T 181F,"Shower Square 6""X6"" 4 Hole",3530
+T 181B,"Shower Square 6""X6"" Amaze/Drizzle",3670
+T 181C,"Shower Square 6""X6"" Arc Edge",4330
+T 181D,"Shower Square 6""X6"" Choller",3290
+T 181E,"Shower Square 6""X6"" Elegant",3670
+T 181EBK,"Shower Square 6""X6"" Elegant Black",7485
+T 181ERG,"Shower Square 6""X6"" Elegant Gold/Rose Gold",7485
+T 181F,"Shower Square 6""X6"" 4 Hole",3710
 T 182,"Shower Square 8""X8"" Regular",0
 T 182A,"Shower Square 8'X8"" Ultra Slim",2820
-T 182B,"Shower Square 8""X8""  Amaze/Drizzle",4885
-T 182C,"Shower Square 8""X8""  Arc Edge",5085
-T 182D,"Shower Square 8""X8""  Choller",4780
-T 182E,"Shower Square 8""X8""  Elegant",4885
-T 182EBK,"Shower Square 8""X8""  Elegant Black",10185
-T 182ERG,"Shower Square 8""X8""  Elegant Rose Gold",10185
-T 182EG,"Shower Square 8""X8""  Elegant Gold",10185
-T 182F,"Shower Square 8""X8""  4 Hole",5010
+T 182B,"Shower Square 8""X8"" Amaze/Drizzle",5130
+T 182C,"Shower Square 8""X8"" Arc Edge",5340
+T 182D,"Shower Square 8""X8"" Choller",5020
+T 182E,"Shower Square 8""X8"" Elegant",5130
+T 182EBK,"Shower Square 8""X8"" Elegant Black",10800
+T 182ERG,"Shower Square 8""X8"" Elegant Rose Gold",10800
+T 182EG,"Shower Square 8""X8"" Elegant Gold",10800
+T 182F,"Shower Square 8""X8"" 4 Hole",5315
 T 183A,"Shower Square 10""X10"" Ultra Slim",5725
-T 183B,"Shower Square 10""X10"" Amaze/Drizzle",11155
-T 183D,"Shower Square 10""X10"" Choler",10185
-T 183E,"Shower Square 10""X10"" Elegant",11155
-T 183F,"Shower Square 10""X10"" 4 Hole",11665
+T 183B,"Shower Square 10""X10"" Amaze/Drizzle",11715
+T 183D,"Shower Square 10""X10"" Choler",10695
+T 183E,"Shower Square 10""X10"" Elegant",11715
+T 183F,"Shower Square 10""X10"" 4 Hole",12250
 T 184A,"Shower Square 12""X12"" Ultra Slim",6875
-T 184B,"Shower Square 12""X12"" Amaze/Drizzle",13475
-T 184D,"Shower Square 12""X12"" Choller",12025
-T 184E,"Shower Square 12""X12"" Elegant",13475
-T 184EBK,"Shower Square 12""X12"" Elegant Black",25485
-T 184ERG,"Shower Square 12""X12"" Elegant Gold/Rose Gold",25485
-T 184F,"Shower Square 12""X12"" 4 Hole",13580
-T 185B,"Shower Square 16""X16"" Amaze/Drizzle",24775
-T 185E,"Shower Square 16""X16"" Elegant",24860
-SH 1080,"Shower Square 4""X4"" Cozy",1770
-SH 1081,"Shower Square 6""X6"" Cozy",3505
-SH 1082,"Shower Square 8""X8"" Cozy",4885
-SH 2081,"Shower Square 6""X6"" Step",3505
-SH 2082,"Shower Square 8""X8"" Step",4885
-SH 3081,"Shower Square 6""X6"" My",3100
-T 192,"Shower Round 4"" Regular",2870
-T 192IM,"Shower Round 4"" Regular Economical",1515
-T 192A,"Shower Round 4"" Ultra Slim",1720
-T 192B,"Shower Round 4"" Amaze/Drizzle",2180
-T 192D,"Shower Round 4"" Choller",2080
-T 193,"Shower Round 5"" Regular",3175
-T 193IM,"Shower Round 5"" Regular Economical",2000
+T 184B,"Shower Square 12""X12"" Amaze/Drizzle",14285
+T 184D,"Shower Square 12""X12"" Choller",12750
+T 184E,"Shower Square 12""X12"" Elegant",14285
+T 184EBK,"Shower Square 12""X12"" Elegant Black",27015
+T 184ERG,"Shower Square 12""X12"" Elegant Gold/Rose Gold",27015
+T 184F,"Shower Square 12""X12"" 4 Hole",14395
+T 185B,"Shower Square 16""X16"" Amaze/Drizzle",26265
+T 185E,"Shower Square 16""X16"" Elegant",26355
+SH 1080,"Shower Square 4""X4"" Cozy",1860
+SH 1081,"Shower Square 6""X6"" Cozy",3685
+SH 1082,"Shower Square 8""X8"" Cozy",5130
+SH 2081,"Shower Square 6""X6"" Step",3685
+SH 2082,"Shower Square 8""X8"" Step",5130
+SH 3081,"Shower Square 6""X6"" My",3290
+T 192,"Shower Round 4"" Regular",3045
+T 192IM,"Shower Round 4"" Regular Economical",1595
+T 192A,"Shower Round 4"" Ultra Slim",1810
+T 192B,"Shower Round 4"" Amaze/Drizzle",2290
+T 192D,"Shower Round 4"" Choller",2185
+T 193,"Shower Round 5"" Regular",3335
+T 193IM,"Shower Round 5"" Regular Economical",2140
 T 193 A,"Shower Dome 5"" Round",2640
 T 193 B,"Shower Dome 5"" Square",2690
-T 194,"Shower Round 6"" Regular",5445
+T 194,"Shower Round 6"" Regular",5775
 T 194A,"Shower Round 6"" Ultra Slim",2335
-T 194B,"Shower Round 6"" Amaze/Drizzle",3505
-T 194D,"Shower Round 6"" Choller",3100
-SH 1094,"Shower Round 6"" My",3100
+T 194B,"Shower Round 6"" Amaze/Drizzle",3685
+T 194D,"Shower Round 6"" Choller",3290
+SH 1094,"Shower Round 6"" My",3290
 T 195,"Shower Round 8"" Regular",0
 T 195A,"Shower Round 8"" Ultra Slim",2790
-T 195B,"Shower Round 8"" Amaze/Drizzle",4885
-T 195D,"Shower Round 8"" Choller",4780
-T 196B,"Shower Round 10"" Amaze/Drizzle",10185
-T 197B,"Shower Round 12"" Amaze/Drizzle",13475
-T 198,"Shower Oval 5""X8""",3530
-T 198A,"Shower Oval 7""X10""",5725
-T 198B,"Shower Oval 9""X14""",12100
-T 199,"shower Leaf 4""X6""",3275
-T 199A,"Shower Leaf 6""X10""",5700
-T 199B,"Shower Leaf 8""X12""",12735
-SH 79,"Shower 4"" Round Hexa",1260
-SH 80,"Shower 6"" Round Disc",3175
-SH 81,"Shower Globe Square",4065
-SH 82,"Shower Globe Round",4065
-SH 83,"Shower Solar",5085
-SH 84,"Shower Disk",6105
-SH 85,"Shower Mesh 10"" (Auto Cleaning)",8400
-SH 89,"Shower Pearl",4830
-SH 90,"Shower Sieve",5085
-SH 91,"Shower Daimond Round",13500
-SH 92,"Shower Daimond Rectangular",13500
-SH 93,"Shower Diamond Rectangular 9""X6""",4320
-SH 94,"Shower Rain Dance 8""X14""",15030
-SH 95,"Shower Rain Dance 12""",14265
-SH 96,"Shower Statement 10""X14""",12025
-SH 97,"Shower Euphoria 12""",11105
-SH 97BG,"Shower Euphoria 12"" Brush Gold",17835
-SH 98,"Shower Mist 10""",12990
-SH 99,"Shower Filter",4985
-SH 101,"Shower Lamp",44230
-SH 200,"Rain Shower  8""x 20"" Classic",23395
+T 195B,"Shower Round 8"" Amaze/Drizzle",5130
+T 195D,"Shower Round 8"" Choller",5020
+T 196B,"Shower Round 10"" Amaze/Drizzle",10695
+T 197B,"Shower Round 12"" Amaze/Drizzle",14150
+T 198,"Shower Oval 5""X8""",3710
+T 198A,"Shower Oval 7""X10""",6015
+T 198B,"Shower Oval 9""X14""",12705
+T 199,"shower Leaf 4""X6""",3440
+T 199A,"Shower Leaf 6""X10""",5985
+T 199B,"Shower Leaf 8""X12""",13375
+SH 79,"Shower 4"" Round Hexa",1325
+SH 80,"Shower 6"" Round Disc",3335
+SH 81,"Shower Globe Square",4310
+SH 82,"Shower Globe Round",4310
+SH 83,"Shower Solar",5340
+SH 84,"Shower Disk",6535
+SH 85,"Shower Mesh 10"" (Auto Cleaning)",8905
+SH 89,"Shower Pearl",5170
+SH 90,"Shower Sieve",5445
+SH 91,"Shower Daimond Round",14445
+SH 92,"Shower Daimond Rectangular",14445
+SH 93,"Shower Diamond Rectangular 9""X6""",4625
+SH 94,"Shower Rain Dance 8""X14""",16085
+SH 95,"Shower Rain Dance 12""",15265
+SH 96,"Shower Statement 10""X14""",12870
+SH 97,"Shower Euphoria 12""",11885
+SH 97BG,"Shower Euphoria 12"" Brush Gold",21405
+SH 98,"Shower Mist 10""",13900
+SH 99,"Shower Filter",5335
+SH 101,"Shower Lamp",47330
+SH 200,"Rain Shower 8""x 20"" Classic",23395
 SH 201,"Rain Shower 10""x 22"" Waterfall",45885
-SH 204,"Shower 10""x15"" Single Flow",40020
-SH 205,"Shower 12""x12"" Single Flow",40020
-SH 111,"Shower 16""x16"" Single Flow",46395
-SH 111BK,"Shower 16""x16"" Single Flow Black",69730
-SH 111RG,"Shower 16""x16"" Single Flow Rose Gold",69730
-SH 112L,"Shower 16""x16"" Dual Flow Rain & Mist with All Side LED",86430
+SH 204,"Shower 10""x15"" Single Flow",42025
+SH 205,"Shower 12""x12"" Single Flow",42025
+SH 111,"Shower 16""x16"" Single Flow",48715
+SH 111BK,"Shower 16""x16"" Single Flow Black",73220
+SH 111RG,"Shower 16""x16"" Single Flow Rose Gold",73220
+SH 112L,"Shower 16""x16"" Dual Flow Rain & Mist with All Side LED",105445
 SH 212,"Shower 16""x18"" Dual Flow Rain & Mist",67305
 SH 213,"Shower 16""x18"" Triple Flow Rain & Mist with Water Fall",73425
-SH 213L,"Shower 16""x18"" Triple Flow Rain & Mist with Water Fall & LED",79545
+SH 213L,"Shower 16""x18"" Triple Flow Rain & Mist with Water Fall & LED",83525
 SH,"Shower 20""x20"" Dual Flow Rain & Mist",79545
 SH 312,"Shower 20""x22"" Dual Flow Rain & Mist",79545
-SH 313,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall",87195
-SH 313L,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall & LED",94845
-SH 313LBK,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall & LED Black",142275
-SH 313LRG,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall & LED Rose Gold",142275
+SH 313,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall",91555
+SH 313L,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall & LED",99590
+SH 313LBK,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall & LED Black",149390
+SH 313LRG,"Shower 20""x22"" Triple Flow Rain & Mist with Water Fall & LED Rose Gold",149390
 SH 314L,"Shower 20""x22"" Four Flow Rain & Mist with Water Fall & LED",102495
 T 161,"Shower Arm (Fancy) Brass",10160
 T 162,"Shower Arm Square 24"" Brass",9985
@@ -721,52 +662,54 @@ T 173RG,"Shower Arm Square 18"" Rose Gold",5085
 T 174,"Shower Arm Square 15"" (S.S)",2665
 T 175,"Shower Arm Square 12"" (S.S)",2025
 T 176,"Shower Arm Square 9"" (S.S)",1770
-T 173A,"Shower Arm Sq Angle  (S.S)                                                                                                                                     Square S.S",65
-T 173B,"Shower Arm Rect. 18"" (S.S)                                                                                                                                      Square S.S",155
+T 173A,"Shower Arm Sq Angle (S.S)",65
+T 173B,"Shower Arm Rect. 18"" (S.S)",155
+N/a,"Shower Arm Round 24"" S.S.",0
 T 163S,"Shower Arm Round 18"" S.S. 28mm",3300
 T 164L,"Shower Arm Round 15""/16"" S.S.",805
 T 165L,"Shower Arm Round 12"" S.S.",700
+N/a,"Shower Arm Round 9"" S.S.",0
 T 166SS,"Shower Arm Round 9"" (Economical)",1250
 T 167,"Shower Arm Pulsify",4575
 T167BG,"Shower Arm Pulsify Brush Gold",7380
-HF 127,"Health Faucet Brass Square With CP Tube & Hook",3555
-HF 128,"Health Faucet Brass Sleek  With CP Tube & Hook",3045
-HF 129,"Health Faucet Brass Cute With CP Tube & Hook",3300
-HF 130,"Health Faucet Brass Heavy With CP Tube & Hook",3555
-HF 134,"Health Faucet (BRASS) With CP Tube & Hook",3810
-HF 135,"Health Faucet ABS Crome With CP Tube & Hook",2535
-HF 135H,"Health Faucet ABS Crome Heavy With CP Tube & Hook",3045
-HF 136,"Health Faucet ABS Round With CP Tube & Hook",3045
-HF 137,"Health Faucet ABS Popular With CP Tube & Hook",2280
-HF 138,"Health Faucet ABS Cute With CP Tube & Hook",2280
-HF 139,"Health Faucet ABS Square With CP Tube & Hook",2280
-HF 140,"Health Faucet ABS Grohe With CP Tube & Hook",2790
-HF 141,"Health Faucet ABS Slider With CP Tube & Hook",3810
-HF 142,"Health Faucet ABS Slider With CP Tube & Hook",3045
-HF 143,"Health Faucet ABS Uplift With CP Tube & Hook",3810
-HF 144,"Health Faucet Squarish ABS With CP Tube & Hook",2790
-HF 145,"Health Faucet ABS American With CP Tube & Hook",2790
-HF 146,"Health Faucet ABS Round With CP Tube & Hook",2790
-HF 147,"Health Faucet ABS Moon With CP Tube & Hook",2790
-HF 148,"Health Faucet ABS Grip With CP Tube & Hook",2790
-HF 149,"Health Faucet ABS Bullet With CP Tube & Hook",2280
-HF 150,"Health Faucet ABS Push With CP Tube & Hook",3045
-HF 151,"Health Faucet ABS Dual Flow With CP Tube & Hook",3810
-HF 152,"Health Faucet ABS Opal With CP Tube & Hook",2410
-HF 153,"Health Faucet ABS Oval With CP Tube & Hook",2410
-HF 154B,"Health Faucet ABS Kohler Black With CP Tube & Hook",3300
-HF 155,"Health Faucet ABS Diamond Magnetic With CP Tube & Hook",5085
-HF 156,"Health Faucet ABS Heavy With CP Tube & Hook",2790
-HF 157,"Health Faucet ABS Saturn With CP Tube & Hook",2790
-HF 158,"Health Faucet ABS Mic Squarish With CP Tube & Hook",2790
-HF 168,"Health Faucet ABS Kohler Type With Spiral Tube & Hook",4065
-HF 169,"Health Faucet ABS Grohe Type Black  With Spiral Tube & Hook",4065
-HF 170,"Health Faucet ABS Puro Dual Flow With CP Tube & Hook",4320
-HF 171,"Health Faucet ABS Elate With CP Tube & Hook",3300
-HF 171BK,"Health Faucet ABS Elate With CP Tube & Hook Black",4320
-HF 171WT,"Health Faucet ABS Elate With CP Tube & Hook White",4320
-HF 171RG,"Health Faucet ABS Elate With CP Tube & Hook Gold/Rose Gold/Brush Gold",5085
-HF 172,"Health Faucet ABS Pressmatic With CP Tube & Hook",3300
+HF 127,"Health Faucet Brass Square With CP Tube & Hook",3915
+HF 128,"Health Faucet Brass Sleek With CP Tube & Hook",3350
+HF 129,"Health Faucet Brass Cute With CP Tube & Hook",3630
+HF 130,"Health Faucet Brass Heavy With CP Tube & Hook",3915
+HF 134,"Health Faucet (BRASS) With CP Tube & Hook",4195
+HF 135,"Health Faucet ABS Crome With CP Tube & Hook",2665
+HF 135H,"Health Faucet ABS Crome Heavy With CP Tube & Hook",3200
+HF 136,"Health Faucet ABS Round With CP Tube & Hook",3200
+HF 137,"Health Faucet ABS Popular With CP Tube & Hook",2395
+HF 138,"Health Faucet ABS Cute With CP Tube & Hook",2395
+HF 139,"Health Faucet ABS Square With CP Tube & Hook",2395
+HF 140,"Health Faucet ABS Grohe With CP Tube & Hook",2930
+HF 141,"Health Faucet ABS Slider With CP Tube & Hook",4005
+HF 142,"Health Faucet ABS Slider With CP Tube & Hook",3200
+HF 143,"Health Faucet ABS Uplift With CP Tube & Hook",4005
+HF 144,"Health Faucet Squarish ABS With CP Tube & Hook",2930
+HF 145,"Health Faucet ABS American With CP Tube & Hook",2930
+HF 146,"Health Faucet ABS Round With CP Tube & Hook",2930
+HF 147,"Health Faucet ABS Moon With CP Tube & Hook",2930
+HF 148,"Health Faucet ABS Grip With CP Tube & Hook",2930
+HF 149,"Health Faucet ABS Bullet With CP Tube & Hook",2395
+HF 150,"Health Faucet ABS Push With CP Tube & Hook",3200
+HF 151,"Health Faucet ABS Dual Flow With CP Tube & Hook",4005
+HF 152,"Health Faucet ABS Opal With CP Tube & Hook",2535
+HF 153,"Health Faucet ABS Oval With CP Tube & Hook",2535
+HF 154B,"Health Faucet ABS Kohler Black With CP Tube & Hook",3465
+HF 155,"Health Faucet ABS Diamond Magnetic With CP Tube & Hook",5340
+HF 156,"Health Faucet ABS Heavy With CP Tube & Hook",2930
+HF 157,"Health Faucet ABS Saturn With CP Tube & Hook",2930
+HF 158,"Health Faucet ABS Mic Squarish With CP Tube & Hook",2930
+HF 168,"Health Faucet ABS Kohler Type With Spiral Tube & Hook",4270
+HF 169,"Health Faucet ABS Grohe Type Black With Spiral Tube & Hook",4270
+HF 170,"Health Faucet ABS Puro Dual Flow With CP Tube & Hook",4540
+HF 171,"Health Faucet ABS Elate With CP Tube & Hook",3465
+HF 171BK,"Health Faucet ABS Elate With CP Tube & Hook Black",4540
+HF 171WT,"Health Faucet ABS Elate With CP Tube & Hook White",4540
+HF 171RG,"Health Faucet ABS Elate With CP Tube & Hook Gold/Rose Gold/Brush Gold",5595
+HF 172,"Health Faucet ABS Pressmatic With CP Tube & Hook",3465
 T 363,"Round Drainer 3""",100
 T 364/364A,"Round Drainer 4""Plain/Cut",120
 T 365/365A,"Round Drainer 5"" Plain/Cut",155
@@ -776,13 +719,13 @@ T 372/ 372A,"Square Drainer 5x5 Matt Round Trap Without Moulding Plain/Cut",700
 T 373/373A,"Square Drainer 5x5 Round Trap Without Moulding Plain/Cut Lining",700
 T 376/ 376A,"Square Drainer 5x5 Matt Round Trap Mosaic Plain/Cut",700
 T 378/ 378A,"Square Drainer 5x5 Matt Round Trap Lining Plain/Cut",700
-T 379/379A,"Square Drainer 5x5  Sq. Trap Without Moulding Plain/Cut Mosaic",765
+T 379/379A,"Square Drainer 5x5 Sq. Trap Without Moulding Plain/Cut Mosaic",765
 T 380/ 380A,"Square Drainer 5x5 Matt Sq. Trap Without Moulding Plain/Cut",765
 T 381/T 381A,"Square Drainer 5x5 Matt Sq. Trap Mosaic Plain/Cut",855
-T 382/T382A,"Square Drainer 5x5 Matt  Sq. Trap Four Line Plain/Cut",855
-T 383/T383A,"Square Drainer 5x5 Matt  Sq. Trap Three Line Plain/Cut",855
-T 386/T 386 A,"Square Drainer 6x6  Mosaic Plain/Cut",1435
-T 387/T 387A,"Square Drainer 6x6  Four Line Plain/Cut",1435
+T 382/T382A,"Square Drainer 5x5 Matt Sq. Trap Four Line Plain/Cut",855
+T 383/T383A,"Square Drainer 5x5 Matt Sq. Trap Three Line Plain/Cut",855
+T 386/T 386 A,"Square Drainer 6x6 Mosaic Plain/Cut",1435
+T 387/T 387A,"Square Drainer 6x6 Four Line Plain/Cut",1435
 T 393,"Square Drainer 5x5 For Tile Fitting",3300
 T 394,"Square Drainer 6x6 For Tile Fitting",3915
 T 394P,"Square Drainer 6""X6"" Pop Up",1620
@@ -807,28 +750,28 @@ T 9863 B,"Square Drainer 5x5 (Brass) with Cockroach Trap",4015
 HK 23,"Hook Capsule 3 pin",1950
 HK 24,"Hook Capsule 4 pin",2590
 HK 25,"Hook Capsule 5 pin",3250
-HK 53,"Hook Wave 3 pin",2435
-HK 54,"Hook Wave 4 pin",3300
-HK 55,"Hook Wave 5 pin",4170
-T 105,"Extention Nipple 6""",1495
-T 106,"Extention Nipple 4""",955
-T 107B,"Extention Nipple 3""",750
-T 107,"Extension Nipple 2.5''",650
-T 107A,"Extension Nipple 2''",535
-T 108,"Extention Nipple 1.5""",400
-T 109,"Extention Nipple 1""",300
-T 114,"Hex Nipple",495
-T 107M,"Extension Nipple 2.5''",650
-T 107AM,"Extension Nipple 2''",450
-T 108M,"Extention Nipple 1.5""",385
-T 109M,"Extention Nipple 1""",250
-T 105SS,"Extention Nipple SS 6""",690
-T 106SS,"Extention Nipple SS 4""",495
-T 107BSS,"Extention Nipple SS 3""",326
-T 107SS,"Extension Nipple SS 2.5''",266
-T 107ASS,"Extension Nipple SS 2''",206
-T 108SS,"Extention Nipple SS 1.5""",146
-T 109SS,"Extention Nipple SS 1""",98
+HK 53,"Hook Wave 3 pin",2825
+HK 54,"Hook Wave 4 pin",3795
+HK 55,"Hook Wave 5 pin",4800
+T 105,"Extention Nipple 6""",1825
+T 106,"Extention Nipple 4""",1170
+T 107B,"Extention Nipple 3""",915
+T 107,"Extension Nipple 2.5''",780
+T 107A,"Extension Nipple 2''",645
+T 108,"Extention Nipple 1.5""",480
+T 109,"Extention Nipple 1""",350
+T 114,"Hex Nipple",0
+T 107M,"Extension Nipple 2.5''",775
+T 107AM,"Extension Nipple 2''",545
+T 108M,"Extention Nipple 1.5""",470
+T 109M,"Extention Nipple 1""",305
+T 105SS,"Extention Nipple SS 6""",760
+T 106SS,"Extention Nipple SS 4""",545
+T 107BSS,"Extention Nipple SS 3""",360
+T 107SS,"Extension Nipple SS 2.5''",295
+T 107ASS,"Extension Nipple SS 2''",230
+T 108SS,"Extention Nipple SS 1.5""",160
+T 109SS,"Extention Nipple SS 1""",110
 T 141 A,"C.P Connection Pipe 18""",420
 T 142 A,"C.P Connection Pipe 24""",470
 T 143 A,"C.P Connection Pipe 36""",575
@@ -840,7 +783,7 @@ T 145,"PVC Connection 24"" Heavy",445
 T 146,"PVC Connection 36"" Heavy",575
 T 147,"PTMT Connection Pipe 18""",240
 T 148,"PTMT Connection Pipe 24""",295
-,"PTMT Connection Pipe 36""",345
+N/a,"PTMT Connection Pipe 36""",345
 T 149,"Waste pipe (Spring)",100
 T 149 A,"Waste pipe Heavy (Spring)",230
 T 149 B,"Waste pipe Plain",240
@@ -854,95 +797,81 @@ T 122,"Rag Bolts For Wall Hanging",2255
 T 122A,"Rag Bolts L-Key (Fisher Set)",1825
 T 122B,"Rag Bolts L-Key (Fisher Set Brass )",2435
 T 123,"Rag Bolts For Wash Basin",205
-T 126,"Urinal Spreader",1825
+T 126,"Urinal Spreader",2100
 T 1070,"Cloth Liner",3125
-T 1071,"Bottle Trap",6080
-T 1071A,"Bottle Trap Light",3480
+T 1071,"Bottle Trap",6995
+T 1071A,"Bottle Trap Light",4110
 T 1071B,"Bottle Trap With 12"" Pipe",0
-,"Kitchen Sink Copuling Square",955
+N/a,"Kitchen Sink Copuling Square",955
+N/a,"Pan Connector",0
 T 1072A,"Jet Shower L Type R- Nozzle",1595
 T 1072B,"Jet Shower L Type Multi",1415
 T 1072C,"Jet Shower L Type Butterfly",1415
-T 1073A,"Nozzle Cock",2280
-T 1073,"Washing Mashine Tap",3175
+T 1073A,"Nozzle Cock",2510
+T 1073,"Washing Mashine Tap",3750
 T 1074R,"Magnifying Glass Round",7000
-T 1074SQ,"Magnifying Glass Square",8655
+T 1074SQ,"Magnifying Glass Square",9955
 T 1075,"CP Tap Hole Cover",0
 T 1076,"Bidet Spray Round Handle",8020
 T 1077,"Bidet Spray Lever Handle",8020
 T 1081,"Toilet Brush Holder With Glass",3175
 T 1083,"Toilet Brush Holder With SS Cover",5215
-T 58,"Toilet Paper  Holder With Mobile Stand",3175
+T 58,"Toilet Paper Holder With Mobile Stand",3175
 T 1080,"Soap Dispenser",2080
 AL 203,"CP Tube 1 Meter",1440
 AL 204,"CP Tube 1.5 Meter",1770
-S 201,"C/S/C Disc 22x1.5",830
-S 202,"C/S/C Disc 28x1.5",1070
-S 203,"Standard Disc 22x1.5",665
-S 204,"Standard Disc 28x1.5",805
-S 206,"Standard Disc 15mm",470
-S 206 I,"Standard Disc 15mm Italian",610
-S 207,"C/S/C Disc 15mm",740
+S 201,"C/S/C Disc 22x1.5",915
+S 202,"C/S/C Disc 28x1.5",1180
+S 203,"Standard Disc 22x1.5",735
+S 204,"Standard Disc 28x1.5",890
+S 206,"Standard Disc 15mm",520
+S 206 I,"Standard Disc 15mm Italian",700
+S 207,"C/S/C Disc 15mm",815
 S 208,"Braided Hose Set",1060
 S 208A,"Braided Hose Set Italian 18""",1340
 S 209,"Braided Hose Set SS 24""",1135
 S 209A,"Braided Hose Set Italian 24""",1390
-S 210,"Wall Mixer Leg Set Only",1975
+S 210,"Wall Mixer Leg Set Only",2370
 S 211,"Wall Mixer Leg Set With Flange",2535
 S 216/217,"Crutch",0
 S 224,"Foam Flow",115
 S 225,"Permix Female / Male",305
-S 226,"CP Nozzel for Bib Cock",255
-S 252,"Wall Flange Round Brass",195
+S 226,"CP Nozzel for Bib Cock",315
+S 252,"Wall Flange Round Brass",220
 S 252C,"Wall Flange Round chrome SS",80
-S 252F,"Wall Flange Round Flat SS",76
+S 252F,"Wall Flange Round Flat SS",85
 S 252MF,"Wall Flange Round Mirror Finish SS",76
 S 252H,"Wall Flange Round Chrome Heavy SS",115
 S 254,"Wall Flange Square Brass",195
 S 254 H,"Wall Flange Square Brass Heavy",0
-S 254 MF,"Wall Flange Square Mirror Finish S.S",76
-,"Pillar Cock Flange",165
+S 254 MF,"Wall Flange Square Mirror Finish S.S",80
+N/a,"Pillar Cock Flange",165
 TT 01,"Teflon Tape Shrink Pack 12mm",0
-TT 02,"Teflon Tape High Density 12mm",65
+TT 02,"Teflon Tape High Density 12mm",56
 TT 05,"Teflon Tape 20mm",85
 T75C,"SOAP DISEPSOR Peral",1495
 T76C,"SOAP DISEPSOR Prayag",1495
-,"SOAP DISEPSOR New",1595
-T 115,"Universal Angle Cock",1595
-T 115 A,"Universal Angle Cock (Round Handle)",1745
-T 115 B,"Universal Angle Cock Medium",1295
+N/a,"SOAP DISEPSOR New",1595
+T 115,"Universal Angle Cock",1870
+T 115 A,"Universal Angle Cock (Round Handle)",2010
+T 115 B,"Universal Angle Cock Medium",1450
 T 115 S,"Univeral Angle Cock Chrome",0
-T 115 OP,"Universal Angle Cock Opal",1390
-T 115 VG,"Univarsal angle Cock Vignette",1390
-T 115 AR,"Universal Angle Cock Arya",1390
-T 115 ST,"Universal Angle Cock Step",1390
-T 115 AL,"Universal Angle Cock Alive",1390
-T 115 MR,"Universal Angle Cock Mars",1390
-T 116,"Angle Cock Half Turn",2280
-T 10015,"Angle Cock",2385
-T 10016,"Angle Cock",2385
-EKO 145,"EKO Angle Cock Half Turn",2360
-BV 15,"Ball Valve Brass 1/2''",1210
-BV 20,"Ball Valve Brass 3/4''",1850
-BV 25,"Ball Valve Brass 1""",2740
-BV 32,"Ball Valve Brass 1.1/4''",4320
-BV 40,"Ball Valve Brass 1.1/2''",6360
-BV 50,"Ball Valve Brass 2""",9930
-BV 15 H,"Ball Valve Brass 1/2'' (Heavy)",2025
-BV 20 H,"Ball Valve Brass 3/4'' (Heavy)",2790
-BV 25 H,"Ball Valve Brass 1"" (Heavy)",4575
-,"Kitchen Sink 16x18",0
-Sink,"Kitchen Sink 24x18",0
-Sink,"Kitchen Sink 24x18 Tap Hole",0
-Sink,"Kitchen Sink 24x18 Black",0
-Sink,"Kitchen Sink 24x18 Black Tap Hole",0
-Sink,"Kitchen Sink 37x18",0
-Sink,"Kitchen Sink 37x18 Tap Hole",0
-Sink,"Kitchen Sink 37x18 Black",0
-Sink,"Kitchen Sink 37x18 Black Tap Hole",0
-Sink,"Kitchen Sink 45x20",0
-Sink,"Kitchen Sink 45x20 Tap Hole",0
-Sink,"Kitchen Sink 45x20 Black",0
-Sink,"Kitchen Sink 45x20 Black Tap Hole",0
-Sink,"Smart Sink 30x18",0
-Sink,"Smart Sink 46x18",0
+T 115 OP,"Universal Angle Cock Opal",1530
+T 115 VG,"Univarsal angle Cock Vignette",1530
+T 115 AR,"Universal Angle Cock Arya",1530
+T 115 ST,"Universal Angle Cock Step",1530
+T 115 AL,"Universal Angle Cock Alive",1530
+T 115 MR,"Universal Angle Cock Mars",1530
+T 116,"Angle Cock Half Turn",2580
+T 10015,"Angle Cock",2865
+T 10016,"Angle Cock",2865
+EKO 145,"EKO Angle Cock Half Turn",2835
+BV 15,"Ball Valve Brass 1/2''",1455
+BV 20,"Ball Valve Brass 3/4''",2225
+BV 25,"Ball Valve Brass 1""",3295
+BV 32,"Ball Valve Brass 1.1/4''",5195
+BV 40,"Ball Valve Brass 1.1/2''",7635
+BV 50,"Ball Valve Brass 2""",11915
+BV 15 H,"Ball Valve Brass 1/2'' (Heavy)",2435
+BV 20 H,"Ball Valve Brass 3/4'' (Heavy)",3355
+BV 25 H,"Ball Valve Brass 1"" (Heavy)",5495
