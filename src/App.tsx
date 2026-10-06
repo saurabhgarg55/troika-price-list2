@@ -224,7 +224,7 @@ function ProductDetailPage({
 
   useEffect(() => {
     setQuantity(1);
-  }, [product.code]);
+  }, [product.code, product.name, product.size]);
 
   const handleDragEnd = (e: any, { offset }: any) => {
     const swipe = offset.x;
@@ -492,67 +492,70 @@ function CartScreen({
         ) : (
           <div className="space-y-4">
             <AnimatePresence>
-              {cart.map((item) => (
-                <motion.div 
-                  layout
-                  initial={{ opacity: 0, scale: 0.9, y: 10 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.9, height: 0, marginBottom: 0, transition: { duration: 0.2 } }}
-                  transition={{ type: "spring", stiffness: 300, damping: 25 }}
-                  key={item.product.code} 
-                  className="relative rounded-xl bg-red-500 overflow-hidden"
-                >
-                  <div className="absolute inset-y-0 right-0 flex items-center justify-end w-full pr-6 text-white font-bold">
-                    <span className="mr-2 text-sm">Swipe to delete</span>
-                    <Trash2 className="h-6 w-6" />
-                  </div>
-                  <motion.div
-                    drag="x"
-                    dragConstraints={{ left: 0, right: 0 }}
-                    dragElastic={{ left: 0.5, right: 0 }}
-                    onDragEnd={(e, { offset, velocity }) => {
-                      if (offset.x < -100 || velocity.x < -500) {
-                        triggerHaptic('medium');
-                        onRemoveItem(item.product.code);
-                      }
-                    }}
-                    className="bg-white rounded-xl p-4 shadow-sm border border-slate-200 relative z-10 flex flex-col"
+              {cart.map((item) => {
+                const itemKey = item.product.id || `${item.product.code}___${item.product.name}___${item.product.size || ''}`;
+                return (
+                  <motion.div 
+                    layout
+                    initial={{ opacity: 0, scale: 0.9, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.9, height: 0, marginBottom: 0, transition: { duration: 0.2 } }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                    key={itemKey} 
+                    className="relative rounded-xl bg-red-500 overflow-hidden"
                   >
-                    <div className="flex justify-between items-start mb-3">
-                      <div className="pr-4">
-                        <h3 className="font-bold text-slate-800 leading-tight">{item.product.name}</h3>
-                        <p className="text-xs text-slate-500 font-mono mt-1">{item.product.code}</p>
-                      </div>
-                      <button 
-                        onClick={() => { triggerHaptic('medium'); onRemoveItem(item.product.code); }}
-                        className="text-red-400 hover:text-red-600 p-1"
-                      >
-                        <Trash2 className="h-5 w-5" />
-                      </button>
+                    <div className="absolute inset-y-0 right-0 flex items-center justify-end w-full pr-6 text-white font-bold">
+                      <span className="mr-2 text-sm">Swipe to delete</span>
+                      <Trash2 className="h-6 w-6" />
                     </div>
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                    <motion.div
+                      drag="x"
+                      dragConstraints={{ left: 0, right: 0 }}
+                      dragElastic={{ left: 0.5, right: 0 }}
+                      onDragEnd={(e, { offset, velocity }) => {
+                        if (offset.x < -100 || velocity.x < -500) {
+                          triggerHaptic('medium');
+                          onRemoveItem(itemKey);
+                        }
+                      }}
+                      className="bg-white rounded-xl p-4 shadow-sm border border-slate-200 relative z-10 flex flex-col"
+                    >
+                      <div className="flex justify-between items-start mb-3">
+                        <div className="pr-4">
+                          <h3 className="font-bold text-slate-800 leading-tight">{item.product.name}</h3>
+                          <p className="text-xs text-slate-500 font-mono mt-1">{item.product.code}</p>
+                        </div>
                         <button 
-                          onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity - 1); }}
-                          className="p-2 hover:bg-slate-200 text-slate-600"
+                          onClick={() => { triggerHaptic('medium'); onRemoveItem(itemKey); }}
+                          className="text-red-400 hover:text-red-600 p-1"
                         >
-                          <Minus className="h-4 w-4" />
-                        </button>
-                        <span className="w-8 text-center font-bold text-sm text-slate-800">{item.quantity}</span>
-                        <button 
-                          onClick={() => { triggerHaptic('light'); onUpdateQuantity(item.product.code, item.quantity + 1); }}
-                          className="p-2 hover:bg-slate-200 text-slate-600"
-                        >
-                          <Plus className="h-4 w-4" />
+                          <Trash2 className="h-5 w-5" />
                         </button>
                       </div>
-                      <div className="font-bold text-[#00AEEF]">
-                        Rs. {(parsePrice(item.product.price) * item.quantity).toFixed(2)}
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center bg-slate-100 rounded-lg border border-slate-200 overflow-hidden">
+                          <button 
+                            onClick={() => { triggerHaptic('light'); onUpdateQuantity(itemKey, item.quantity - 1); }}
+                            className="p-2 hover:bg-slate-200 text-slate-600"
+                          >
+                            <Minus className="h-4 w-4" />
+                          </button>
+                          <span className="w-8 text-center font-bold text-sm text-slate-800">{item.quantity}</span>
+                          <button 
+                            onClick={() => { triggerHaptic('light'); onUpdateQuantity(itemKey, item.quantity + 1); }}
+                            className="p-2 hover:bg-slate-200 text-slate-600"
+                          >
+                            <Plus className="h-4 w-4" />
+                          </button>
+                        </div>
+                        <div className="font-bold text-[#00AEEF]">
+                          Rs. {(parsePrice(item.product.price) * item.quantity).toFixed(2)}
+                        </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </motion.div>
-                </motion.div>
-              ))}
+                );
+              })}
             </AnimatePresence>
           </div>
         )}
@@ -765,7 +768,7 @@ export default function App() {
       
       if (!matchesCategory) {
         if (selectedCategory === 'Sink') {
-          matchesCategory = p.name.trim().toLowerCase().startsWith('kitchen sink');
+          matchesCategory = p.code.trim().toUpperCase() === 'SINK' || p.name.trim().toLowerCase().startsWith('kitchen sink') || p.name.trim().toLowerCase().startsWith('smart sink') || p.name.trim().toLowerCase().startsWith('sink');
         } else if (selectedCategory === 'Sanitary Ware') {
           matchesCategory = p.category === 'Sanitary Ware';
         } else {
@@ -844,13 +847,16 @@ export default function App() {
     setSelectedCategory(cat);
   };
 
+  const getProductKey = (p: Product) => p.id || `${p.code}___${p.name}___${p.size || ''}`;
+
   const handleAddToCart = (selectedProd: Product, quantity: number) => {
-    const originalProduct = products.find(p => p.code === selectedProd.code) || selectedProd;
+    const prodKey = getProductKey(selectedProd);
+    const originalProduct = products.find(p => getProductKey(p) === prodKey) || selectedProd;
     setCart(prev => {
-      const existing = prev.find(item => item.product.code === originalProduct.code);
+      const existing = prev.find(item => getProductKey(item.product) === prodKey);
       if (existing) {
         return prev.map(item => 
-          item.product.code === originalProduct.code 
+          getProductKey(item.product) === prodKey 
             ? { ...item, quantity: item.quantity + quantity }
             : item
         );
@@ -859,21 +865,21 @@ export default function App() {
     });
   };
 
-  const handleUpdateCartQuantity = (code: string, quantity: number) => {
+  const handleUpdateCartQuantity = (itemKey: string, quantity: number) => {
     if (quantity <= 0) {
-      handleRemoveFromCart(code);
+      handleRemoveFromCart(itemKey);
       return;
     }
     setCart(prev => prev.map(item => 
-      item.product.code === code ? { ...item, quantity } : item
+      getProductKey(item.product) === itemKey ? { ...item, quantity } : item
     ));
   };
 
-  const handleRemoveFromCart = (code: string) => {
-    setCart(prev => prev.filter(item => item.product.code !== code));
+  const handleRemoveFromCart = (itemKey: string) => {
+    setCart(prev => prev.filter(item => getProductKey(item.product) !== itemKey));
   };
 
-  const selectedProductIndex = selectedProduct ? discountedFilteredProducts.findIndex(p => p.code === selectedProduct.code) : -1;
+  const selectedProductIndex = selectedProduct ? discountedFilteredProducts.findIndex(p => getProductKey(p) === getProductKey(selectedProduct)) : -1;
 
   const handleNextProduct = selectedProductIndex >= 0 && selectedProductIndex < discountedFilteredProducts.length - 1
     ? () => setSelectedProduct(discountedFilteredProducts[selectedProductIndex + 1])
