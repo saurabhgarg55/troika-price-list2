@@ -172,18 +172,34 @@ function HomeScreen({
               <li 
                 key={`${product.code || product.id}-${index}`}
                 onClick={() => { triggerHaptic('light'); onSelectProduct(product); }}
-                className="bg-white rounded-3xl p-5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] mb-3 flex justify-between items-center cursor-pointer hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] active:scale-[0.98] transition-all"
+                className="bg-white rounded-3xl p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] mb-3 flex justify-between items-center cursor-pointer hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] active:scale-[0.98] transition-all"
               >
-                <div className="flex flex-col pr-4 items-start">
-                  <span className="font-bold text-slate-800 text-lg leading-tight mb-2">{product.name}</span>
-                  <div className="flex items-center space-x-2">
-                    <span className="font-mono text-[10px] tracking-wide bg-slate-100 text-slate-500 rounded-full px-2.5 py-0.5 inline-block">{product.code}</span>
-                    {product.size && (
-                      <span className="font-mono text-[10px] tracking-wide bg-[#00AEEF]/10 text-[#00AEEF] rounded-full px-2.5 py-0.5 inline-block whitespace-nowrap">Size: {product.size}</span>
-                    )}
+                <div className="flex items-center space-x-4 flex-1 min-w-0 pr-3">
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name} 
+                      className="w-16 h-16 object-contain rounded-2xl bg-slate-50 p-1 border border-slate-100 shrink-0"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 shrink-0 flex items-center justify-center text-slate-300">
+                      <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-tighter text-center px-1">
+                        {product.code ? product.code.split(' ')[0] : 'ITEM'}
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex flex-col items-start min-w-0 flex-1">
+                    <span className="font-bold text-slate-800 text-base leading-snug mb-1.5 truncate w-full">{product.name}</span>
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span className="font-mono text-[10px] tracking-wide bg-slate-100 text-slate-500 rounded-full px-2.5 py-0.5 inline-block">{product.code}</span>
+                      {product.size && (
+                        <span className="font-mono text-[10px] tracking-wide bg-[#00AEEF]/10 text-[#00AEEF] rounded-full px-2.5 py-0.5 inline-block whitespace-nowrap">Size: {product.size}</span>
+                      )}
+                    </div>
                   </div>
                 </div>
-                <div className="text-lg font-black text-[#00AEEF] shrink-0">
+                <div className="text-base font-black text-[#00AEEF] shrink-0">
                   {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
                 </div>
               </li>
@@ -298,13 +314,26 @@ function ProductDetailPage({
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-6 min-h-0 pb-20">
               <div className="mb-8">
-                {product.image && (
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
-                    className="w-full h-64 object-contain mb-6 rounded-xl bg-slate-100 p-4 pointer-events-none"
-                    referrerPolicy="no-referrer"
-                  />
+                {product.image ? (
+                  <div className="w-full h-72 rounded-2xl bg-gradient-to-b from-slate-50 to-white p-6 border border-slate-200/80 mb-6 flex items-center justify-center shadow-sm relative group overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.name} 
+                      className="max-h-full max-w-full object-contain pointer-events-none transition-transform duration-300 group-hover:scale-105"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-500 font-mono text-[10px] px-2.5 py-1 rounded-full border border-slate-200 shadow-xs">
+                      Official Photo
+                    </div>
+                  </div>
+                ) : (
+                  <div className="w-full h-44 rounded-2xl bg-slate-50 border-2 border-dashed border-slate-200 mb-6 flex flex-col items-center justify-center text-slate-400 p-4 text-center">
+                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-2 text-slate-400 font-bold font-mono">
+                      📷
+                    </div>
+                    <p className="text-sm font-semibold text-slate-500">No product photo attached yet</p>
+                    <p className="text-xs text-slate-400 mt-0.5">Upload photo as <span className="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-600">{product.code ? product.code.replace(/\s+/g, '_') : 'CODE'}.jpg</span> to attach</p>
+                  </div>
                 )}
                 <h2 className="text-3xl font-black text-slate-900 mb-3 leading-tight">{product.name}</h2>
                 <div className="flex flex-wrap items-center gap-2 mb-6">

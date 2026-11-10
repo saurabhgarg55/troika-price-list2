@@ -18,21 +18,36 @@ window.addEventListener('unhandledrejection', (e) => {
   document.body.innerHTML = `<div style="color: red; padding: 20px;"><h1>Unhandled Promise Rejection</h1><pre>${e.reason?.message || e.reason}</pre><pre>${e.reason?.stack}</pre></div>`;
 });
 
-class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean, error: Error | null}> {
-  constructor(props: {children: React.ReactNode}) {
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  declare props: ErrorBoundaryProps;
+  declare state: ErrorBoundaryState;
+
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null };
   }
-  static getDerivedStateFromError(error: Error) {
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
+
   render() {
     if (this.state.hasError) {
-      return <div style={{color: 'red', padding: '20px'}}>
-        <h1>React Render Error</h1>
-        <pre>{this.state.error?.message}</pre>
-        <pre>{this.state.error?.stack}</pre>
-      </div>;
+      return (
+        <div style={{ color: 'red', padding: '20px' }}>
+          <h1>React Render Error</h1>
+          <pre>{this.state.error?.message}</pre>
+          <pre>{this.state.error?.stack}</pre>
+        </div>
+      );
     }
     return this.props.children;
   }
