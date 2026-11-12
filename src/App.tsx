@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin, X, Share, Play, Pause, Volume2, VolumeX, Maximize, Tv, Sparkles } from 'lucide-react';
+import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin, X, Share, Play, Pause, Volume2, VolumeX, Maximize, Tv, Sparkles, Globe, Instagram, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem, BeforeInstallPromptEvent } from './types';
 import productsData from './data/products.json';
@@ -697,6 +697,65 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
             alt="Troika" 
             className="h-24 object-contain"
           />
+        </div>
+
+        {/* Official Channels: Website & Instagram */}
+        <div className="space-y-3">
+          <div className="flex items-center justify-between px-1">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">
+              Official Channels
+            </h3>
+            <span className="text-xs text-[#00AEEF] font-semibold">
+              Verified Links
+            </span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a 
+              href="https://troikaworld.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => triggerHaptic('light')}
+              className="bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-[#00AEEF]/50 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all flex items-center justify-between group active:scale-[0.98]"
+            >
+              <div className="flex items-center space-x-3.5 min-w-0 pr-2">
+                <div className="w-11 h-11 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:bg-[#00AEEF] group-hover:text-white transition-colors">
+                  <Globe className="h-5 w-5" />
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <span className="font-bold text-slate-900 text-sm group-hover:text-[#00AEEF] transition-colors truncate">
+                    troikaworld.com
+                  </span>
+                  <span className="text-xs text-slate-500 truncate">
+                    Official Website & Catalogues
+                  </span>
+                </div>
+              </div>
+              <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-[#00AEEF] shrink-0 transition-colors" />
+            </a>
+
+            <a 
+              href="https://www.instagram.com/troika_nepal?dlrf=MWE5OXR3YXJzbG85bw==" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => triggerHaptic('light')}
+              className="bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-pink-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all flex items-center justify-between group active:scale-[0.98]"
+            >
+              <div className="flex items-center space-x-3.5 min-w-0 pr-2">
+                <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <Instagram className="h-5 w-5" />
+                </div>
+                <div className="flex flex-col min-w-0">
+                  <span className="font-bold text-slate-900 text-sm group-hover:text-rose-600 transition-colors truncate">
+                    @troika_nepal
+                  </span>
+                  <span className="text-xs text-slate-500 truncate">
+                    Instagram • Design Updates
+                  </span>
+                </div>
+              </div>
+              <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-rose-500 shrink-0 transition-colors" />
+            </a>
+          </div>
         </div>
         
         {/* Brand Video Showcase */}
