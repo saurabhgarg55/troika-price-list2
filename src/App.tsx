@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin, X, Share } from 'lucide-react';
+import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin, X, Share, Play, Pause, Volume2, VolumeX, Maximize, Tv, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem, BeforeInstallPromptEvent } from './types';
 import productsData from './data/products.json';
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import * as XLSX from 'xlsx';
+import Fuse from 'fuse.js';
 import { requestNotificationPermission } from './firebase';
 
 const triggerHaptic = (type: 'light' | 'medium' | 'heavy' = 'light') => {
@@ -23,6 +24,65 @@ const parsePrice = (price: string | number): number => {
   const match = price.replace(/,/g, '').match(/\d+(\.\d+)?/);
   return match ? parseFloat(match[0]) : 0;
 };
+
+function ProductListItem({ 
+  product, 
+  onSelect 
+}: { 
+  product: Product; 
+  onSelect: () => void; 
+  key?: React.Key;
+}) {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <li 
+      onClick={() => { triggerHaptic('light'); onSelect(); }}
+      className="bg-white rounded-3xl p-3.5 sm:p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] mb-3 flex items-center space-x-3.5 cursor-pointer hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] active:scale-[0.98] transition-all"
+    >
+      {/* Thumbnail */}
+      <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 shrink-0 p-1 flex items-center justify-center overflow-hidden">
+        {product.image && !imageError ? (
+          <img 
+            src={product.image} 
+            alt={product.name} 
+            className="w-full h-full object-contain pointer-events-none"
+            referrerPolicy="no-referrer"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-tighter text-center px-1">
+            {product.code ? product.code.split(' ')[0] : 'ITEM'}
+          </span>
+        )}
+      </div>
+
+      {/* Info Container: Title has full width on top; Code & MRP on bottom row */}
+      <div className="flex-1 min-w-0 flex flex-col justify-between self-stretch py-0.5">
+        <h3 className="font-bold text-slate-800 text-[15px] sm:text-base leading-snug line-clamp-2 mb-1">
+          {product.name}
+        </h3>
+        
+        <div className="flex items-center justify-between gap-2 mt-auto pt-1">
+          <div className="flex flex-wrap items-center gap-1.5 min-w-0">
+            <span className="font-mono text-[11px] font-medium tracking-wide bg-slate-100 text-slate-600 rounded-lg px-2 py-0.5 inline-block">
+              {product.code}
+            </span>
+            {product.size && (
+              <span className="font-mono text-[11px] font-medium tracking-wide bg-[#00AEEF]/10 text-[#00AEEF] rounded-lg px-2 py-0.5 inline-block whitespace-nowrap">
+                Size: {product.size}
+              </span>
+            )}
+          </div>
+
+          <div className="text-base sm:text-lg font-black text-[#00AEEF] shrink-0 whitespace-nowrap ml-2">
+            {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
+          </div>
+        </div>
+      </div>
+    </li>
+  );
+}
 
 function HomeScreen({ 
   products, 
@@ -169,40 +229,11 @@ function HomeScreen({
         ) : (
           <>
             {products.map((product, index) => (
-              <li 
+              <ProductListItem 
                 key={`${product.code || product.id}-${index}`}
-                onClick={() => { triggerHaptic('light'); onSelectProduct(product); }}
-                className="bg-white rounded-3xl p-4 shadow-[0_4px_20px_rgba(0,0,0,0.04)] mb-3 flex justify-between items-center cursor-pointer hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] active:scale-[0.98] transition-all"
-              >
-                <div className="flex items-center space-x-4 flex-1 min-w-0 pr-3">
-                  {product.image ? (
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
-                      className="w-16 h-16 object-contain rounded-2xl bg-slate-50 p-1 border border-slate-100 shrink-0"
-                      referrerPolicy="no-referrer"
-                    />
-                  ) : (
-                    <div className="w-16 h-16 rounded-2xl bg-slate-50 border border-slate-100 shrink-0 flex items-center justify-center text-slate-300">
-                      <span className="text-[10px] font-bold text-slate-400 uppercase font-mono tracking-tighter text-center px-1">
-                        {product.code ? product.code.split(' ')[0] : 'ITEM'}
-                      </span>
-                    </div>
-                  )}
-                  <div className="flex flex-col items-start min-w-0 flex-1">
-                    <span className="font-bold text-slate-800 text-base leading-snug mb-1.5 truncate w-full">{product.name}</span>
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      <span className="font-mono text-[10px] tracking-wide bg-slate-100 text-slate-500 rounded-full px-2.5 py-0.5 inline-block">{product.code}</span>
-                      {product.size && (
-                        <span className="font-mono text-[10px] tracking-wide bg-[#00AEEF]/10 text-[#00AEEF] rounded-full px-2.5 py-0.5 inline-block whitespace-nowrap">Size: {product.size}</span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <div className="text-base font-black text-[#00AEEF] shrink-0">
-                  {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
-                </div>
-              </li>
+                product={product}
+                onSelect={() => onSelectProduct(product)}
+              />
             ))}
           </>
         )}
@@ -276,6 +307,12 @@ function ProductDetailPage({
     })
   };
 
+  const [imgError, setImgError] = useState(false);
+
+  useEffect(() => {
+    setImgError(false);
+  }, [product.code, product.name, product.image]);
+
   return (
     <div className="flex flex-col flex-1 min-h-0 bg-white h-full relative overflow-hidden">
       {/* AppBar */}
@@ -314,25 +351,18 @@ function ProductDetailPage({
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-6 min-h-0 pb-20">
               <div className="mb-8">
-                {product.image ? (
+                {product.image && !imgError && (
                   <div className="w-full h-72 rounded-2xl bg-gradient-to-b from-slate-50 to-white p-6 border border-slate-200/80 mb-6 flex items-center justify-center shadow-sm relative group overflow-hidden">
                     <img 
                       src={product.image} 
                       alt={product.name} 
                       className="max-h-full max-w-full object-contain pointer-events-none transition-transform duration-300 group-hover:scale-105"
                       referrerPolicy="no-referrer"
+                      onError={() => setImgError(true)}
                     />
                     <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-500 font-mono text-[10px] px-2.5 py-1 rounded-full border border-slate-200 shadow-xs">
                       Official Photo
                     </div>
-                  </div>
-                ) : (
-                  <div className="w-full h-44 rounded-2xl bg-slate-50 border-2 border-dashed border-slate-200 mb-6 flex flex-col items-center justify-center text-slate-400 p-4 text-center">
-                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center mb-2 text-slate-400 font-bold font-mono">
-                      📷
-                    </div>
-                    <p className="text-sm font-semibold text-slate-500">No product photo attached yet</p>
-                    <p className="text-xs text-slate-400 mt-0.5">Upload photo as <span className="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-600">{product.code ? product.code.replace(/\s+/g, '_') : 'CODE'}.jpg</span> to attach</p>
                   </div>
                 )}
                 <h2 className="text-3xl font-black text-slate-900 mb-3 leading-tight">{product.name}</h2>
@@ -626,6 +656,29 @@ function CartScreen({
 }
 
 function AboutScreen({ onBack }: { onBack: () => void }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        videoRef.current.play().catch(() => {});
+        setIsPlaying(true);
+      }
+    }
+  };
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
   return (
     <div className="flex flex-col flex-1 min-h-0 h-full bg-white relative">
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
@@ -646,6 +699,67 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
           />
         </div>
         
+        {/* Brand Video Showcase */}
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-bold text-[#1A365D] flex items-center">
+              <Tv className="h-5 w-5 mr-2 text-[#00AEEF]" /> Brand Showcase
+            </h3>
+            <span className="text-xs font-semibold bg-[#00AEEF]/10 text-[#00AEEF] px-2.5 py-1 rounded-full flex items-center">
+              <Sparkles className="h-3 w-3 mr-1" /> HD Video
+            </span>
+          </div>
+          
+          <div className="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900 border border-slate-200 group">
+            <video
+              ref={videoRef}
+              src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+              poster="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80"
+              loop
+              muted={isMuted}
+              playsInline
+              onClick={togglePlay}
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+              className="w-full h-56 object-cover cursor-pointer"
+            />
+            
+            {/* Play overlay button when paused */}
+            {!isPlaying && (
+              <div 
+                onClick={togglePlay}
+                className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center cursor-pointer transition-all hover:bg-black/30"
+              >
+                <div className="w-16 h-16 rounded-full bg-white/90 text-[#1A365D] flex items-center justify-center shadow-xl transform transition-transform group-hover:scale-110">
+                  <Play className="h-8 w-8 fill-current ml-1" />
+                </div>
+                <span className="text-white text-xs font-bold mt-3 tracking-wider uppercase">Play Brand Video</span>
+              </div>
+            )}
+
+            {/* Video Controls bar */}
+            <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-between text-white">
+              <button 
+                onClick={togglePlay}
+                className="p-1.5 rounded-lg bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-colors"
+              >
+                {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+              </button>
+
+              <span className="text-xs font-medium tracking-wide drop-shadow-sm">
+                Troika Bathware & Faucets
+              </span>
+
+              <button 
+                onClick={toggleMute}
+                className="p-1.5 rounded-lg bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-colors"
+              >
+                {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-4">
           <p className="leading-relaxed text-lg text-slate-800 font-medium">
             Troika is an idea conceived as a synthesis of technological innovation and artfully created products, poised to make its mark in the domestic and international markets.
@@ -786,45 +900,84 @@ export default function App() {
   const categories = ["All", "Sanitary Ware", ...Object.keys(categoryMapping)];
 
   const filteredProducts = useMemo(() => {
-    const filtered = products.filter(p => {
-      const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                            p.code.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      const code = p.code.trim();
+    // 1. Apply category filter first
+    const categoryFiltered = products.filter(p => {
+      if (selectedCategory === 'All') return true;
+      const code = (p.code || '').trim();
       const prefix = code.split(' ')[0].toUpperCase();
       
-      let matchesCategory = selectedCategory === 'All';
-      
-      if (!matchesCategory) {
-        if (selectedCategory === 'Sink') {
-          matchesCategory = p.code.trim().toUpperCase() === 'SINK' || p.name.trim().toLowerCase().startsWith('kitchen sink') || p.name.trim().toLowerCase().startsWith('smart sink') || p.name.trim().toLowerCase().startsWith('sink');
-        } else if (selectedCategory === 'Sanitary Ware') {
-          matchesCategory = p.category === 'Sanitary Ware';
-        } else {
-          const mappedPrefix = categoryMapping[selectedCategory];
-          matchesCategory = prefix === mappedPrefix;
-        }
+      if (selectedCategory === 'Sink') {
+        return (p.code || '').trim().toUpperCase() === 'SINK';
+      } else if (selectedCategory === 'Sanitary Ware') {
+        return p.category === 'Sanitary Ware';
+      } else {
+        const mappedPrefix = categoryMapping[selectedCategory];
+        return prefix === mappedPrefix;
       }
-
-      return matchesSearch && matchesCategory;
     });
 
-    if (searchQuery.trim() !== '') {
-      const query = searchQuery.trim().toLowerCase();
-      const exactMatches = [];
-      const others = [];
-      
-      for (const p of filtered) {
-        if (p.code.trim().toLowerCase() === query) {
-          exactMatches.push(p);
-        } else {
-          others.push(p);
-        }
+    const rawQuery = searchQuery.trim();
+    if (!rawQuery) return categoryFiltered;
+
+    const queryLower = rawQuery.toLowerCase();
+    const queryClean = queryLower.replace(/[^a-z0-9]/g, '');
+    const tokens = queryLower.split(/\s+/).filter(Boolean);
+
+    // Multi-token & multi-field relevance scoring
+    const scoredResults: { product: Product; score: number }[] = [];
+
+    categoryFiltered.forEach(p => {
+      const code = String(p.code || '').toLowerCase();
+      const codeClean = code.replace(/[^a-z0-9]/g, '');
+      const name = String(p.name || '').toLowerCase();
+      const size = String(p.size || '').toLowerCase();
+      const priceStr = String(p.price || '');
+      const category = String(p.category || '').toLowerCase();
+      const combinedText = `${code} ${name} ${size} ${priceStr} ${category}`;
+
+      const isExactCode = code === queryLower || codeClean === queryClean;
+      const isCodePrefix = code.startsWith(queryLower) || codeClean.startsWith(queryClean);
+      const isCodeSub = code.includes(queryLower) || codeClean.includes(queryClean);
+      const isNameSub = name.includes(queryLower);
+
+      // Check if EVERY search token matches at least one product field
+      const allTokensMatch = tokens.every(token => {
+        const cleanToken = token.replace(/[^a-z0-9]/g, '');
+        return combinedText.includes(token) || (cleanToken !== '' && codeClean.includes(cleanToken));
+      });
+
+      if (isExactCode) {
+        scoredResults.push({ product: p, score: 1000 });
+      } else if (isCodePrefix) {
+        scoredResults.push({ product: p, score: 800 });
+      } else if (isCodeSub) {
+        scoredResults.push({ product: p, score: 650 });
+      } else if (isNameSub) {
+        scoredResults.push({ product: p, score: 500 });
+      } else if (allTokensMatch) {
+        scoredResults.push({ product: p, score: 400 });
       }
-      return [...exactMatches, ...others];
+    });
+
+    if (scoredResults.length > 0) {
+      scoredResults.sort((a, b) => b.score - a.score);
+      return scoredResults.map(r => r.product);
     }
 
-    return filtered;
+    // 2. Fuse.js fallback fuzzy search for typos or flexible queries across name, code, size, price
+    const fuse = new Fuse(categoryFiltered, {
+      keys: [
+        { name: 'code', weight: 0.4 },
+        { name: 'name', weight: 0.35 },
+        { name: 'size', weight: 0.15 },
+        { name: 'price', weight: 0.1 }
+      ],
+      threshold: 0.35,
+      ignoreLocation: true
+    });
+
+    const fuseResults = fuse.search(rawQuery);
+    return fuseResults.map(res => res.item);
   }, [products, searchQuery, selectedCategory]);
 
   const discountedFilteredProducts = useMemo(() => {
