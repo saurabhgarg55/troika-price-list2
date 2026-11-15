@@ -3,21 +3,6 @@ import {createRoot} from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then((registrations) => {
-    for (let registration of registrations) {
-      registration.unregister();
-    }
-  });
-}
-
-window.addEventListener('error', (e) => {
-  document.body.innerHTML = `<div style="color: red; padding: 20px;"><h1>Window Error</h1><pre>${e.message}</pre><pre>${e.error?.stack}</pre></div>`;
-});
-window.addEventListener('unhandledrejection', (e) => {
-  document.body.innerHTML = `<div style="color: red; padding: 20px;"><h1>Unhandled Promise Rejection</h1><pre>${e.reason?.message || e.reason}</pre><pre>${e.reason?.stack}</pre></div>`;
-});
-
 interface ErrorBoundaryProps {
   children: React.ReactNode;
 }
@@ -42,10 +27,17 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   render() {
     if (this.state.hasError) {
       return (
-        <div style={{ color: 'red', padding: '20px' }}>
-          <h1>React Render Error</h1>
-          <pre>{this.state.error?.message}</pre>
-          <pre>{this.state.error?.stack}</pre>
+        <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-slate-50 text-center">
+          <h1 className="text-xl font-bold text-[#1A365D] mb-2">Something went wrong</h1>
+          <p className="text-sm text-slate-600 mb-4 max-w-sm">
+            {this.state.error?.message || 'An unexpected error occurred.'}
+          </p>
+          <button
+            onClick={() => window.location.reload()}
+            className="bg-[#1A365D] text-white font-semibold px-5 py-2.5 rounded-xl text-sm shadow-sm hover:bg-[#122643] transition-colors"
+          >
+            Reload App
+          </button>
         </div>
       );
     }

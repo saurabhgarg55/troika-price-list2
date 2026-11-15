@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Mail, Phone, Download, MapPin, X, Share, Play, Pause, Volume2, VolumeX, Maximize, Tv, Sparkles, Globe, Instagram, ExternalLink } from 'lucide-react';
+import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Phone, Download, MapPin, X, Share, Globe, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem, BeforeInstallPromptEvent } from './types';
 import productsData from './data/products.json';
@@ -23,6 +23,13 @@ const parsePrice = (price: string | number): number => {
   if (typeof price === 'number') return price;
   const match = price.replace(/,/g, '').match(/\d+(\.\d+)?/);
   return match ? parseFloat(match[0]) : 0;
+};
+
+const isPriceAvailable = (price: string | number): boolean => parsePrice(price) > 0;
+
+const formatPrice = (price: string | number): string => {
+  if (!isPriceAvailable(price)) return 'Price on Request';
+  return typeof price === 'number' ? `Rs. ${price.toFixed(2)}` : price;
 };
 
 function ProductListItem({ 
@@ -75,8 +82,8 @@ function ProductListItem({
             )}
           </div>
 
-          <div className="text-base sm:text-lg font-black text-[#00AEEF] shrink-0 whitespace-nowrap ml-2">
-            {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
+          <div className={`shrink-0 whitespace-nowrap ml-2 ${isPriceAvailable(product.price) ? 'text-base sm:text-lg font-black text-[#00AEEF]' : 'text-xs sm:text-sm font-semibold text-slate-400'}`}>
+            {formatPrice(product.price)}
           </div>
         </div>
       </div>
@@ -136,10 +143,6 @@ function HomeScreen({
             className="h-12 w-auto object-contain cursor-pointer -ml-2"
             onClick={() => { triggerHaptic('light'); onOpenAbout(); }}
           />
-          <div className="hidden flex-col">
-            <h1 className="text-xl font-black tracking-wider leading-none text-[#1A365D]">TROIKA</h1>
-            <span className="text-[10px] tracking-wide text-[#00AEEF] leading-tight mt-0.5">artful passion</span>
-          </div>
         </div>
         <div className="flex items-center space-x-1 -mr-2">
           <a href="https://share.google/Jlr8F77IVfGNzaPLR" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Locate Us" onClick={() => triggerHaptic('light')}>
@@ -376,8 +379,8 @@ function ProductDetailPage({
                     </div>
                   )}
                 </div>
-                <div className="text-5xl font-black text-[#00AEEF]">
-                  {typeof product.price === 'number' ? `Rs. ${product.price.toFixed(2)}` : product.price}
+                <div className={isPriceAvailable(product.price) ? 'text-5xl font-black text-[#00AEEF]' : 'text-2xl font-bold text-slate-400'}>
+                  {formatPrice(product.price)}
                 </div>
               </div>
 
@@ -498,26 +501,32 @@ function CartScreen({
     autoTable(doc, {
       startY: 40,
       head: [['Code', 'Name', 'Qty', 'Price', 'Total']],
-      body: cart.map(item => [
-        item.product.code,
-        item.product.name,
-        item.quantity,
-        parsePrice(item.product.price).toFixed(2),
-        (parsePrice(item.product.price) * item.quantity).toFixed(2)
-      ]),
+      body: cart.map(item => {
+        const unitPrice = parsePrice(item.product.price);
+        return [
+          item.product.code,
+          item.product.name,
+          item.quantity,
+          unitPrice > 0 ? unitPrice.toFixed(2) : 'Price on Request',
+          unitPrice > 0 ? (unitPrice * item.quantity).toFixed(2) : 'Price on Request'
+        ];
+      }),
       foot: [['', '', '', 'Total', total.toFixed(2)]],
     });
     doc.save(`Troika_Quote_${new Date().toISOString().split('T')[0]}.pdf`);
   };
 
   const handleSaveExcel = () => {
-    const worksheet = XLSX.utils.json_to_sheet(cart.map(item => ({
-      Code: item.product.code,
-      Name: item.product.name,
-      Quantity: item.quantity,
-      Price: parsePrice(item.product.price),
-      Total: parsePrice(item.product.price) * item.quantity
-    })));
+    const worksheet = XLSX.utils.json_to_sheet(cart.map(item => {
+      const unitPrice = parsePrice(item.product.price);
+      return {
+        Code: item.product.code,
+        Name: item.product.name,
+        Quantity: item.quantity,
+        Price: unitPrice > 0 ? unitPrice : 'Price on Request',
+        Total: unitPrice > 0 ? unitPrice * item.quantity : 'Price on Request'
+      };
+    }));
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Quotation');
     XLSX.writeFile(workbook, `Troika_Quote_${new Date().toISOString().split('T')[0]}.xlsx`);
@@ -607,8 +616,10 @@ function CartScreen({
                             <Plus className="h-4 w-4" />
                           </button>
                         </div>
-                        <div className="font-bold text-[#00AEEF]">
-                          Rs. {(parsePrice(item.product.price) * item.quantity).toFixed(2)}
+                        <div className={`font-bold ${isPriceAvailable(item.product.price) ? 'text-[#00AEEF]' : 'text-xs font-semibold text-slate-400'}`}>
+                          {isPriceAvailable(item.product.price)
+                            ? `Rs. ${(parsePrice(item.product.price) * item.quantity).toFixed(2)}`
+                            : 'Price on Request'}
                         </div>
                       </div>
                     </motion.div>
@@ -656,29 +667,6 @@ function CartScreen({
 }
 
 function AboutScreen({ onBack }: { onBack: () => void }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play().catch(() => {});
-        setIsPlaying(true);
-      }
-    }
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
   return (
     <div className="flex flex-col flex-1 min-h-0 h-full bg-white relative">
       <header className="bg-white text-[#1A365D] p-4 shadow-sm z-10 flex items-center h-16 shrink-0 border-b border-slate-200">
@@ -699,124 +687,37 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
           />
         </div>
 
-        {/* Official Channels: Website & Instagram */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between px-1">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-400">
-              Official Channels
-            </h3>
-            <span className="text-xs text-[#00AEEF] font-semibold">
-              Verified Links
-            </span>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <a 
-              href="https://troikaworld.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => triggerHaptic('light')}
-              className="bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-[#00AEEF]/50 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all flex items-center justify-between group active:scale-[0.98]"
-            >
-              <div className="flex items-center space-x-3.5 min-w-0 pr-2">
-                <div className="w-11 h-11 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center shrink-0 group-hover:bg-[#00AEEF] group-hover:text-white transition-colors">
-                  <Globe className="h-5 w-5" />
-                </div>
-                <div className="flex flex-col min-w-0">
-                  <span className="font-bold text-slate-900 text-sm group-hover:text-[#00AEEF] transition-colors truncate">
-                    troikaworld.com
-                  </span>
-                  <span className="text-xs text-slate-500 truncate">
-                    Official Website & Catalogues
-                  </span>
-                </div>
-              </div>
-              <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-[#00AEEF] shrink-0 transition-colors" />
-            </a>
-
-            <a 
-              href="https://www.instagram.com/troika_nepal?dlrf=MWE5OXR3YXJzbG85bw==" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              onClick={() => triggerHaptic('light')}
-              className="bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-pink-300 rounded-2xl p-4 shadow-sm hover:shadow-md transition-all flex items-center justify-between group active:scale-[0.98]"
-            >
-              <div className="flex items-center space-x-3.5 min-w-0 pr-2">
-                <div className="w-11 h-11 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shrink-0 shadow-sm group-hover:scale-105 transition-transform">
-                  <Instagram className="h-5 w-5" />
-                </div>
-                <div className="flex flex-col min-w-0">
-                  <span className="font-bold text-slate-900 text-sm group-hover:text-rose-600 transition-colors truncate">
-                    @troika_nepal
-                  </span>
-                  <span className="text-xs text-slate-500 truncate">
-                    Instagram • Design Updates
-                  </span>
-                </div>
-              </div>
-              <ExternalLink className="h-4 w-4 text-slate-400 group-hover:text-rose-500 shrink-0 transition-colors" />
-            </a>
-          </div>
-        </div>
-        
-        {/* Brand Video Showcase */}
-        <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <h3 className="text-xl font-bold text-[#1A365D] flex items-center">
-              <Tv className="h-5 w-5 mr-2 text-[#00AEEF]" /> Brand Showcase
-            </h3>
-            <span className="text-xs font-semibold bg-[#00AEEF]/10 text-[#00AEEF] px-2.5 py-1 rounded-full flex items-center">
-              <Sparkles className="h-3 w-3 mr-1" /> HD Video
-            </span>
-          </div>
-          
-          <div className="relative rounded-2xl overflow-hidden shadow-lg bg-slate-900 border border-slate-200 group">
-            <video
-              ref={videoRef}
-              src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
-              poster="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80"
-              loop
-              muted={isMuted}
-              playsInline
-              onClick={togglePlay}
-              onPlay={() => setIsPlaying(true)}
-              onPause={() => setIsPlaying(false)}
-              className="w-full h-56 object-cover cursor-pointer"
-            />
-            
-            {/* Play overlay button when paused */}
-            {!isPlaying && (
-              <div 
-                onClick={togglePlay}
-                className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex flex-col items-center justify-center cursor-pointer transition-all hover:bg-black/30"
-              >
-                <div className="w-16 h-16 rounded-full bg-white/90 text-[#1A365D] flex items-center justify-center shadow-xl transform transition-transform group-hover:scale-110">
-                  <Play className="h-8 w-8 fill-current ml-1" />
-                </div>
-                <span className="text-white text-xs font-bold mt-3 tracking-wider uppercase">Play Brand Video</span>
-              </div>
-            )}
-
-            {/* Video Controls bar */}
-            <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-center justify-between text-white">
-              <button 
-                onClick={togglePlay}
-                className="p-1.5 rounded-lg bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-colors"
-              >
-                {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-              </button>
-
-              <span className="text-xs font-medium tracking-wide drop-shadow-sm">
-                Troika Bathware & Faucets
-              </span>
-
-              <button 
-                onClick={toggleMute}
-                className="p-1.5 rounded-lg bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-colors"
-              >
-                {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
-              </button>
+        {/* Website & Instagram Buttons with Text Labels */}
+        <div className="flex items-center justify-center space-x-6 pt-2">
+          <a 
+            href="https://troikaworld.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => triggerHaptic('light')}
+            className="flex items-center space-x-2.5 bg-white border border-slate-200 hover:border-[#00AEEF]/50 hover:bg-slate-50 px-4 py-2.5 rounded-xl shadow-sm transition-all active:scale-95 group"
+          >
+            <div className="text-[#00AEEF]">
+              <Globe className="h-5 w-5" />
             </div>
-          </div>
+            <span className="text-xs font-bold text-slate-700 group-hover:text-[#00AEEF] transition-colors">
+              Official Website
+            </span>
+          </a>
+
+          <a 
+            href="https://www.instagram.com/troika_nepal?dlrf=MWE5OXR3YXJzbG85bw==" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => triggerHaptic('light')}
+            className="flex items-center space-x-2.5 bg-white border border-slate-200 hover:border-pink-300 hover:bg-slate-50 px-4 py-2.5 rounded-xl shadow-sm transition-all active:scale-95 group"
+          >
+            <div className="text-rose-600">
+              <Instagram className="h-5 w-5" />
+            </div>
+            <span className="text-xs font-bold text-slate-700 group-hover:text-rose-600 transition-colors">
+              Instagram
+            </span>
+          </a>
         </div>
 
         <div className="space-y-4">
@@ -888,13 +789,34 @@ export default function App() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cart, setCart] = useState<CartItem[]>(() => {
+    try {
+      const saved = localStorage.getItem('troika_quote_cart');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed)) {
+          return parsed.filter(item => item && item.product && typeof item.quantity === 'number');
+        }
+      }
+    } catch {
+      // Ignore storage errors in private browsing or restricted iframes
+    }
+    return [];
+  });
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isIosStore, setIsIosStore] = useState(false);
   const [globalDiscount, setGlobalDiscount] = useState(0);
   const allClickCountRef = useRef(0);
   const clickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('troika_quote_cart', JSON.stringify(cart));
+    } catch {
+      // Ignore storage quota or private mode errors
+    }
+  }, [cart]);
 
   const applyGlobalDiscount = (price: string | number) => {
     if (globalDiscount === 0) return price;
@@ -904,26 +826,49 @@ export default function App() {
   };
 
   useEffect(() => {
+    try {
+      if (localStorage.getItem('troika_install_dismissed') === 'true') return;
+    } catch {
+      // Ignore storage errors
+    }
+
     const isIos = () => {
       const userAgent = window.navigator.userAgent.toLowerCase();
       return /iphone|ipad|ipod/.test(userAgent);
     };
     const isInStandaloneMode = () => ('standalone' in window.navigator) && (window.navigator as any).standalone;
     
+    let timerId: ReturnType<typeof setTimeout> | null = null;
+
     if (isIos() && !isInStandaloneMode()) {
       setIsIosStore(true);
-      setTimeout(() => setShowInstallPrompt(true), 1500);
+      timerId = setTimeout(() => setShowInstallPrompt(true), 1500);
+      return () => {
+        if (timerId) clearTimeout(timerId);
+      };
     } else {
       const handler = (e: Event) => {
         e.preventDefault();
         setDeferredPrompt(e as BeforeInstallPromptEvent);
         // Give a slight delay before showing the install banner to be less aggressive
-        setTimeout(() => setShowInstallPrompt(true), 1500);
+        timerId = setTimeout(() => setShowInstallPrompt(true), 1500);
       };
       window.addEventListener('beforeinstallprompt', handler);
-      return () => window.removeEventListener('beforeinstallprompt', handler);
+      return () => {
+        window.removeEventListener('beforeinstallprompt', handler);
+        if (timerId) clearTimeout(timerId);
+      };
     }
   }, []);
+
+  const handleDismissInstallPrompt = () => {
+    setShowInstallPrompt(false);
+    try {
+      localStorage.setItem('troika_install_dismissed', 'true');
+    } catch {
+      // Ignore storage errors
+    }
+  };
 
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
@@ -989,17 +934,14 @@ export default function App() {
       const code = String(p.code || '').toLowerCase();
       const codeClean = code.replace(/[^a-z0-9]/g, '');
       const name = String(p.name || '').toLowerCase();
-      const size = String(p.size || '').toLowerCase();
-      const priceStr = String(p.price || '');
-      const category = String(p.category || '').toLowerCase();
-      const combinedText = `${code} ${name} ${size} ${priceStr} ${category}`;
+      const combinedText = `${code} ${name}`;
 
       const isExactCode = code === queryLower || codeClean === queryClean;
       const isCodePrefix = code.startsWith(queryLower) || codeClean.startsWith(queryClean);
       const isCodeSub = code.includes(queryLower) || codeClean.includes(queryClean);
       const isNameSub = name.includes(queryLower);
 
-      // Check if EVERY search token matches at least one product field
+      // Check if EVERY search token matches product code or product name
       const allTokensMatch = tokens.every(token => {
         const cleanToken = token.replace(/[^a-z0-9]/g, '');
         return combinedText.includes(token) || (cleanToken !== '' && codeClean.includes(cleanToken));
@@ -1023,13 +965,11 @@ export default function App() {
       return scoredResults.map(r => r.product);
     }
 
-    // 2. Fuse.js fallback fuzzy search for typos or flexible queries across name, code, size, price
+    // 2. Fuse.js fallback fuzzy search for typos strictly across code and name
     const fuse = new Fuse(categoryFiltered, {
       keys: [
-        { name: 'code', weight: 0.4 },
-        { name: 'name', weight: 0.35 },
-        { name: 'size', weight: 0.15 },
-        { name: 'price', weight: 0.1 }
+        { name: 'code', weight: 0.55 },
+        { name: 'name', weight: 0.45 }
       ],
       threshold: 0.35,
       ignoreLocation: true
@@ -1202,7 +1142,7 @@ export default function App() {
               className="absolute bottom-4 left-4 right-4 z-50 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-200 rounded-2xl p-4 flex flex-col pt-5"
             >
               <button 
-                onClick={() => setShowInstallPrompt(false)}
+                onClick={handleDismissInstallPrompt}
                 className="absolute top-2 right-2 p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600 rounded-full transition-colors"
                 aria-label="Dismiss"
               >

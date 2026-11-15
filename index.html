@@ -7,20 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="Troika" />
-    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
     <link rel="preload" href="/logo.png" as="image" />
     <title>Troika Price List</title>
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      window.addEventListener('error', (e) => {
-        document.body.innerHTML = `<div style="color: red; padding: 20px;"><h1>Early Error</h1><pre>${e.message}</pre><pre>${e.error?.stack}</pre></div>`;
-      });
-      window.addEventListener('unhandledrejection', (e) => {
-        document.body.innerHTML = `<div style="color: red; padding: 20px;"><h1>Early Promise Rejection</h1><pre>${e.reason?.message || e.reason}</pre><pre>${e.reason?.stack}</pre></div>`;
-      });
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
