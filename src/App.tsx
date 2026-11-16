@@ -782,6 +782,109 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
   );
 }
 
+const TROIKA_LOGO_URL =
+  "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png";
+
+function BrandedOpeningCurtain({ onComplete }: { onComplete: () => void }) {
+  const [isExiting, setIsExiting] = useState(false);
+  const [logoError, setLogoError] = useState(false);
+  const onCompleteRef = useRef(onComplete);
+  onCompleteRef.current = onComplete;
+
+  useEffect(() => {
+    const exitTimer = setTimeout(() => {
+      setIsExiting(true);
+    }, 620);
+
+    const doneTimer = setTimeout(() => {
+      onCompleteRef.current();
+    }, 920);
+
+    return () => {
+      clearTimeout(exitTimer);
+      clearTimeout(doneTimer);
+    };
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ y: 0, opacity: 1 }}
+      animate={
+        isExiting
+          ? { y: '-100%', opacity: 0.25 }
+          : { y: 0, opacity: 1 }
+      }
+      transition={{
+        duration: 0.3,
+        ease: [0.76, 0, 0.24, 1],
+      }}
+      onClick={() => setIsExiting(true)}
+      className={`absolute inset-0 z-[60] flex flex-col items-center justify-center select-none overflow-hidden ${
+        isExiting ? 'pointer-events-none' : 'cursor-pointer'
+      }`}
+      style={{
+        background:
+          'radial-gradient(circle at 50% 42%, #23497D 0%, #1A365D 55%, #112542 100%)',
+      }}
+      aria-hidden="true"
+    >
+      {/* Subtle architectural edge hairline */}
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#00AEEF]/40 to-transparent" />
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.94, y: 6 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="flex flex-col items-center px-8"
+      >
+        {/* Centered Troika Mark framed in a clean architectural crest */}
+        <div className="bg-white rounded-3xl px-7 py-5 shadow-[0_24px_64px_rgba(7,17,34,0.45)] ring-1 ring-white/20 flex items-center justify-center">
+          {!logoError ? (
+            <img
+              src={TROIKA_LOGO_URL}
+              alt="Troika"
+              className="h-20 w-auto object-contain pointer-events-none"
+              onError={() => setLogoError(true)}
+            />
+          ) : (
+            <span className="text-3xl font-black tracking-[0.18em] text-[#1A365D] uppercase">
+              Troika
+            </span>
+          )}
+        </div>
+
+        {/* Subtle hairline shimmer */}
+        <div className="relative w-36 h-[1.5px] bg-white/15 rounded-full overflow-hidden mt-7 mb-3.5">
+          <motion.div
+            initial={{ x: '-100%' }}
+            animate={{ x: '100%' }}
+            transition={{
+              duration: 0.58,
+              delay: 0.06,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="absolute inset-0 w-full h-full"
+            style={{
+              background:
+                'linear-gradient(90deg, transparent 0%, rgba(0,174,239,0.85) 40%, rgba(255,255,255,0.95) 50%, rgba(0,174,239,0.85) 60%, transparent 100%)',
+            }}
+          />
+        </div>
+
+        {/* Brand Tagline */}
+        <motion.p
+          initial={{ opacity: 0, y: 4 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.28, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+          className="text-[11px] font-semibold tracking-[0.34em] uppercase text-white/80 text-center"
+        >
+          Artful Passion
+        </motion.p>
+      </motion.div>
+    </motion.div>
+  );
+}
+
 export default function App() {
   const [products, setProducts] = useState<Product[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -789,6 +892,22 @@ export default function App() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [showOpeningCurtain, setShowOpeningCurtain] = useState<boolean>(() => {
+    try {
+      if (typeof window !== 'undefined') {
+        const prefersReduced = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) return false;
+        const alreadySeen = sessionStorage.getItem('troika_curtain_seen') === 'true';
+        if (!alreadySeen) {
+          sessionStorage.setItem('troika_curtain_seen', 'true');
+          return true;
+        }
+      }
+    } catch {
+      // Ignore storage errors in restricted contexts
+    }
+    return false;
+  });
   const [cart, setCart] = useState<CartItem[]>(() => {
     try {
       const saved = localStorage.getItem('troika_quote_cart');
@@ -1183,6 +1302,10 @@ export default function App() {
             </motion.div>
           )}
         </AnimatePresence>
+        {/* 0.9s Branded Opening Curtain (once per session, non-blocking) */}
+        {showOpeningCurtain && (
+          <BrandedOpeningCurtain onComplete={() => setShowOpeningCurtain(false)} />
+        )}
       </div>
     </div>
   );
