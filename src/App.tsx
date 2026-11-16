@@ -9,6 +9,9 @@ import * as XLSX from 'xlsx';
 import Fuse from 'fuse.js';
 import { requestNotificationPermission } from './firebase';
 
+const TROIKA_LOGO_URL = '/troika-menu-logo.webp';
+const TROIKA_PDF_LOGO_URL = '/troika-menu-logo.png';
+
 const triggerHaptic = (type: 'light' | 'medium' | 'heavy' = 'light') => {
   if (typeof window !== 'undefined' && navigator.vibrate) {
     switch (type) {
@@ -133,27 +136,27 @@ function HomeScreen({
       {/* AppBar */}
       <header className={`sticky top-0 z-30 flex items-center justify-between h-16 shrink-0 border-b transition-all duration-300 px-4 ${
         isScrolled 
-          ? 'bg-white/70 backdrop-blur-[12px] border-slate-200/50 shadow-sm' 
-          : 'bg-white border-slate-200'
+          ? 'bg-[#1A365D]/78 backdrop-blur-[14px] border-white/15 shadow-md' 
+          : 'bg-[#1A365D] border-[#112542]'
       }`}>
         <div className="flex items-center">
           <img 
-            src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
-            alt="Troika - artful passion" 
-            className="h-12 w-auto object-contain cursor-pointer -ml-2"
+            src={TROIKA_LOGO_URL} 
+            alt="Troika - Bathware & Faucets" 
+            className="h-9 sm:h-10 w-auto object-contain cursor-pointer"
             onClick={() => { triggerHaptic('light'); onOpenAbout(); }}
           />
         </div>
         <div className="flex items-center space-x-1 -mr-2">
-          <a href="https://share.google/Jlr8F77IVfGNzaPLR" target="_blank" rel="noopener noreferrer" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Locate Us" onClick={() => triggerHaptic('light')}>
+          <a href="https://share.google/Jlr8F77IVfGNzaPLR" target="_blank" rel="noopener noreferrer" className="p-2 text-white/85 hover:text-white hover:bg-white/10 rounded-full transition-colors" title="Locate Us" onClick={() => triggerHaptic('light')}>
             <MapPin className="h-6 w-6" />
           </a>
-          <a href="tel:+9779705952285" className="p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors" title="Call Us" onClick={() => triggerHaptic('light')}>
+          <a href="tel:+9779705952285" className="p-2 text-white/85 hover:text-white hover:bg-white/10 rounded-full transition-colors" title="Call Us" onClick={() => triggerHaptic('light')}>
             <Phone className="h-6 w-6" />
           </a>
           <motion.button 
             onClick={() => { triggerHaptic('light'); onOpenCart(); }} 
-            className="relative p-2 text-slate-500 hover:bg-slate-100 rounded-full transition-colors"
+            className="relative p-2 text-white/85 hover:text-white hover:bg-white/10 rounded-full transition-colors"
             animate={cartBump ? { scale: [1, 1.2, 1] } : {}}
             transition={{ duration: 0.3 }}
           >
@@ -164,7 +167,7 @@ function HomeScreen({
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
-                  className="absolute top-0 right-0 bg-[#00AEEF] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform translate-x-1 -translate-y-1"
+                  className="absolute top-0 right-0 bg-[#00AEEF] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center transform translate-x-1 -translate-y-1 ring-2 ring-[#1A365D]"
                 >
                   {cartCount}
                 </motion.span>
@@ -242,13 +245,15 @@ function HomeScreen({
         )}
         
         {products.length > 0 && (
-          <div className="py-8 text-center flex flex-col items-center justify-center opacity-70">
-            <img 
-              src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
-              alt="Troika" 
-              className="h-16 w-auto object-contain mb-3 opacity-80"
-            />
-            <p className="text-[10px] mt-1">© Troika. All Rights Reserved.</p>
+          <div className="py-8 text-center flex flex-col items-center justify-center">
+            <div className="bg-[#1A365D] px-5 py-2.5 rounded-2xl shadow-sm mb-3">
+              <img 
+                src={TROIKA_LOGO_URL} 
+                alt="Troika" 
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+            <p className="text-[11px] text-slate-400">© Troika. All Rights Reserved.</p>
           </div>
         )}
       </ul>
@@ -484,22 +489,30 @@ function CartScreen({
 
   const handleGeneratePDF = () => {
     const doc = new jsPDF();
-    
-    // Add Branding
-    const logoUrl = "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png";
-    
-    // Add Logo
-    doc.addImage(logoUrl, 'PNG', 14, 10, 20, 20);
-    
-    doc.setFontSize(20);
-    doc.text('Troika Quotation', 45, 18);
-    doc.setFontSize(10);
-    doc.text('Artful Passion', 45, 24);
-    doc.text('Email: info@troikaworld.com', 45, 29);
-    doc.line(14, 35, 196, 35);
+
+    // Branded Deep Navy Header Band
+    doc.setFillColor(26, 54, 93);
+    doc.rect(0, 0, 210, 34, 'F');
+
+    try {
+      doc.addImage(TROIKA_PDF_LOGO_URL, 'PNG', 14, 10, 42, 14);
+    } catch {
+      doc.setTextColor(255, 255, 255);
+      doc.setFontSize(18);
+      doc.text('TROIKA', 14, 20);
+    }
+
+    doc.setTextColor(255, 255, 255);
+    doc.setFontSize(16);
+    doc.text('Troika Quotation', 196, 16, { align: 'right' });
+    doc.setFontSize(9);
+    doc.setTextColor(186, 230, 253);
+    doc.text('Artful Passion  |  info@troikaworld.com', 196, 23, { align: 'right' });
+    doc.setTextColor(30, 41, 59);
 
     autoTable(doc, {
-      startY: 40,
+      startY: 42,
+      headStyles: { fillColor: [26, 54, 93] },
       head: [['Code', 'Name', 'Qty', 'Price', 'Total']],
       body: cart.map(item => {
         const unitPrice = parsePrice(item.product.price);
@@ -549,11 +562,13 @@ function CartScreen({
       <div className="flex-1 overflow-y-auto p-4 pb-48 min-h-0">
         {cart.length === 0 ? (
           <div className="text-center text-slate-400 mt-20 flex flex-col items-center">
-            <img 
-              src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
-              alt="Troika" 
-              className="h-24 w-auto object-contain mb-6 opacity-60"
-            />
+            <div className="bg-[#1A365D] px-7 py-4 rounded-2xl shadow-md mb-6">
+              <img 
+                src={TROIKA_LOGO_URL} 
+                alt="Troika" 
+                className="h-11 w-auto object-contain"
+              />
+            </div>
             <p className="font-medium text-slate-500">Your quote is empty.</p>
             <p className="text-sm mt-1">Add items from the Troika catalog.</p>
           </div>
@@ -679,11 +694,17 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
         <h1 className="text-lg font-bold tracking-wide">About Troika</h1>
       </header>
       <div className="flex-1 overflow-y-auto p-6 space-y-8 text-slate-700 min-h-0">
-        <div className="flex justify-center">
+        <div
+          className="rounded-2xl py-7 px-6 shadow-[0_14px_36px_rgba(26,54,93,0.2)] flex flex-col items-center justify-center"
+          style={{
+            background:
+              'radial-gradient(circle at 50% 42%, #23497D 0%, #1A365D 60%, #112542 100%)',
+          }}
+        >
           <img 
-            src="https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png" 
-            alt="Troika" 
-            className="h-24 object-contain"
+            src={TROIKA_LOGO_URL} 
+            alt="Troika - Bathware & Faucets" 
+            className="h-16 w-auto object-contain"
           />
         </div>
 
@@ -782,9 +803,6 @@ function AboutScreen({ onBack }: { onBack: () => void }) {
   );
 }
 
-const TROIKA_LOGO_URL =
-  "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/753aadc10b893627517de3b302d3ccc2e9a5427a/public/logo.png";
-
 function BrandedOpeningCurtain({ onComplete }: { onComplete: () => void }) {
   const [isExiting, setIsExiting] = useState(false);
   const [logoError, setLogoError] = useState(false);
@@ -837,21 +855,19 @@ function BrandedOpeningCurtain({ onComplete }: { onComplete: () => void }) {
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
         className="flex flex-col items-center px-8"
       >
-        {/* Centered Troika Mark framed in a clean architectural crest */}
-        <div className="bg-white rounded-3xl px-7 py-5 shadow-[0_24px_64px_rgba(7,17,34,0.45)] ring-1 ring-white/20 flex items-center justify-center">
-          {!logoError ? (
-            <img
-              src={TROIKA_LOGO_URL}
-              alt="Troika"
-              className="h-20 w-auto object-contain pointer-events-none"
-              onError={() => setLogoError(true)}
-            />
-          ) : (
-            <span className="text-3xl font-black tracking-[0.18em] text-[#1A365D] uppercase">
-              Troika
-            </span>
-          )}
-        </div>
+        {/* Centered Troika Mark directly on Deep Navy */}
+        {!logoError ? (
+          <img
+            src={TROIKA_LOGO_URL}
+            alt="Troika - Bathware & Faucets"
+            className="w-64 sm:w-72 h-auto object-contain pointer-events-none drop-shadow-[0_12px_32px_rgba(0,0,0,0.28)]"
+            onError={() => setLogoError(true)}
+          />
+        ) : (
+          <span className="text-4xl font-black tracking-[0.2em] text-white uppercase">
+            Troika
+          </span>
+        )}
 
         {/* Subtle hairline shimmer */}
         <div className="relative w-36 h-[1.5px] bg-white/15 rounded-full overflow-hidden mt-7 mb-3.5">
