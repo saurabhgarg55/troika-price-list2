@@ -12,19 +12,68 @@ export default defineConfig(({mode}) => {
       tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
+        includeAssets: ['troika-menu-logo.webp', 'troika-menu-logo.png'],
         workbox: {
           maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
+          globPatterns: ['**/*.{js,css,html,ico,png,jpg,svg,webp,woff,woff2,json}'],
+          runtimeCaching: [
+            {
+              urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'google-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365,
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+            {
+              urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+              handler: 'CacheFirst',
+              options: {
+                cacheName: 'gstatic-fonts-cache',
+                expiration: {
+                  maxEntries: 10,
+                  maxAgeSeconds: 60 * 60 * 24 * 365,
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+            {
+              urlPattern: /^https:\/\/(troikaworld\.com|lh3\.googleusercontent\.com|raw\.githubusercontent\.com)\/.*/i,
+              handler: 'StaleWhileRevalidate',
+              options: {
+                cacheName: 'troika-product-images-cache',
+                expiration: {
+                  maxEntries: 500,
+                  maxAgeSeconds: 60 * 60 * 24 * 30,
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+          ],
         },
         devOptions: {
           enabled: true
         },
         manifest: {
+          id: "/",
           name: "Troika Price List",
           short_name: "Troika",
           description: "Troika Products Price List",
           theme_color: "#1A365D",
           background_color: "#ffffff",
           display: "standalone",
+          start_url: "/",
+          scope: "/",
           icons: [
             {
               src: "https://raw.githubusercontent.com/saurabhgarg55/troika-price-list2/bb44831cd794dbd1ba70a443e541d293fcf46c8e/public/icon-192.png",

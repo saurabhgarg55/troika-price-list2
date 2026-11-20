@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Phone, Download, MapPin, X, Share, Globe, Instagram } from 'lucide-react';
+import { Search, ChevronLeft, ShoppingCart, Plus, Minus, Trash2, Send, Phone, Download, MapPin, X, Share, Share2, Check, Loader2, Globe, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Product, CartItem, BeforeInstallPromptEvent } from './types';
 import productsData from './data/products.json';
@@ -8,9 +8,31 @@ import autoTable from 'jspdf-autotable';
 import * as XLSX from 'xlsx';
 import Fuse from 'fuse.js';
 import { requestNotificationPermission } from './firebase';
+import { syncCatalogOfflineFirst } from './utils/offlineCatalog';
+import { generateAndShareProductCard } from './utils/shareProductCard';
 
 const TROIKA_LOGO_URL = '/troika-menu-logo.webp';
 const TROIKA_PDF_LOGO_URL = '/troika-menu-logo.png';
+
+function useOnlineStatus(): boolean {
+  const [isOnline, setIsOnline] = useState<boolean>(() =>
+    typeof navigator !== 'undefined' ? navigator.onLine : true
+  );
+
+  useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+    return () => {
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
+
+  return isOnline;
+}
 
 const triggerHaptic = (type: 'light' | 'medium' | 'heavy' = 'light') => {
   if (typeof window !== 'undefined' && navigator.vibrate) {
@@ -316,24 +338,62 @@ function ProductDetailPage({
   };
 
   const [imgError, setImgError] = useState(false);
+  const [shareState, setShareState] = useState<'idle' | 'sharing' | 'done'>('idle');
 
   useEffect(() => {
     setImgError(false);
+    setShareState('idle');
   }, [product.code, product.name, product.image]);
+
+  const handleShareCard = async () => {
+    if (shareState === 'sharing') return;
+    triggerHaptic('light');
+    setShareState('sharing');
+    try {
+      const result = await generateAndShareProductCard(
+        product,
+        formatPrice(product.price),
+        isPriceAvailable(product.price)
+      );
+      if (result === 'shared' || result === 'downloaded') {
+        setShareState('done');
+        setTimeout(() => setShareState('idle'), 1800);
+      } else {
+        setShareState('idle');
+      }
+    } catch {
+      setShareState('idle');
+    }
+  };
 
   return (
     <div className="flex flex-col flex-1 min-h-0 bg-white h-full relative overflow-hidden">
       {/* AppBar */}
-      <header className="bg-white text-[#1A365D] p-4 shadow-sm z-30 flex items-center h-16 shrink-0 border-b border-slate-200">
-        <button 
-          onClick={onBack}
-          className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-slate-100 transition-colors active:bg-slate-200"
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </button>
-        <div className="flex items-center space-x-2">
+      <header className="bg-white text-[#1A365D] px-4 shadow-sm z-30 flex items-center justify-between h-16 shrink-0 border-b border-slate-200">
+        <div className="flex items-center">
+          <button 
+            onClick={onBack}
+            className="mr-3 p-1.5 -ml-1.5 rounded-full hover:bg-slate-100 transition-colors active:bg-slate-200"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
           <h1 className="text-lg font-bold tracking-wide">Product Details</h1>
         </div>
+        <button
+          onClick={handleShareCard}
+          disabled={shareState === 'sharing'}
+          aria-label="Share product card image"
+          title="Share product image"
+          className="min-h-[44px] min-w-[44px] -mr-2 flex items-center justify-center rounded-full text-[#1A365D] hover:bg-slate-100 active:bg-slate-200 transition-colors disabled:opacity-60"
+        >
+          {shareState === 'sharing' ? (
+            <Loader2 className="h-5 w-5 animate-spin text-[#00AEEF]" />
+          ) : shareState === 'done' ? (
+            <Check className="h-5 w-5 text-emerald-600" />
+          ) : (
+            <Share2 className="h-5 w-5" />
+          )}
+        </button>
       </header>
 
       {/* Swipeable Content wrapper */}
@@ -902,7 +962,8 @@ function BrandedOpeningCurtain({ onComplete }: { onComplete: () => void }) {
 }
 
 export default function App() {
-  const [products, setProducts] = useState<Product[]>([]);
+  const isOnline = useOnlineStatus();
+  const [products, setProducts] = useState<Product[]>(() => productsData as Product[]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -1020,8 +1081,15 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    setProducts(productsData as Product[]);
-  }, []);
+    let active = true;
+    syncCatalogOfflineFirst(productsData as Product[]).then(({ products: cachedProducts }) => {
+      if (!active) return;
+      setProducts(cachedProducts);
+    });
+    return () => {
+      active = false;
+    };
+  }, [isOnline]);
 
   const categoryMapping: { [key: string]: string } = {
     "Remus": "RE",
