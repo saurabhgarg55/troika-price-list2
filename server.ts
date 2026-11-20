@@ -39,9 +39,10 @@ async function startServer() {
 
     try {
       const upstream = await fetch(parsed.toString(), {
-        signal: AbortSignal.timeout(8000),
+        signal: AbortSignal.timeout(10000),
         headers: {
-          Accept: 'image/*',
+          'User-Agent': 'Mozilla/5.0 (compatible; TroikaCatalog/1.0)',
+          Accept: 'image/avif,image/webp,image/apng,image/png,image/jpeg,image/*,*/*;q=0.8',
         },
       });
 
@@ -50,13 +51,14 @@ async function startServer() {
         return;
       }
 
-      const contentType = upstream.headers.get('content-type') || 'image/jpeg';
-      if (!contentType.toLowerCase().startsWith('image/')) {
+      const rawContentType = (upstream.headers.get('content-type') || 'image/jpeg').toLowerCase();
+      if (!rawContentType.startsWith('image/') && !rawContentType.startsWith('application/octet-stream')) {
         res.status(415).json({ error: 'Upstream response is not an image' });
         return;
       }
 
       const arrayBuffer = await upstream.arrayBuffer();
+      const contentType = rawContentType.startsWith('image/') ? rawContentType : 'image/jpeg';
       res.setHeader('Content-Type', contentType);
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Cache-Control', 'public, max-age=86400');

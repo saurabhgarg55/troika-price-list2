@@ -2,42 +2,86 @@ import { Product } from '../types';
 
 export type ShareCardResult = 'shared' | 'downloaded' | 'cancelled';
 
-function loadImageElement(src: string, useCrossOrigin = false): Promise<HTMLImageElement> {
+async function loadImageElement(src: string, useCrossOrigin = false): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
     const img = new Image();
     if (useCrossOrigin) {
       img.crossOrigin = 'anonymous';
     }
-    img.referrerPolicy = 'no-referrer';
-    img.onload = () => resolve(img);
+    img.onload = async () => {
+      try {
+        if (typeof img.decode === 'function') {
+          await img.decode();
+        }
+      } catch {
+        // Ignore decode warning if image is already rasterizable
+      }
+      resolve(img);
+    };
     img.onerror = () => reject(new Error(`Failed to load image: ${src}`));
     img.src = src;
   });
 }
 
-async function fetchImageAsBlobElement(url: string): Promise<HTMLImageElement> {
-  const res = await fetch(url);
+function isImageCanvasSafe(img: HTMLImageElement | null | undefined): img is HTMLImageElement {
+  if (!img || !img.complete || img.naturalWidth <= 0 || img.naturalHeight <= 0) {
+    return false;
+  }
+  try {
+    const probe = document.createElement('canvas');
+    probe.width = 1;
+    probe.height = 1;
+    const probeCtx = probe.getContext('2d');
+    if (!probeCtx) return false;
+    probeCtx.drawImage(img, 0, 0, 1, 1);
+    probe.toDataURL('image/png');
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function blobToDataUrl(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (typeof reader.result === 'string') {
+        resolve(reader.result);
+      } else {
+        reject(new Error('Failed to convert blob to data URL'));
+      }
+    };
+    reader.onerror = () => reject(reader.error || new Error('FileReader error'));
+    reader.readAsDataURL(blob);
+  });
+}
+
+async function fetchImageAsDataUrlElement(url: string): Promise<HTMLImageElement> {
+  const res = await fetch(url, { credentials: 'same-origin' });
   if (!res.ok) {
     throw new Error(`Image fetch failed: ${res.status}`);
   }
   const blob = await res.blob();
-  if (!blob.type.startsWith('image/')) {
-    throw new Error('Response is not an image');
+  if (blob.size === 0 || (blob.type && !blob.type.startsWith('image/') && !blob.type.startsWith('application/octet-stream'))) {
+    throw new Error('Response is not a valid image');
   }
-  const objectUrl = URL.createObjectURL(blob);
-  try {
-    return await loadImageElement(objectUrl, false);
-  } finally {
-    // Keep objectUrl alive briefly until canvas draws; revoked after drawImage via returned wrapper or microtask
-    setTimeout(() => URL.revokeObjectURL(objectUrl), 10000);
-  }
+  const dataUrl = await blobToDataUrl(blob);
+  return loadImageElement(dataUrl, false);
 }
 
-async function resolveShareableProductImage(imageUrl?: string): Promise<HTMLImageElement | null> {
+async function resolveShareableProductImage(
+  imageUrl?: string,
+  existingImgElement?: HTMLImageElement | null
+): Promise<HTMLImageElement | null> {
+  // 1. Fast path: reuse the already-loaded, CORS-clean <img> currently rendered in ProductDetailPage
+  if (isImageCanvasSafe(existingImgElement)) {
+    return existingImgElement;
+  }
+
   if (!imageUrl || !imageUrl.trim()) return null;
   const trimmed = imageUrl.trim();
 
-  // Same-origin local assets load directly
+  // 2. Local same-origin asset
   if (trimmed.startsWith('/')) {
     try {
       return await loadImageElement(trimmed, false);
@@ -46,12 +90,12 @@ async function resolveShareableProductImage(imageUrl?: string): Promise<HTMLImag
     }
   }
 
-  // Fetch through same-origin CORS proxy as a blob so canvas export works reliably across all hosts
+  // 3. Fetch via same-origin proxy as base64 Data URL (mobile Safari/Android WebView safe)
   try {
     const proxyUrl = `/api/image-proxy?url=${encodeURIComponent(trimmed)}`;
-    return await fetchImageAsBlobElement(proxyUrl);
+    return await fetchImageAsDataUrlElement(proxyUrl);
   } catch {
-    // Fallback to direct CORS load (e.g. lh3.googleusercontent.com)
+    // 4. Direct CORS fallback (e.g. lh3.googleusercontent.com)
     try {
       return await loadImageElement(trimmed, true);
     } catch {
@@ -125,17 +169,18 @@ function wrapTextLines(
 export async function generateAndShareProductCard(
   product: Product,
   formattedPrice: string,
-  hasPrice: boolean
+  hasPrice: boolean,
+  existingImgElement?: HTMLImageElement | null
 ): Promise<ShareCardResult> {
   const width = 1080;
   const padX = 56;
   const contentW = width - padX * 2;
   const bannerHeight = 148;
 
-  // Load logo & product image in parallel
+  // Load logo & resolve product image in parallel
   const [logoImg, productImg] = await Promise.all([
     loadImageElement('/troika-menu-logo.png', false).catch(() => null),
-    resolveShareableProductImage(product.image),
+    resolveShareableProductImage(product.image, existingImgElement),
   ]);
 
   // Pre-measure wrapped name lines to size the card tightly with zero wasted space

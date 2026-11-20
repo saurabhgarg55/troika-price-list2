@@ -46,6 +46,20 @@ export default defineConfig(({mode}) => {
               },
             },
             {
+              urlPattern: /^\/api\/image-proxy\b.*/i,
+              handler: 'StaleWhileRevalidate',
+              options: {
+                cacheName: 'troika-proxied-images-cache',
+                expiration: {
+                  maxEntries: 500,
+                  maxAgeSeconds: 60 * 60 * 24 * 30,
+                },
+                cacheableResponse: {
+                  statuses: [0, 200],
+                },
+              },
+            },
+            {
               urlPattern: /^https:\/\/(troikaworld\.com|lh3\.googleusercontent\.com|raw\.githubusercontent\.com)\/.*/i,
               handler: 'StaleWhileRevalidate',
               options: {

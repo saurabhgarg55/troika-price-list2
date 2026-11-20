@@ -338,12 +338,23 @@ function ProductDetailPage({
   };
 
   const [imgError, setImgError] = useState(false);
+  const [useDirectImgFallback, setUseDirectImgFallback] = useState(false);
   const [shareState, setShareState] = useState<'idle' | 'sharing' | 'done'>('idle');
+  const productImgRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
     setImgError(false);
+    setUseDirectImgFallback(false);
     setShareState('idle');
   }, [product.code, product.name, product.image]);
+
+  const detailImageSrc = useMemo(() => {
+    if (!product.image) return '';
+    if (useDirectImgFallback || product.image.startsWith('/')) {
+      return product.image;
+    }
+    return `/api/image-proxy?url=${encodeURIComponent(product.image)}`;
+  }, [product.image, useDirectImgFallback]);
 
   const handleShareCard = async () => {
     if (shareState === 'sharing') return;
@@ -353,7 +364,8 @@ function ProductDetailPage({
       const result = await generateAndShareProductCard(
         product,
         formatPrice(product.price),
-        isPriceAvailable(product.price)
+        isPriceAvailable(product.price),
+        productImgRef.current
       );
       if (result === 'shared' || result === 'downloaded') {
         setShareState('done');
@@ -422,11 +434,19 @@ function ProductDetailPage({
                 {product.image && !imgError && (
                   <div className="w-full h-72 rounded-2xl bg-gradient-to-b from-slate-50 to-white p-6 border border-slate-200/80 mb-6 flex items-center justify-center shadow-sm relative group overflow-hidden">
                     <img 
-                      src={product.image} 
+                      ref={productImgRef}
+                      src={detailImageSrc} 
                       alt={product.name} 
+                      crossOrigin={useDirectImgFallback ? undefined : 'anonymous'}
                       className="max-h-full max-w-full object-contain pointer-events-none transition-transform duration-300 group-hover:scale-105"
                       referrerPolicy="no-referrer"
-                      onError={() => setImgError(true)}
+                      onError={() => {
+                        if (!useDirectImgFallback) {
+                          setUseDirectImgFallback(true);
+                        } else {
+                          setImgError(true);
+                        }
+                      }}
                     />
                     <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-slate-500 font-mono text-[10px] px-2.5 py-1 rounded-full border border-slate-200 shadow-xs">
                       Official Photo
